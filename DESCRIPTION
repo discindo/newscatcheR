@@ -1,0 +1,21 @@
+Package: newscatcheR
+Title: Programmatically collect normalized news from (almost)
+    any website
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Novica",
+           family = "Nakov",
+           role = c("aut", "cre"),
+           email = "nnovica@gmail.com")
+Description: Programmatically collect normalized news from
+    (almost) any website. An R clone of the
+    https://github.com/kotartemiy/newscatcher Python module.
+License: file LICENSE
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
