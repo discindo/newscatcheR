@@ -16,5 +16,5 @@ a tibble containing the contents of the rss feed
 Get news
 }
 \examples{
-get_news(website = "nytimes.com")
+get_news(website = "theguardian.com")
 }

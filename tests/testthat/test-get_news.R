@@ -1,10 +1,6 @@
 test_that("get_headlines works", {
-  # Get path
-  datapath <- system.file("example-data/rss_example_table.csv",
-                          package = "newscatcheR")
-  # Read data with {readr}
-  example_data <- readr::read_delim(datapath, delim = "|",
-                                    escape_double = FALSE, trim_ws = TRUE)
+  # adding a small time delay to avoid simultaneous posts to the api
+  Sys.sleep(1)
 
   # Get the news
   output_headlines <- get_headlines("news.ycombinator.com")

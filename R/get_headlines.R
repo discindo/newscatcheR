@@ -11,6 +11,6 @@
 get_headlines <- function(website = "news.ycombinator.com") {
   feed_entries <- get_news(website)
 
-  title_list <- feed_entries$item_title
+  title_list <- as.data.frame(feed_entries$item_title)
   return(title_list)
 }
