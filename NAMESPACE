@@ -3,4 +3,3 @@
 export(get_headlines)
 export(get_news)
 import(tidyRSS)
-import(tidyverse)

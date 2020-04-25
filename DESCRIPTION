@@ -15,10 +15,8 @@ Depends:
     R (>= 2.10)
 Imports: 
     tidyRSS,
-    tidyverse
 Suggests: 
     knitr,
-    readr,
     rmarkdown,
     testthat
 VignetteBuilder: 
