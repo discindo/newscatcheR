@@ -11,11 +11,19 @@ Description: Programmatically collect normalized news from
     (almost) any website. An R clone of the
     https://github.com/kotartemiy/newscatcher Python module.
 License: file LICENSE
+Depends: 
+    R (>= 2.10)
+Imports: 
+    tidyRSS,
+    tidyverse
 Suggests: 
     knitr,
-    rmarkdown
+    readr,
+    rmarkdown,
+    testthat
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+Requires: dplyr, tidyRSS
+RoxygenNote: 7.1.0

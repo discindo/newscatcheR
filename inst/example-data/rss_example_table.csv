@@ -1,0 +1,4 @@
+url|rss_endpoint
+bbc.com|http://feeds.bbci.co.uk/news/world/rss.xml
+news.ycombinator.com|https://news.ycombinator.com/rss
+washingtonpost.com|http://feeds.washingtonpost.com/rss/world

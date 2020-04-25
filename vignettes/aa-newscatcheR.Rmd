@@ -1,0 +1,43 @@
+---
+title: "newscatcheR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{aa-newscatheR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r preliminaries, echo=FALSE, message=FALSE}
+library(newscatcheR)
+library(tidyverse)
+library(tidyRSS)
+```
+
+```{r example_data, message = FALSE}
+# Get path
+datapath <- system.file("example-data/rss_example_table.csv", package = "newscatcheR")
+# Read data with {readr} 
+rss_table <- readr::read_delim(datapath, delim = "|", escape_double = FALSE, trim_ws = TRUE)
+```
+
+## Overview
+
+The _newscatcheR_ package provides two simple functions for reading RSS feeds from news outlets and have them conviniently returned as a tibble.
+
+The first function `get_news()` returns a tibble of the rss feed of a given site.
+```{r}
+get_news(website = "news.ycombinator.com")
+```
+
+
+The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
+```{r}
+get_headlines(website = "news.ycombinator.com")
+```

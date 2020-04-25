@@ -4,3 +4,8 @@ attachment::att_to_description()
 devtools::check()
 # Install the package
 devtools::install()
+# Add functions and tests
+usethis::use_r("get_news")
+usethis::use_r("get_headlines")
+usethis::use_test("get_news")
+usethis::use_test("get_headlines")
