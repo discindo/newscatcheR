@@ -18,5 +18,5 @@ Get headlines
 A helper function to get just the headlines of the feed
 }
 \examples{
-get_headlines("news.ycombinator.com")
+get_headlines(website = "news.ycombinator.com")
 }

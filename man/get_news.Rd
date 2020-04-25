@@ -16,7 +16,5 @@ a tibble containing the contents of the rss feed
 Get news
 }
 \examples{
-datapath <- system.file("example-data/my-dataset.csv", package = "newscatcheR")
-example_data <- readr::read_csv(datapath, col_names = c("url", "rss"))
-get_news("news.ycombinator.com")
+get_news(website = "nytimes.com")
 }
