@@ -6,14 +6,11 @@
 #' @return a tibble containing the headlines contained in the feed
 #' @export
 #' @examples
-#' get_headlines("news.ycombinator.com")
+#' get_headlines(website = "news.ycombinator.com")
 
 get_headlines <- function(website = "news.ycombinator.com") {
-
   feed_entries <- get_news(website)
 
-  title_list <- feed_entries %>%
-    select(item_title)
-
+  title_list <- feed_entries$item_title
   return(title_list)
 }
