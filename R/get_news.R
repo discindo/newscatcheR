@@ -15,9 +15,10 @@ get_news <- function(website = "news.ycombinator.com") {
     stop("Website should be character vector.")
 
     # check if it exists in dataframe and inform if it doesn't
-  } else if (!all(website %in% rss_table$url)) {
-    faulty <- website[!website %in% rss_table$url]
-    stop(paste("Can't find website(s):", faulty, "in our database. Please check if these are valid website names.", sep=" "))
+  } else if (!any(website == rss_table$url)) {
+    #faulty <- website[!website %in% rss_table$url]
+    stop(paste("Can't find website(s):", website, "in our database.
+               Please check if these are valid website names.", sep = " "))
 
     # return if it does
   } else {
