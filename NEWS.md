@@ -1,4 +1,4 @@
-# newcatheR 0.0.0.9000
+# newcatcheR 0.0.0.9000
 
 * First release.
 
