@@ -2,7 +2,7 @@
 title: "newscatcheR"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{aa-newscatheR}
+  %\VignetteIndexEntry{newscatheR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -23,15 +23,34 @@ library(tidyRSS)
 
 The _newscatcheR_ package provides two simple functions for reading RSS feeds from news outlets and have them conviniently returned as a tibble.
 
+### get_news()
+
 The first function `get_news()` returns a tibble of the rss feed of a given site.
 ```{r}
 get_news(website = "news.ycombinator.com")
 ```
 
+### get_headlines()
 
 The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
 ```{r}
 # adding a small time delay to avoid simultaneous posts to the api
 Sys.sleep(1)
 get_headlines(website = "news.ycombinator.com")
+```
+
+## Use case
+
+This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
+
+Assuming we have the news sites we want to follow:
+
+```{r}
+sites = c("bbc.com", "spiegel.de", "washingtonpost.com")
+```
+
+We can get a list of data frames with:
+
+```{r}
+lapply(sites, get_news)
 ```
