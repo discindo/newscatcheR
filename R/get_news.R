@@ -11,19 +11,18 @@
 get_news <- function(website = "news.ycombinator.com") {
 
   # check if argument is character
-  if (is.character(website) == FALSE) {
-    stop("Website should be character vector.")
+  if (is.character(website)) {
+    index <- rss_table$url == website
+  } else {
+    stop("'Website' should be character string.")
+  }
 
-    # check if it exists in dataframe and inform if it doesn't
-  } else if (!any(website == rss_table$url)) {
-    #faulty <- website[!website %in% rss_table$url]
+  if (!any(index)) {
     stop(paste("Can't find website(s):", website, "in our database.
                Please check if these are valid website names.", sep = " "))
-
-    # return if it does
-  } else {
-    news_source <- rss_table$rss_endpoint[rss_table$url %in% website]
-    feed_entries <- tidyfeed(news_source) # this fails on some feeds
   }
+
+  news_source <- rss_table$rss_endpoint[index]
+  feed_entries <- tidyfeed(news_source) # this fails on some feeds
   return(feed_entries)
 }
