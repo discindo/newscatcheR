@@ -29,7 +29,8 @@ It provides a daset of news sites and their rss feeds, and two funcions that wor
 
 `get_headlines(website)` returns just the headlines of the website's rss feed.
 
- get_headlines("news.ycombinator.com")
+` get_headlines("news.ycombinator.com")`
+```
 #> GET request successful. Parsing...
 #>                                                     feed_entries$item_title
 #> 1                           Teleforking a Process onto a Different Computer
@@ -42,13 +43,13 @@ It provides a daset of news sites and their rss feeds, and two funcions that wor
 #> 8     Show HN: Kanmail – An email client that functions like a kanban board
 #> 9                                                     My NixOS Desktop Flow
 #> 10       A hypothesis that self-face-touching subserves self-smelling [pdf]
-
+```
 ## Use case
 
 This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
 
 Assuming we have the news sites we want to follow:
-  sites = c("bbc.com", "spiegel.de", "washingtonpost.com")
+`sites = c("bbc.com", "spiegel.de", "washingtonpost.com")`
 
 We can get a list of data frames with:
-  lapply(sites, get_news)
+ `lapply(sites, get_news)`
