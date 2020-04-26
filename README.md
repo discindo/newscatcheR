@@ -9,7 +9,8 @@ It provides a daset of news sites and their rss feeds, and two funcions that wor
 
 `get_news(website)` returns the contents of a rss feed of a website. 
 
- get_news("news.ycombinator.com")
+`get_news("news.ycombinator.com")`
+```
 #> GET request successful. Parsing...
 #> # A tibble: 30 x 9
 #>    feed_title feed_link feed_description feed_pub_date       item_title
@@ -26,7 +27,7 @@ It provides a daset of news sites and their rss feeds, and two funcions that wor
 #> 10 Hacker Ne… https://… Links for the i… 2020-04-26 15:19:34 A hypothe…
 #> # … with 20 more rows, and 4 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_comments <chr>
-
+```
 `get_headlines(website)` returns just the headlines of the website's rss feed.
 
 ` get_headlines("news.ycombinator.com")`
