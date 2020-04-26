@@ -50,7 +50,9 @@ It provides a daset of news sites and their rss feeds, and two funcions that wor
 This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
 
 Assuming we have the news sites we want to follow:
+
 `sites = c("bbc.com", "spiegel.de", "washingtonpost.com")`
 
 We can get a list of data frames with:
+
  `lapply(sites, get_news)`
