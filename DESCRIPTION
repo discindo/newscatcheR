@@ -28,5 +28,5 @@ VignetteBuilder:
     knitr
 Encoding: UTF-8
 LazyData: true
-Requires: dplyr, tidyRSS
+Requires: tidyRSS
 RoxygenNote: 7.1.0
