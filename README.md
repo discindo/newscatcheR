@@ -6,6 +6,7 @@ newscatcheR is an R clone of the python package [newscatcher](https://github.com
 The package provides a daset of news sites and their rss feeds, and two funcions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site.
 
 It can be installed from Github with:
+
 `devtools::install_github("discindo/newscatcheR")`
 
 ## Overview
