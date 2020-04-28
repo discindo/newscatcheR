@@ -19,7 +19,8 @@ get_news <- function(website = "news.ycombinator.com") {
 
   if (!any(index)) {
     stop(paste("Can't find website(s):", website, "in our database.
-               Please check if these are valid website names.", sep = " "))
+               Please check if these are valid website names, or
+               try to fetch the feed directly with tidyfeed()'.", sep = " "))
   }
 
   news_source <- rss_table$rss_endpoint[index]
