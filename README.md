@@ -9,6 +9,14 @@ It can be installed from Github with:
 
 `devtools::install_github("discindo/newscatcheR")`
 
+And then loaded with: 
+
+`library(newscatcheR)`
+
+Note: If you don't have `devtools` you will need to first:
+
+`install.packages("devtools")`
+
 ## Overview
 
 `get_news(website)` returns the contents of a rss feed of a website. 
