@@ -21,7 +21,7 @@ library(tidyRSS)
 
 ## Overview
 
-The _newscatcheR_ package provides two simple functions for reading RSS feeds from news outlets and have them conviniently returned as a tibble.
+The _newscatcheR_ package provides three simple functions for reading RSS feeds from news outlets and have them conviniently returned as a tibble.
 
 ### get_news()
 
@@ -33,10 +33,19 @@ get_news(website = "news.ycombinator.com")
 ### get_headlines()
 
 The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
+
 ```{r}
 # adding a small time delay to avoid simultaneous posts to the api
 Sys.sleep(1)
 get_headlines(website = "news.ycombinator.com")
+```
+
+### tld_sources()
+
+The function `tld_sources` is a helper funcion for browsing news sites by top level domains. It's useful to see which newssites from a country are present in the database. 
+
+```{r}
+tld_sources("de")
 ```
 
 ## Use case
