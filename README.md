@@ -3,7 +3,7 @@ Programmatically collect normalized news from (almost) any website using R
 
 newscatcheR is an R clone of the python package [newscatcher](https://github.com/kotartemiy/newscatcher).  
 
-The package provides a daset of news sites and their rss feeds, and two funcions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site. It also provides a function to check the dataset for news sources per top level domain.
+The package provides a dataset of news sites and their rss feeds, and two functions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site. It also provides a function to check the dataset for news sources per top level domain.
 
 It can be installed from Github with:
 
