@@ -3,7 +3,7 @@ Programmatically collect normalized news from (almost) any website using R
 
 newscatcheR is an R clone of the python package [newscatcher](https://github.com/kotartemiy/newscatcher).  
 
-The package provides a daset of news sites and their rss feeds, and two funcions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site.
+The package provides a daset of news sites and their rss feeds, and two funcions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site. It also provides a function to check the dataset for news sources per top level domain.
 
 It can be installed from Github with:
 
@@ -32,6 +32,7 @@ It can be installed from Github with:
 #> # … with 20 more rows, and 4 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_comments <chr>
 ```
+
 `get_headlines(website)` returns just the headlines of the website's rss feed.
 
 ` get_headlines("news.ycombinator.com")`
@@ -48,6 +49,26 @@ It can be installed from Github with:
 #> 8     Show HN: Kanmail – An email client that functions like a kanban board
 #> 9                                                     My NixOS Desktop Flow
 #> 10       A hypothesis that self-face-touching subserves self-smelling [pdf]
+```
+
+`tld_sources(tld)` returns rows from the provided dataset of news sites with the given top level domain
+
+`tld_sources("it")`
+
+```
+# A tibble: 10 x 2
+   url            rss_endpoint                     
+   <chr>          <chr>                            
+ 1 ansa.it        http://www.ansa.it/web/ansait_we…
+ 2 thinkandbuild… https://www.thinkandbuild.it/fee…
+ 3 wasproject.it  http://www.wasproject.it/w/en/bl…
+ 4 corriere.it    http://www.corriere.it/rss/homep…
+ 5 gazzetta.it    http://www.gazzetta.it/rss/calci…
+ 6 ilfattoquotid… http://www.ilfattoquotidiano.it/…
+ 7 lastampa.it    http://www.lastampa.it/redazione…
+ 8 punto-informa… http://punto-informatico.it/fade…
+ 9 repubblica.it  http://www.repubblica.it/rss/hom…
+10 tgcom.mediase… http://www.tgcom.mediaset.it/rss…
 ```
 ## Use case
 
