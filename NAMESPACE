@@ -2,5 +2,6 @@
 
 export(get_headlines)
 export(get_news)
+export(tld_sources)
 import(tidyRSS)
 import(utils)
