@@ -1,3 +1,5 @@
 ^newscatcheR\.Rproj$
 ^\.Rproj\.user$
 ^dev_history\.R$
+^newscatcheR\cran-comments.md$
+^README\.Rmd$

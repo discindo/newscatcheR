@@ -1,0 +1,82 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# newscatcheR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Programmatically collect normalized news from (almost) any website using R
+
+newscatcheR is an R clone of the python package [newscatcher](https://github.com/kotartemiy/newscatcher).  
+
+The package provides a dataset of news sites and their rss feeds, and two functions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from a given site. It also provides a function to check the dataset for news sources per top level domain.
+
+## Installation
+
+~~You can install the released version of newscatcheR from [CRAN](https://CRAN.R-project.org) with:~~
+
+~~``` r
+~~install.packages("newscatcheR")
+~~```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("discindo/newscatcheR")
+```
+## Overview
+
+`get_news(website)` returns the contents of a rss feed of a website. 
+
+```{r example1}
+library(newscatcheR)
+get_news("news.ycombinator.com")
+```
+
+`get_headlines(website)` returns just the headlines of the website's rss feed.
+
+```{r example2}
+library(newscatcheR)
+# adding a small time delay to avoid simultaneous posts to the API
+Sys.sleep(1) # 
+get_headlines("news.ycombinator.com")
+```
+
+
+`tld_sources(tld)` returns rows from the provided dataset of news sites with the given top level domain
+
+```{r example3}
+library(newscatcheR)
+tld_sources("it")
+```
+
+## Use Case
+
+This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
+
+Assuming we have the news sites we want to follow:
+
+```{r example4, eval = FALSE}
+sites = c("bbc.com", "spiegel.de", "washingtonpost.com")
+```
+
+We can get a list of data frames with:
+
+```{r example5, eval = FALSE}
+library(newscatcheR)
+lapply(sites, get_news)
+```

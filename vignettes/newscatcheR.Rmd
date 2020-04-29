@@ -35,7 +35,7 @@ get_news(website = "news.ycombinator.com")
 The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
 
 ```{r}
-# adding a small time delay to avoid simultaneous posts to the api
+# adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(1)
 get_headlines(website = "news.ycombinator.com")
 ```
