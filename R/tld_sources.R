@@ -1,7 +1,7 @@
 #' tld_sources
 #' A helper function to explore news sources by country (or other TLD)
 #'
-#' @param tld a country code tope level domain in the format ".de"
+#' @param tld a country code top level domain in the format ".de"
 #'
 #' @return a tibble containing the contents of the rss feed
 #' @export
