@@ -1,5 +1,5 @@
 Package: newscatcheR
-Title: Programmatically Collect Normalized News From (Almost)
+Title: Programmatically Collect Normalized News from (Almost)
     Any Website
 Version: 0.0.1
 Authors@R: 
@@ -19,7 +19,8 @@ Depends:
     R (>= 2.10)
 Imports: 
     tidyRSS,
-    utils
+    utils,
+    Rccp
 Suggests: 
     knitr,
     rmarkdown,
