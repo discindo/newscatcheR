@@ -18,5 +18,6 @@ Get headlines
 A helper function to get just the headlines of the feed
 }
 \examples{
+#' Sys.sleep(1) # adding a small time delay to avoid simultaneous posts to the API
 get_headlines(website = "news.ycombinator.com")
 }

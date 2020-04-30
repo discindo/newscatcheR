@@ -16,5 +16,6 @@ a tibble containing the contents of the rss feed
 Get news
 }
 \examples{
-get_news(website = "theguardian.com")
+Sys.sleep(1) # adding a small time delay to avoid simultaneous posts to the API
+get_news(website = "news.ycombinator.com")
 }
