@@ -21,10 +21,12 @@ sources per top level domain.
 
 ## Installation
 
-~~You can install the released version of newscatcheR from
-[CRAN](https://CRAN.R-project.org) with:~~
+You can install the released version of newscatcheR from
+[CRAN](https://CRAN.R-project.org) with:
 
-\~\~`r ~~install.packages("newscatcheR") ~~`
+``` r
+install.packages("newscatcheR")
+```
 
 And the development version from [GitHub](https://github.com/) with:
 
@@ -44,16 +46,16 @@ get_news("news.ycombinator.com")
 #> # A tibble: 30 x 9
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Show HN: …
-#>  2 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Lyft lays…
-#>  3 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Why Segme…
-#>  4 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Free data…
-#>  5 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 A simple …
-#>  6 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Boeing, E…
-#>  7 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Good writ…
-#>  8 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Building …
-#>  9 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 I Sing th…
-#> 10 Hacker Ne… https://… Links for the i… 2020-04-29 16:49:58 Ennui: Ho…
+#>  1 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Medium-ha…
+#>  2 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 CTO of Se…
+#>  3 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 The Sequo…
+#>  4 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Building …
+#>  5 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 My First …
+#>  6 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 UCF resea…
+#>  7 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 I shipped…
+#>  8 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Concurren…
+#>  9 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Build you…
+#> 10 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 History o…
 #> # … with 20 more rows, and 4 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_comments <chr>
 ```
@@ -67,37 +69,37 @@ library(newscatcheR)
 Sys.sleep(1) # 
 get_headlines("news.ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                             feed_entries$item_title
-#> 1                   Show HN: Insomnia Designer, an API Designer Powered by Insomnia
-#> 2                           Lyft lays off 17% of workforce, furloughs hundreds more
-#> 3                                               Why Segment Went Back to a Monolith
-#> 4                        Free dataset of VCs investing in seed and Series A+ rounds
-#> 5          A simple macOS tool to instantly deploying GUIs for commands and scripts
-#> 6                              Boeing, Expecting a Long Slump, Will Cut 16,000 Jobs
-#> 7                                              Good writing is a business advantage
-#> 8                       Building a WireGuard Jail with the FreeBSD's Standard Tools
-#> 9                                                      I Sing the Airplane Electric
-#> 10                                           Ennui: How to Overcome Chronic Boredom
-#> 11          A Glass Nightmare: Cleaning Up the Cold War’s Nuclear Legacy at Hanford
-#> 12                            Software Folklore – A collection of weird bug stories
-#> 13              Show HN: Midas, a Streaming Anomaly Detector. Now Implemented in Go
-#> 14                                                       Hunting a Linux kernel bug
-#> 15 DataJet – Fully managed Apache NiFi as a service. Visual Data flows without code
-#> 16                              Boiling the machines when they needed to just chill
-#> 17                                                      More Descent, Less Gradient
-#> 18                          Show HN: A sound-effect chatroom for meeting engagement
-#> 19                                                                 Anger Management
-#> 20           Vidgear – A complete, cross-platform video processing Python framework
-#> 21                                                    68 Bits of Unsolicited Advice
-#> 22                  U.S. Economy Shrinks at 4.8% Pace, Signaling Start of Recession
-#> 23 German government to bail Lufthansa out of bankruptcy with nearly $10B state aid
-#> 24                         Pachyderm Is Hiring React Devs, Go Engineers, K8s DevOps
-#> 25        Do you need more than a Front end and Firebase education to ship product?
-#> 26                                        Opting in to Preview Builds with AWS ALBs
-#> 27                                                     I could do that in a weekend
-#> 28                                                 Fat pointers in C using libcello
-#> 29                                                         De-Googling: My Progress
-#> 30                                                     LibreOffice ReleaseNotes 7.0
+#>                                                            feed_entries$item_title
+#> 1                                              Medium-hard SQL interview questions
+#> 2                           CTO of Segment on how to sell a B2B Enterprise product
+#> 3                                                     The Sequoia Guide to Pricing
+#> 4                   Building a real-time patient monitoring system with Go and Vue
+#> 5                                         My First Year as a Freelance AI Engineer
+#> 6              UCF researchers develop groundbreaking new rocket-propulsion system
+#> 7        I shipped a word processor that formatted the hard drive every 1024 saves
+#> 8                                                           Concurrent Hash Tables
+#> 9                                              Build your own WebAssembly Compiler
+#> 10                                                                 History of Logo
+#> 11                     Show HN: Rendering One Million Datapoints with D3 and WebGL
+#> 12                                                                        Pg-Basic
+#> 13     Scientists Waited Two and a Half Years to See Whether Bacteria Can Eat Rock
+#> 14                                                             The Design Squiggle
+#> 15                         Safe Network. Secure P2P app system implemented in Rust
+#> 16                                                 Static Sites with Elasticsearch
+#> 17                                                The power of admitting ignorance
+#> 18                            India orders coronavirus tracing app for all workers
+#> 19                         Witchcraft and Wizardry – RPG game created in Minecraft
+#> 20                       Ubuntu 20.04 LTS’ snap obsession has snapped me off of it
+#> 21 Show HN: DiscoverAli – A weekly newsletter of inexpensive, interesting products
+#> 22                                      What Is a Sustainable Path to Open Access?
+#> 23                                                                    Time on Unix
+#> 24                            Bandcamp is waiving fees today in support of artists
+#> 25    Judge Orders FCC To Hand Over IP Addresses Linked To Net Neutrality Comments
+#> 26                                 Notion encourages busy-work and I’m tired of it
+#> 27         ‘Breathable’ Electronics Pave the Way for More Functional Wearable Tech
+#> 28            Jerry (YC S17) Is Hiring Full Stack Engineers (Toronto, SF Bay Area)
+#> 29                             The World Is Still Producing More Oil Than It Needs
+#> 30        What Happens Next? Covid-19 Futures, Explained with Playable Simulations
 ```
 
 `tld_sources(tld)` returns rows from the provided dataset of news sites

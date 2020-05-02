@@ -26,11 +26,11 @@ The package provides a dataset of news sites and their rss feeds, and two functi
 
 ## Installation
 
-~~You can install the released version of newscatcheR from [CRAN](https://CRAN.R-project.org) with:~~
+You can install the released version of newscatcheR from [CRAN](https://CRAN.R-project.org) with:
 
-~~``` r
-~~install.packages("newscatcheR")
-~~```
+``` r
+install.packages("newscatcheR")
+```
 
 And the development version from [GitHub](https://github.com/) with:
 

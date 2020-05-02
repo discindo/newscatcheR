@@ -12,8 +12,8 @@ Authors@R:
              role = "ctb",
              email = "teofiln@gmail.com"))
 Description: Programmatically collect normalized news from
-    (almost) any website. An R clone of the
-    <https://github.com/kotartemiy/newscatcher> Python module.
+    (almost) any website. An 'R' clone of the
+    <https://github.com/kotartemiy/newscatcher> 'Python' module.
 License: MIT + file LICENSE
 Depends: 
     R (>= 2.10)
