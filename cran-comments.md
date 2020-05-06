@@ -10,3 +10,4 @@ This is my first submission to CRAN.
 I followed the interactive menu of devtools::release to submit to r-hub first. From r-hub I got one error in a messege about not being able to install on windows, but in subsequent messages the error was not there. 
 devtools::check_win() didn't return any errors.
 I corrected the License and description as notified.
+I added the missing: Discindo [cph]
