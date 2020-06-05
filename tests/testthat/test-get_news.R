@@ -1,6 +1,6 @@
 test_that("get_news works", {
   # adding a small time delay to avoid simultaneous posts to the api
-  Sys.sleep(1)
+  Sys.sleep(3)
 
   # Get the news
   output_news <- get_news("news.ycombinator.com")
@@ -9,13 +9,13 @@ test_that("get_news works", {
   expect_is(output_news, "data.frame")
 
   # adding a small time delay to avoid simultaneous posts to the api
-  Sys.sleep(1)
+  Sys.sleep(3)
 
   # numbers return an error
   expect_error(output_news <- get_news(123))
 
   # adding a small time delay to avoid simultaneous posts to the api
-  Sys.sleep(1)
+  Sys.sleep(3)
 
   # url not in database returns error
   expect_error(output_news <- get_news("example.com"))

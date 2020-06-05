@@ -1,6 +1,6 @@
 test_that("get_headlines works", {
   # adding a small time delay to avoid simultaneous posts to the api
-  Sys.sleep(1)
+  Sys.sleep(3)
 
   # Get the news
   output_headlines <- get_headlines("news.ycombinator.com")
