@@ -6,7 +6,8 @@
 #' @return a tibble containing the headlines contained in the feed
 #' @export
 #' @examples
-#' #' Sys.sleep(1) # adding a small time delay to avoid simultaneous posts to the API
+#' Sys.sleep(3) # adding a small time delay to avoid
+#' # simultaneous posts to the API
 #' get_headlines(website = "news.ycombinator.com")
 
 get_headlines <- function(website = "news.ycombinator.com") {

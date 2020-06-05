@@ -1,2 +1,2 @@
-#' @import utils
+#' @importFrom utils globalVariables
 utils::globalVariables("rss_table")

@@ -3,10 +3,11 @@
 #' @param website a url of a new source in the format "news.ycombinator.com"
 #'
 #' @return a tibble containing the contents of the rss feed
-#' @import tidyRSS
+#' @importFrom tidyRSS tidyfeed
 #' @export
 #' @examples
-#' Sys.sleep(1) # adding a small time delay to avoid simultaneous posts to the API
+#' Sys.sleep(3) # adding a small time delay to avoid
+#' # simultaneous posts to the API
 #' get_news(website = "news.ycombinator.com")
 
 get_news <- function(website = "news.ycombinator.com") {
