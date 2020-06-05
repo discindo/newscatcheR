@@ -31,6 +31,13 @@ install.packages("newscatcheR")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
+# install.packages("remotes")
+remotes::install_github("discindo/newscatcheR")
+```
+
+Or
+
+``` r
 # install.packages("devtools")
 devtools::install_github("discindo/newscatcheR")
 ```
@@ -41,23 +48,36 @@ devtools::install_github("discindo/newscatcheR")
 
 ``` r
 library(newscatcheR)
+# adding a small time delay to avoid simultaneous posts to the API
+Sys.sleep(3)
 get_news("news.ycombinator.com")
 #> GET request successful. Parsing...
-#> # A tibble: 30 x 9
+#> Warning: Predicate functions must be wrapped in `where()`.
+#> 
+#>   # Bad
+#>   data %>% select(is.character)
+#> 
+#>   # Good
+#>   data %>% select(where(is.character))
+#> 
+#> ℹ Please update your code.
+#> This message is displayed once per session.
+#> # A tibble: 30 x 10
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Medium-ha…
-#>  2 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 CTO of Se…
-#>  3 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 The Sequo…
-#>  4 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Building …
-#>  5 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 My First …
-#>  6 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 UCF resea…
-#>  7 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 I shipped…
-#>  8 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Concurren…
-#>  9 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 Build you…
-#> 10 Hacker Ne… https://… Links for the i… 2020-05-02 18:51:23 History o…
-#> # … with 20 more rows, and 4 more variables: item_link <chr>,
-#> #   item_description <chr>, item_pub_date <dttm>, item_comments <chr>
+#>  1 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 Ask HN: H…
+#>  2 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 SimRefine…
+#>  3 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 Why Is th…
+#>  4 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 Mental We…
+#>  5 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 People tr…
+#>  6 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 First pho…
+#>  7 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 A History…
+#>  8 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 Germany, …
+#>  9 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 Julia as …
+#> 10 Hacker Ne… https://… Links for the i… 2020-06-05 12:26:26 DeepFaceD…
+#> # … with 20 more rows, and 5 more variables: item_link <chr>,
+#> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
+#> #   item_comments <chr>
 ```
 
 `get_headlines(website)` returns just the headlines of the website’s rss
@@ -66,40 +86,40 @@ feed.
 ``` r
 library(newscatcheR)
 # adding a small time delay to avoid simultaneous posts to the API
-Sys.sleep(1) # 
+Sys.sleep(3)  
 get_headlines("news.ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                            feed_entries$item_title
-#> 1                                              Medium-hard SQL interview questions
-#> 2                           CTO of Segment on how to sell a B2B Enterprise product
-#> 3                                                     The Sequoia Guide to Pricing
-#> 4                   Building a real-time patient monitoring system with Go and Vue
-#> 5                                         My First Year as a Freelance AI Engineer
-#> 6              UCF researchers develop groundbreaking new rocket-propulsion system
-#> 7        I shipped a word processor that formatted the hard drive every 1024 saves
-#> 8                                                           Concurrent Hash Tables
-#> 9                                              Build your own WebAssembly Compiler
-#> 10                                                                 History of Logo
-#> 11                     Show HN: Rendering One Million Datapoints with D3 and WebGL
-#> 12                                                                        Pg-Basic
-#> 13     Scientists Waited Two and a Half Years to See Whether Bacteria Can Eat Rock
-#> 14                                                             The Design Squiggle
-#> 15                         Safe Network. Secure P2P app system implemented in Rust
-#> 16                                                 Static Sites with Elasticsearch
-#> 17                                                The power of admitting ignorance
-#> 18                            India orders coronavirus tracing app for all workers
-#> 19                         Witchcraft and Wizardry – RPG game created in Minecraft
-#> 20                       Ubuntu 20.04 LTS’ snap obsession has snapped me off of it
-#> 21 Show HN: DiscoverAli – A weekly newsletter of inexpensive, interesting products
-#> 22                                      What Is a Sustainable Path to Open Access?
-#> 23                                                                    Time on Unix
-#> 24                            Bandcamp is waiving fees today in support of artists
-#> 25    Judge Orders FCC To Hand Over IP Addresses Linked To Net Neutrality Comments
-#> 26                                 Notion encourages busy-work and I’m tired of it
-#> 27         ‘Breathable’ Electronics Pave the Way for More Functional Wearable Tech
-#> 28            Jerry (YC S17) Is Hiring Full Stack Engineers (Toronto, SF Bay Area)
-#> 29                             The World Is Still Producing More Oil Than It Needs
-#> 30        What Happens Next? Covid-19 Futures, Explained with Playable Simulations
+#>                                                           feed_entries$item_title
+#> 1                          Ask HN: How do I reach making $1-1.5k/mo in 13 months?
+#> 2                                                           SimRefinery Recovered
+#> 3                                     Why Is the Human Brain So Efficient? (2018)
+#> 4                                                                   Mental Wealth
+#> 5     People try to do right by each other, no matter the motivation, study finds
+#> 6                                       First photo of HS2 tunnel boring machines
+#> 7                                                      A History of Clojure [pdf]
+#> 8            Germany, France launch Gaia-X platform in bid for ‘tech sovereignty’
+#> 9                                                       Julia as a CLI Calculator
+#> 10      DeepFaceDrawing Generates Photorealistic Portraits from Freehand Sketches
+#> 11      Ask HN: Are my expectations on code quality and professionalism too high?
+#> 12                                            The Go Compiler Needs to Be Smarter
+#> 13                                                Unker Non-Linear Writing System
+#> 14            Signal app downloads spike as US protesters seek message encryption
+#> 15           Synthetic red blood cells mimic natural ones, and have new abilities
+#> 16                                                   The Beauty of Unix Pipelines
+#> 17                                                                  Kids and Time
+#> 18                          555 timer teardown: inside the most popular IC (2016)
+#> 19                                  Currents: Have Meaningful Discussions at Work
+#> 20                                        Words that don't translate into English
+#> 21                                                        Homoiconicity Revisited
+#> 22                                               Containers from first principles
+#> 23 Ask HN: Have you ever gone without a computer or phone for an extended period?
+#> 24                                                    Why Sleep Deprivation Kills
+#> 25                                                        macOS in QEMU in Docker
+#> 26                                                         The Illiac IV Computer
+#> 27                                  Cryo-electron microscopy breaks a key barrier
+#> 28                                                          Emacs as Email Client
+#> 29                        In a photo of a black hole, a possible key to mysteries
+#> 30                         WeChat permabans account for using wrongthink password
 ```
 
 `tld_sources(tld)` returns rows from the provided dataset of news sites
