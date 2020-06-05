@@ -1,3 +1,21 @@
+# version 0.0.2
+
+Updated dependency for tidyRSS >= 2.0.2 which requires dplyr 1.0.0
+
+## Test environments
+* local 5.6.15-arch1-1 linux install, R 4.0.0
+* local windows 10 install, R 4.0.0
+
+## R CMD check results
+There were no ERRORs, WARNINGs or NOTEs. 
+
+## Rhub / Win-builder
+devtools::check_rhub() returned an error about not being able to install on Windows with reference to Rcpp.dll
+devtools::check_win() didn't return any errors.
+
+
+# version 0.0.1
+
 ## Test environments
 * local OS X install, R 3.6.3
 * local 5.6.6-arch1-1 linux install, R 3.6.3
