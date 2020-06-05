@@ -27,6 +27,8 @@ The _newscatcheR_ package provides three simple functions for reading RSS feeds 
 
 The first function `get_news()` returns a tibble of the rss feed of a given site.
 ```{r}
+# adding a small time delay to avoid simultaneous posts to the API
+Sys.sleep(3)
 get_news(website = "news.ycombinator.com")
 ```
 
@@ -36,7 +38,7 @@ The second function `get_headlines` is a helper function that returns a tibble o
 
 ```{r}
 # adding a small time delay to avoid simultaneous posts to the API
-Sys.sleep(1)
+Sys.sleep(3)
 get_headlines(website = "news.ycombinator.com")
 ```
 
