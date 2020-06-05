@@ -26,7 +26,7 @@ hakolhayehudi <- "https://www.hakolhayehudi.co.il/rss/%D7%AA%D7%A8%D7%95%D7%9D_%
 
 rss_table <- rss_table_raw %>%
   mutate(rss_endpoint = if_else(str_detect(rss_endpoint,
-                                           "hakolhayehudi"), hakolhayehudi, rss_endpoint))
+                         "hakolhayehudi"), hakolhayehudi, rss_endpoint))
 
 
 usethis::use_data(rss_table, overwrite = TRUE)
