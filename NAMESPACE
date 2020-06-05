@@ -3,5 +3,5 @@
 export(get_headlines)
 export(get_news)
 export(tld_sources)
-import(tidyRSS)
-import(utils)
+importFrom(tidyRSS,tidyfeed)
+importFrom(utils,globalVariables)
