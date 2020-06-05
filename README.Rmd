@@ -34,6 +34,13 @@ install.packages("newscatcheR")
 
 And the development version from [GitHub](https://github.com/) with:
 
+```r
+# install.packages("remotes")
+remotes::install_github("discindo/newscatcheR")
+```
+
+Or
+
 ``` r
 # install.packages("devtools")
 devtools::install_github("discindo/newscatcheR")
@@ -44,6 +51,8 @@ devtools::install_github("discindo/newscatcheR")
 
 ```{r example1}
 library(newscatcheR)
+# adding a small time delay to avoid simultaneous posts to the API
+Sys.sleep(3)
 get_news("news.ycombinator.com")
 ```
 
@@ -52,7 +61,7 @@ get_news("news.ycombinator.com")
 ```{r example2}
 library(newscatcheR)
 # adding a small time delay to avoid simultaneous posts to the API
-Sys.sleep(1) # 
+Sys.sleep(3)  
 get_headlines("news.ycombinator.com")
 ```
 
