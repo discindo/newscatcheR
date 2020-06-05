@@ -22,7 +22,7 @@ BugReports: https://github.com/discindo/newscatcheR/issues/
 Depends: 
     R (>= 2.10)
 Imports: 
-    tidyRSS,
+    tidyRSS (>= 2.0.2),
     utils
 Suggests: 
     knitr,
