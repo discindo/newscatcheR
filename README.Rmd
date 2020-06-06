@@ -16,6 +16,13 @@ knitr::opts_chunk$set(
 # newscatcheR
 
 <!-- badges: start -->
+
+<!-- badges: start -->
+
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
+[![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+[![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+
 <!-- badges: end -->
 
 Programmatically collect normalized news from (almost) any website using R
