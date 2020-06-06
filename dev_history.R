@@ -10,7 +10,8 @@ usethis::use_r("get_headlines")
 usethis::use_test("get_news")
 usethis::use_test("get_headlines")
 attachment::att_to_description()
-
+devtools::release()
+usethis::use_github_release()
 
 # Prepare raw data for rda.
 
