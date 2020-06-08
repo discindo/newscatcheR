@@ -14,7 +14,7 @@ get_news <- function(website = "news.ycombinator.com") {
 
   # check if argument is character
   if (is.character(website)) {
-    index <- rss_table$url == website
+    index <- rss_table$clean_url == website
   } else {
     stop("'Website' should be character string.")
   }
@@ -25,7 +25,7 @@ get_news <- function(website = "news.ycombinator.com") {
                try to fetch the feed directly with tidyfeed()'.", sep = " "))
   }
 
-  news_source <- rss_table$rss_endpoint[index]
+  news_source <- rss_table$rss_url[index]
   feed_entries <- tidyfeed(news_source) # this fails on some feeds
   return(feed_entries)
 }
