@@ -12,7 +12,7 @@
 #' @examples
 #' Sys.sleep(3) # adding a small time delay to avoid
 #' # simultaneous posts to the API
-#' get_headlines(website = "ycombinator.com")
+#' get_headlines(website = "ycombinator.com", rss_table = package_rss)
 
 get_headlines <- function(website = "ycombinator.com", rss_table = package_rss) {
   feed_entries <- get_news(website, rss_table)

@@ -13,9 +13,9 @@
 #' @examples
 #' Sys.sleep(3) # adding a small time delay to avoid
 #' # simultaneous posts to the API
-#' get_news(website = "ycombinator.com")
+#' get_news(website = "ycombinator.com", rss_table = package_rss)
 
-get_news <- function(website = "ycombinator.com", rss_table = package_rss) {
+get_news <- function(website = "ycombinator.com", rss_table = package_rss, feed = 1) {
 
   # check if argument is character
   if (is.character(website)) {
@@ -30,7 +30,12 @@ get_news <- function(website = "ycombinator.com", rss_table = package_rss) {
                try to fetch the feed directly with tidyfeed()'.", sep = " "))
   }
 
-  news_source <- rss_table$rss_url[index]
-  feed_entries <- tidyfeed(news_source) # this fails on some feeds
+  news_source <- rss_table[rss_table$clean_url == website,]
+
+  if (nrow(news_source) > 1) {
+    news_source <- news_source[news_source$main == feed,]
+  }
+
+  feed_entries <- tidyfeed(news_source$rss_url)
   return(feed_entries)
 }

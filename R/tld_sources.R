@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' tld_sources(tld = "de")
+#' tld_sources(tld = "de", rss_table = package_rss)
 
 tld_sources <- function(tld = NULL, rss_table = package_rss) {
   if (!is.null(tld)) {
