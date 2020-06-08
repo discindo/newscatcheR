@@ -4,10 +4,13 @@
 \alias{get_news}
 \title{Get news}
 \usage{
-get_news(website = "news.ycombinator.com")
+get_news(website = "ycombinator.com", rss_table = package_rss)
 }
 \arguments{
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
+
+\item{rss_table}{a dataframe with urls and rss feeds in case you
+#need to construct your own out of webisites not in the included database.}
 }
 \value{
 a tibble containing the contents of the rss feed
@@ -18,5 +21,5 @@ Get news
 \examples{
 Sys.sleep(3) # adding a small time delay to avoid
 # simultaneous posts to the API
-get_news(website = "news.ycombinator.com")
+get_news(website = "ycombinator.com", rss_table = package_rss)
 }

@@ -5,10 +5,13 @@
 \title{tld_sources
 A helper function to explore news sources by country (or other TLD)}
 \usage{
-tld_sources(tld = NULL)
+tld_sources(tld = NULL, rss_table = package_rss)
 }
 \arguments{
 \item{tld}{a country code top level domain in the format ".de"}
+
+\item{rss_table}{a dataframe with urls and rss feeds in case you
+#need to construct your own out of webisites not in the included database.}
 }
 \value{
 a tibble containing the contents of the rss feed
@@ -18,5 +21,5 @@ tld_sources
 A helper function to explore news sources by country (or other TLD)
 }
 \examples{
-tld_sources(tld = "de")
+tld_sources(tld = "de", rss_table = package_rss)
 }
