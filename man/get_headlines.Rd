@@ -5,10 +5,13 @@
 \title{Get headlines
 A helper function to get just the headlines of the feed}
 \usage{
-get_headlines(website = "news.ycombinator.com")
+get_headlines(website = "ycombinator.com", rss_table = package_rss)
 }
 \arguments{
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
+
+\item{rss_table}{a dataframe with urls and rss feeds in case you
+#need to construct your own out of webisites not in the included database.}
 }
 \value{
 a tibble containing the headlines contained in the feed
@@ -20,5 +23,5 @@ A helper function to get just the headlines of the feed
 \examples{
 Sys.sleep(3) # adding a small time delay to avoid
 # simultaneous posts to the API
-get_headlines(website = "news.ycombinator.com")
+get_headlines(website = "ycombinator.com", rss_table = package_rss)
 }
