@@ -14,4 +14,4 @@
 #'   \item{GlobalRank}{rank of website}
 #' }
 #' @source \url{https://github.com/kotartemiy/newscatcher}
-"rss_table"
+"package_rss"
