@@ -11,6 +11,10 @@ Authors@R:
              family = "Nakov",
              role = "ctb",
              email = "teofiln@gmail.com"),
+      person(given = "Artem",
+             family = "Bugara",
+             role = "ctb",
+             email = "bugara.artem@gmail.com"),
       person(given = "Discindo",
              role = "cph"))
 Description: Programmatically collect normalized news from
