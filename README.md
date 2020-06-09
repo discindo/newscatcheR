@@ -11,6 +11,8 @@
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 ![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
+[![Travis Build
+Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR)
 [![Codecov test
 coverage](https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://codecov.io/gh/discindo/newscatcheR?branch=master)
 
@@ -76,14 +78,14 @@ get_news("news.ycombinator.com")
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
 #>  1 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Build you…
 #>  2 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 GnuTLS: T…
-#>  3 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Container…
+#>  3 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Scaling a…
 #>  4 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Formal Sy…
-#>  5 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Faster th…
-#>  6 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 How to Re…
-#>  7 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Metafont …
+#>  5 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Apple Pla…
+#>  6 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 A Peek In…
+#>  7 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Faster th…
 #>  8 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Pycopy – …
-#>  9 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Potential…
-#> 10 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Text for …
+#>  9 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 How to Re…
+#> 10 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Metafont …
 #> # … with 20 more rows, and 5 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
 #> #   item_comments <chr>
@@ -101,33 +103,33 @@ get_headlines("news.ycombinator.com")
 #>                                                            feed_entries$item_title
 #> 1                                                   Build your own PaaS in minutes
 #> 2       GnuTLS: TLS 1.3 session resumption works without master key, allowing MITM
-#> 3      Container technologies at Coinbase: Why Kubernetes is not part of our stack
+#> 3                                   Scaling and Developer Productivity at Coinbase
 #> 4                                                        Formal Systems in Biology
-#> 5                               Faster than radix sort: Kirkpatrick-Reisch sorting
-#> 6                         How to Reverse-Engineer a Satellite TV Smart Card (2008)
-#> 7                                                                  Metafont (1984)
+#> 5                        Apple Plans to Announce Move to Its Own Mac Chips at WWDC
+#> 6                                         A Peek Inside the Erlang Compiler (2012)
+#> 7                               Faster than radix sort: Kirkpatrick-Reisch sorting
 #> 8                 Pycopy – a minimalist and memory-efficient Python implementation
-#> 9          Potential organized fraud in ACM/IEEE computer architecture conferences
-#> 10                      Text for Proofing Fonts: A Farewell to the Quick Brown Fox
-#> 11               Repetition and Learning – misconceptions about effective studying
-#> 12                      How the Magic: The Gathering Color Wheel Explains Humanity
-#> 13    IBM no longer offers general purpose facial recognition or analysis software
-#> 14         Show HN: A library to add a command promp (and telnet) to your programs
-#> 15                        Coordination Problems: What It Takes to Change the World
-#> 16     Israeli Startups Unique Engine Bringing Power to a Remote Philippine Island
-#> 17 Wuhan hospital traffic, search engine data indicate virus activity in Fall 2019
-#> 18                            Show HN: Watch what files any Linux process accesses
-#> 19                Bill Thurston's answer to “What's a mathematician to do?” (2010)
-#> 20                              The Al Jaffee / Mad Magazine Fold-In Effect in CSS
-#> 21                            Questions Answered by Donald E. Knuth (2001) [video]
-#> 22                                 Rich-markdown-editor: react Dropbox Paper clone
-#> 23                               The “Majority Illusion” in Social Networks (2016)
-#> 24                                                 Formalizing Text Editors in Coq
-#> 25                                               “Pain Is the Only School-Teacher”
-#> 26  Amazon sues former AWS marketing VP Brian Hall after he takes Google Cloud job
-#> 27 Tesorio is hiring Managers and Engineers. Join our distributed engineering team
+#> 9                         How to Reverse-Engineer a Satellite TV Smart Card (2008)
+#> 10                                                                 Metafont (1984)
+#> 11         Potential organized fraud in ACM/IEEE computer architecture conferences
+#> 12                      Text for Proofing Fonts: A Farewell to the Quick Brown Fox
+#> 13     Container technologies at Coinbase: Why Kubernetes is not part of our stack
+#> 14               Repetition and Learning – misconceptions about effective studying
+#> 15    IBM no longer offers general purpose facial recognition or analysis software
+#> 16                      How the Magic: The Gathering Color Wheel Explains Humanity
+#> 17                        Coordination Problems: What It Takes to Change the World
+#> 18         Show HN: A library to add a command promp (and telnet) to your programs
+#> 19                            Show HN: Watch what files any Linux process accesses
+#> 20                Bill Thurston's answer to “What's a mathematician to do?” (2010)
+#> 21                              The Al Jaffee / Mad Magazine Fold-In Effect in CSS
+#> 22                            Questions Answered by Donald E. Knuth (2001) [video]
+#> 23                                 Rich-markdown-editor: react Dropbox Paper clone
+#> 24                               The “Majority Illusion” in Social Networks (2016)
+#> 25     Israeli Startups Unique Engine Bringing Power to a Remote Philippine Island
+#> 26                                               “Pain Is the Only School-Teacher”
+#> 27  Amazon sues former AWS marketing VP Brian Hall after he takes Google Cloud job
 #> 28                     The path toward mastery: How to become an expert in a field
-#> 29                       Apple Plans to Announce Move to Its Own Mac Chips at WWDC
+#> 29 Tesorio is hiring Managers and Engineers. Join our distributed engineering team
 #> 30                                        Transcribed police scanners in real-time
 ```
 
