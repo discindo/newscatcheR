@@ -5,14 +5,11 @@
 
 <!-- badges: start -->
 
-<!-- badges: start -->
-
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![CRAN\_Download\_Badge](http://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 ![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
-[![Travis Build
-Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR)
+<!-- [![Travis Build Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR) -->
 [![Codecov test
 coverage](https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://codecov.io/gh/discindo/newscatcheR?branch=master)
 
@@ -76,16 +73,16 @@ get_news("news.ycombinator.com")
 #> # A tibble: 30 x 10
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Build you…
-#>  2 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 GnuTLS: T…
-#>  3 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Scaling a…
-#>  4 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Formal Sy…
-#>  5 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Apple Pla…
-#>  6 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 A Peek In…
-#>  7 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Faster th…
-#>  8 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Pycopy – …
-#>  9 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 How to Re…
-#> 10 Hacker Ne… https://… Links for the i… 2020-06-09 09:28:48 Metafont …
+#>  1 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 New inlin…
+#>  2 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Haiku R1/…
+#>  3 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Quoteback…
+#>  4 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 How Googl…
+#>  5 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Pharaoh R…
+#>  6 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Thank HN:…
+#>  7 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Playing a…
+#>  8 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Fremont T…
+#>  9 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Show HN: …
+#> 10 Hacker Ne… https://… Links for the i… 2020-06-09 14:10:12 Show HN: …
 #> # … with 20 more rows, and 5 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
 #> #   item_comments <chr>
@@ -101,36 +98,36 @@ Sys.sleep(3)
 get_headlines("news.ycombinator.com")
 #> GET request successful. Parsing...
 #>                                                            feed_entries$item_title
-#> 1                                                   Build your own PaaS in minutes
-#> 2       GnuTLS: TLS 1.3 session resumption works without master key, allowing MITM
-#> 3                                   Scaling and Developer Productivity at Coinbase
-#> 4                                                        Formal Systems in Biology
-#> 5                        Apple Plans to Announce Move to Its Own Mac Chips at WWDC
-#> 6                                         A Peek Inside the Erlang Compiler (2012)
-#> 7                               Faster than radix sort: Kirkpatrick-Reisch sorting
-#> 8                 Pycopy – a minimalist and memory-efficient Python implementation
-#> 9                         How to Reverse-Engineer a Satellite TV Smart Card (2008)
-#> 10                                                                 Metafont (1984)
-#> 11         Potential organized fraud in ACM/IEEE computer architecture conferences
-#> 12                      Text for Proofing Fonts: A Farewell to the Quick Brown Fox
-#> 13     Container technologies at Coinbase: Why Kubernetes is not part of our stack
-#> 14               Repetition and Learning – misconceptions about effective studying
-#> 15    IBM no longer offers general purpose facial recognition or analysis software
-#> 16                      How the Magic: The Gathering Color Wheel Explains Humanity
-#> 17                        Coordination Problems: What It Takes to Change the World
-#> 18         Show HN: A library to add a command promp (and telnet) to your programs
-#> 19                            Show HN: Watch what files any Linux process accesses
-#> 20                Bill Thurston's answer to “What's a mathematician to do?” (2010)
-#> 21                              The Al Jaffee / Mad Magazine Fold-In Effect in CSS
-#> 22                            Questions Answered by Donald E. Knuth (2001) [video]
-#> 23                                 Rich-markdown-editor: react Dropbox Paper clone
-#> 24                               The “Majority Illusion” in Social Networks (2016)
-#> 25     Israeli Startups Unique Engine Bringing Power to a Remote Philippine Island
-#> 26                                               “Pain Is the Only School-Teacher”
-#> 27  Amazon sues former AWS marketing VP Brian Hall after he takes Google Cloud job
-#> 28                     The path toward mastery: How to become an expert in a field
-#> 29 Tesorio is hiring Managers and Engineers. Join our distributed engineering team
-#> 30                                        Transcribed police scanners in real-time
+#> 1                             New inline assembly syntax available in Rust nightly
+#> 2                                                 Haiku R1/beta2 has been released
+#> 3                                                       Quotebacks – Quote the Web
+#> 4                                       How Google Meet's noise cancellation works
+#> 5                                                         Pharaoh Ramesses VI Tomb
+#> 6                       Thank HN: My startup was born here and is now 10 years old
+#> 7                                 Playing around with the Fuchsia operating system
+#> 8  Fremont Tesla workers tested positive for coronavirus days after plant reopened
+#> 9                                                      Show HN: Top, but for Nginx
+#> 10  Show HN: I made an app for large group video calls where people shuffle around
+#> 11                                   Honda's global operations hit by cyber-attack
+#> 12                                                 SGAxe How SGX Fails in Practice
+#> 13              Britain has gone two months without burning coal to generate power
+#> 14                                                  Build your own PaaS in minutes
+#> 15           Receiving images of Earth from satellites with software defined radio
+#> 16                                                            Growing Independence
+#> 17                                                                      Prisma 2.0
+#> 18                              Performance of Modern Java on Data-Heavy Workloads
+#> 19                                                    Learn to read Middle English
+#> 20                                      Microship.com: The Library of Technomadics
+#> 21                        Can Negative Supply Shocks Cause Demand Shortages? [pdf]
+#> 22   Gravity: An embeddable programming language without any external dependencies
+#> 23 Archaeologists have mapped a Roman city using advanced ground penetrating radar
+#> 24                Pycopy – a minimalist and memory-efficient Python implementation
+#> 25                          Ask HN: Which tools made you a much better programmer?
+#> 26                                 Dark Basin Uncovering a Hack-for-Hire Operation
+#> 27                             Why skyscraper architects always return to Art Deco
+#> 28                          Flintstoning your way around hard technical challenges
+#> 29                  Pachyderm is Hiring Golang, Kubernetes DevOps, Field Engineers
+#> 30                                                         Is Sudo Almost Useless?
 ```
 
 `tld_sources(tld)` returns rows from the provided dataset of news sites

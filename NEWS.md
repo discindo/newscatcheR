@@ -1,3 +1,13 @@
+# newcatcheR 0.0.3
+
+* updated database of website
+
+* fixed code to match new database columns
+
+* new functions to get description and topics of URLs
+
+* update documentation
+
 # newcatcheR 0.0.2
 
 * make sure the package imports tidyRSS 2.0.2

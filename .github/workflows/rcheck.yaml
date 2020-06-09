@@ -80,10 +80,12 @@ jobs:
           path: check
 
       - name: Generate coverage report
+        if: matrix.config.os == 'macOS-latest' && matrix.config.r == '4.0'
         run: covr::codecov()
         shell: Rscript {0}
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+        if: matrix.config.os == 'macOS-latest' && matrix.config.r == '4.0'
+        uses: codecov/codecov-action@v1@master
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
