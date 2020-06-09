@@ -1,4 +1,12 @@
-on: [push, pull_request]
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 name: R-CMD-check
 
@@ -86,6 +94,6 @@ jobs:
 
       - name: Upload coverage to Codecov
         if: matrix.config.os == 'macOS-latest' && matrix.config.r == '4.0'
-        uses: codecov/codecov-action@v1@master
+        uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
