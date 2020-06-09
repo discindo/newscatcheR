@@ -4,7 +4,7 @@
 \alias{get_news}
 \title{Get news}
 \usage{
-get_news(website = "ycombinator.com", rss_table = package_rss)
+get_news(website = "ycombinator.com", rss_table = package_rss, feed = 1)
 }
 \arguments{
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
