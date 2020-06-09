@@ -3,7 +3,7 @@ test_that("get_headlines works", {
   Sys.sleep(3)
 
   # Get the news
-  output_headlines <- get_headlines("news.ycombinator.com")
+  output_headlines <- get_headlines("ycombinator.com")
 
   # What's returned
   expect_is(output_headlines, "data.frame")

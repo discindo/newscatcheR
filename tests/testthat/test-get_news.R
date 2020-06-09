@@ -3,7 +3,7 @@ test_that("get_news works", {
   Sys.sleep(3)
 
   # Get the news
-  output_news <- get_news("news.ycombinator.com")
+  output_news <- get_news("ycombinator.com")
 
   # What's returned
   expect_is(output_news, "data.frame")
