@@ -4,13 +4,19 @@
 \alias{get_news}
 \title{Get news}
 \usage{
-get_news(website = "ycombinator.com", rss_table = package_rss, feed = 1)
+get_news(website = "ycombinator.com", rss_table = package_rss, topic = NULL)
 }
 \arguments{
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
 #need to construct your own out of webisites not in the included database.}
+
+\item{topic}{the topic of the feed, by default it is NULL which means it
+#will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
+#'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
+#'music', 'sport', 'world', but not all site have all topics.
+#use `topics("webiste")` to check for available feeds.}
 }
 \value{
 a tibble containing the contents of the rss feed
