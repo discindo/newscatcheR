@@ -74,7 +74,6 @@ Sys.sleep(3)
 get_headlines("ycombinator.com")
 ```
 
-
 `tld_sources(tld)` returns rows from the provided dataset of news sites with the given top level domain
 
 ```{r example3}
