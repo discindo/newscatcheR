@@ -61,7 +61,7 @@ devtools::install_github("discindo/newscatcheR")
 library(newscatcheR)
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
-get_news("news.ycombinator.com")
+get_news("ycombinator.com")
 ```
 
 `get_headlines(website)` returns just the headlines of the website's rss feed.
@@ -70,7 +70,7 @@ get_news("news.ycombinator.com")
 library(newscatcheR)
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)  
-get_headlines("news.ycombinator.com")
+get_headlines("ycombinator.com")
 ```
 
 
