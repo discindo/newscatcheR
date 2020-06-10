@@ -41,7 +41,5 @@ jobs:
         run: R CMD INSTALL .
 
       - name: Deploy package
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
         run: pkgdown::deploy_to_branch(new_process = FALSE)
         shell: Rscript {0}
