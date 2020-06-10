@@ -2,7 +2,7 @@
 title: "newscatcheR"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{newscatheR}
+  %\VignetteIndexEntry{newscatcheR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
