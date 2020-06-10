@@ -81,6 +81,7 @@
 <a href="#newscatcher" class="anchor"></a>newscatcheR</h1></div>
 <!-- badges: start -->
 
+<!-- [![Travis Build Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR) -->
 <!-- badges: end -->
 <p>Programmatically collect normalized news from (almost) any website using R</p>
 <p>newscatcheR is an R clone of the python package <a href="https://github.com/kotartemiy/newscatcher">newscatcher</a>.</p>
@@ -104,7 +105,7 @@
 <div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="reference/get_news.html">get_news</a></span>(<span class="st">"news.ycombinator.com"</span>)
+<span class="fu"><a href="reference/get_news.html">get_news</a></span>(<span class="st">"ycombinator.com"</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
 <span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span>
 <span class="co">#&gt; </span>
@@ -119,16 +120,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Haiku R1/…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Thank HN:…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 New inlin…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 How Googl…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Quoteback…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Pharaoh R…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Vanta (YC…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Playing a…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 SGAxe How…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-06-09 18:23:03 Show HN: …</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Create di…</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 SeL4 is v…</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Writing a…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Stanford …</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Logic.ly …</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Teaching …</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 First U.S…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Welcome t…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 No Recent…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 A ‘Useles…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
@@ -136,55 +137,56 @@
 <div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span>(<span class="st">"news.ycombinator.com"</span>)
+<span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span>(<span class="st">"ycombinator.com"</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                            feed_entries$item_title</span>
-<span class="co">#&gt; 1                                                 Haiku R1/beta2 has been released</span>
-<span class="co">#&gt; 2                       Thank HN: My startup was born here and is now 10 years old</span>
-<span class="co">#&gt; 3                             New inline assembly syntax available in Rust nightly</span>
-<span class="co">#&gt; 4                                       How Google Meet's noise cancellation works</span>
-<span class="co">#&gt; 5                                                       Quotebacks – Quote the Web</span>
-<span class="co">#&gt; 6                                                         Pharaoh Ramesses VI Tomb</span>
-<span class="co">#&gt; 7                   Vanta (YC) is hiring to get SoC 2 prep in as little as 30 days</span>
-<span class="co">#&gt; 8                                 Playing around with the Fuchsia operating system</span>
-<span class="co">#&gt; 9                                                  SGAxe How SGX Fails in Practice</span>
-<span class="co">#&gt; 10  Show HN: I made an app for large group video calls where people shuffle around</span>
-<span class="co">#&gt; 11              Britain has gone two months without burning coal to generate power</span>
-<span class="co">#&gt; 12                                                     Show HN: Top, but for Nginx</span>
-<span class="co">#&gt; 13                                                  Build your own PaaS in minutes</span>
-<span class="co">#&gt; 14                                                            Growing Independence</span>
-<span class="co">#&gt; 15                                   Honda's global operations hit by cyber-attack</span>
-<span class="co">#&gt; 16           Receiving images of Earth from satellites with software defined radio</span>
-<span class="co">#&gt; 17                        Can Negative Supply Shocks Cause Demand Shortages? [pdf]</span>
-<span class="co">#&gt; 18                              Performance of Modern Java on Data-Heavy Workloads</span>
-<span class="co">#&gt; 19                                        Defects are not the fault of programmers</span>
-<span class="co">#&gt; 20                       Prisma 2.0 – Type-safe and auto-generated database client</span>
-<span class="co">#&gt; 21                                      Microship.com: The Library of Technomadics</span>
-<span class="co">#&gt; 22                                                    Learn to read Middle English</span>
-<span class="co">#&gt; 23 Fremont Tesla workers tested positive for coronavirus days after plant reopened</span>
-<span class="co">#&gt; 24                          Ask HN: Which tools made you a much better programmer?</span>
-<span class="co">#&gt; 25                Pycopy – a minimalist and memory-efficient Python implementation</span>
-<span class="co">#&gt; 26   Gravity: An embeddable programming language without any external dependencies</span>
-<span class="co">#&gt; 27 Archaeologists have mapped a Roman city using advanced ground penetrating radar</span>
-<span class="co">#&gt; 28                          Flintstoning your way around hard technical challenges</span>
-<span class="co">#&gt; 29                                 Dark Basin Uncovering a Hack-for-Hire Operation</span>
-<span class="co">#&gt; 30                             Why skyscraper architects always return to Art Deco</span></pre></div>
+<span class="co">#&gt;                                                             feed_entries$item_title</span>
+<span class="co">#&gt; 1                                          Create diagrams using code with Graphviz</span>
+<span class="co">#&gt; 2                                                        SeL4 is verified on RISC-V</span>
+<span class="co">#&gt; 3                      Writing a full-text search engine using Bloom filters (2013)</span>
+<span class="co">#&gt; 4                               Stanford Class on Deep Multi-Task and Meta-Learning</span>
+<span class="co">#&gt; 5  Logic.ly – Digital logic simulator for teaching logic gates and digital circuits</span>
+<span class="co">#&gt; 6                             Teaching my MIT classes with only free/libre software</span>
+<span class="co">#&gt; 7             First U.S. woman to walk in space dives to deepest point in the ocean</span>
+<span class="co">#&gt; 8                Welcome to the 21st Century: How to Plan for the Post-Covid Future</span>
+<span class="co">#&gt; 9                                                   No Recent Automation Revolution</span>
+<span class="co">#&gt; 10                             A ‘Useless’ Perspective That Transformed Mathematics</span>
+<span class="co">#&gt; 11   Scraping Roger Ebert’s reviews and finding his favorite movies on Amazon Prime</span>
+<span class="co">#&gt; 12                   Windows Privacy Dashboard: GUI for Windows 10 Privacy Settings</span>
+<span class="co">#&gt; 13          A tiny static full-text search engine using Rust and WebAssembly (2019)</span>
+<span class="co">#&gt; 14                                                           Test Anything Protocol</span>
+<span class="co">#&gt; 15                                Unsupervised translation of programming languages</span>
+<span class="co">#&gt; 16                                                                 Whistler (Radio)</span>
+<span class="co">#&gt; 17                                   Way to keep your cool running a Raspberry Pi 4</span>
+<span class="co">#&gt; 18   DeepMind introduces ‘EATS’: adversarial, end-to-end approach to text-to-speech</span>
+<span class="co">#&gt; 19   Browse hundreds of jobs at actively hiring YC companies with Work at a Startup</span>
+<span class="co">#&gt; 20                       Snabb: 100 Gbit/s pure software switching using Lua (2019)</span>
+<span class="co">#&gt; 21                                                       Quotebacks – Quote the Web</span>
+<span class="co">#&gt; 22                                          How Birds Evolved From Dinosaurs (2015)</span>
+<span class="co">#&gt; 23                    Large-Scale Transactional Data Lake at Uber Using Apache Hudi</span>
+<span class="co">#&gt; 24                                                          From chaos to free will</span>
+<span class="co">#&gt; 25                        New hints of volcanism under the heart of northern Europe</span>
+<span class="co">#&gt; 26                                                 Haiku R1/beta2 has been released</span>
+<span class="co">#&gt; 27                           Let Game Theory Tell You When It’s Time to Go Shopping</span>
+<span class="co">#&gt; 28          Show HN: XgeneCloud – Instant REST and GraphQL APIs on Any SQL Database</span>
+<span class="co">#&gt; 29                             New inline assembly syntax available in Rust nightly</span>
+<span class="co">#&gt; 30                                 IBM Cloud was down, as well as their status page</span></pre></div>
 <p><code><a href="reference/tld_sources.html">tld_sources(tld)</a></code> returns rows from the provided dataset of news sites with the given top level domain</p>
 <div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
 <span class="fu"><a href="reference/tld_sources.html">tld_sources</a></span>(<span class="st">"it"</span>)
-<span class="co">#&gt; # A tibble: 10 x 2</span>
-<span class="co">#&gt;    url                  rss_endpoint                                      </span>
-<span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;                                             </span>
-<span class="co">#&gt;  1 ansa.it              http://www.ansa.it/web/ansait_web_rss_homepage.xml</span>
-<span class="co">#&gt;  2 thinkandbuild.it     https://www.thinkandbuild.it/feed/                </span>
-<span class="co">#&gt;  3 wasproject.it        http://www.wasproject.it/w/en/blog-2/feed         </span>
-<span class="co">#&gt;  4 corriere.it          http://www.corriere.it/rss/homepage.xml           </span>
-<span class="co">#&gt;  5 gazzetta.it          http://www.gazzetta.it/rss/calcio.xml             </span>
-<span class="co">#&gt;  6 ilfattoquotidiano.it http://www.ilfattoquotidiano.it/feed/             </span>
-<span class="co">#&gt;  7 lastampa.it          http://www.lastampa.it/redazione/rss_home.xml     </span>
-<span class="co">#&gt;  8 punto-informatico.it http://punto-informatico.it/fader/pixml.xml       </span>
-<span class="co">#&gt;  9 repubblica.it        http://www.repubblica.it/rss/homepage/rss2.0.xml  </span>
-<span class="co">#&gt; 10 tgcom.mediaset.it    http://www.tgcom.mediaset.it/rss/cronaca.xml</span></pre></div>
+<span class="co">#&gt; # A tibble: 238 x 7</span>
+<span class="co">#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank</span>
+<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;     </span>
+<span class="co">#&gt;  1 zonalocal… it       news          1     None          http://www.… 620899    </span>
+<span class="co">#&gt;  2 wittgenst… it       news          1     None          http://www.… 321276    </span>
+<span class="co">#&gt;  3 wired.it   it       tech          1     None          http://www.… 10861     </span>
+<span class="co">#&gt;  4 wired.it   it       science       None  None          http://www.… 10861     </span>
+<span class="co">#&gt;  5 wired.it   it       news          None  None          http://www.… 10861     </span>
+<span class="co">#&gt;  6 wired.it   it       economics     None  None          http://www.… 10861     </span>
+<span class="co">#&gt;  7 webtrek.it it       tech          1     None          http://www.… 546151    </span>
+<span class="co">#&gt;  8 vita.it    it       world         None  None          http://www.… 37772     </span>
+<span class="co">#&gt;  9 vita.it    it       politics      None  None          http://www.… 37772     </span>
+<span class="co">#&gt; 10 vita.it    it       news          1     None          http://www.… 37772     </span>
+<span class="co">#&gt; # … with 228 more rows</span></pre></div>
 </div>
 <div id="use-case" class="section level2">
 <h2 class="hasAnchor">
