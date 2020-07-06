@@ -128,7 +128,7 @@ A helper function to get just the headlines of the feed</h1>
 A helper function to get just the headlines of the feed</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_headlines</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,7 +151,7 @@ A helper function to get just the headlines of the feed</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
 <span class='co'># simultaneous posts to the API</span>
-<span class='fu'>get_headlines</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
+<span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
 #&gt; <span class='warning'></span>
 #&gt; <span class='warning'>  # Bad</span>
 #&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
@@ -160,37 +160,37 @@ A helper function to get just the headlines of the feed</p>
 #&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
 #&gt; <span class='warning'></span>
 #&gt; <span class='warning'><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                             feed_entries$item_title
-#&gt; 1                                          Create diagrams using code with Graphviz
-#&gt; 2                                                        SeL4 is verified on RISC-V
-#&gt; 3                      Writing a full-text search engine using Bloom filters (2013)
-#&gt; 4                               Stanford Class on Deep Multi-Task and Meta-Learning
-#&gt; 5  Logic.ly – Digital logic simulator for teaching logic gates and digital circuits
-#&gt; 6                             Teaching my MIT classes with only free/libre software
-#&gt; 7             First U.S. woman to walk in space dives to deepest point in the ocean
-#&gt; 8                Welcome to the 21st Century: How to Plan for the Post-Covid Future
-#&gt; 9                                                   No Recent Automation Revolution
-#&gt; 10                             A ‘Useless’ Perspective That Transformed Mathematics
-#&gt; 11   Scraping Roger Ebert’s reviews and finding his favorite movies on Amazon Prime
-#&gt; 12                   Windows Privacy Dashboard: GUI for Windows 10 Privacy Settings
-#&gt; 13          A tiny static full-text search engine using Rust and WebAssembly (2019)
-#&gt; 14                                                           Test Anything Protocol
-#&gt; 15                                Unsupervised translation of programming languages
-#&gt; 16                                                                 Whistler (Radio)
-#&gt; 17                                   Way to keep your cool running a Raspberry Pi 4
-#&gt; 18   DeepMind introduces ‘EATS’: adversarial, end-to-end approach to text-to-speech
-#&gt; 19   Browse hundreds of jobs at actively hiring YC companies with Work at a Startup
-#&gt; 20                       Snabb: 100 Gbit/s pure software switching using Lua (2019)
-#&gt; 21                                                       Quotebacks – Quote the Web
-#&gt; 22                                          How Birds Evolved From Dinosaurs (2015)
-#&gt; 23                    Large-Scale Transactional Data Lake at Uber Using Apache Hudi
-#&gt; 24                                                          From chaos to free will
-#&gt; 25                        New hints of volcanism under the heart of northern Europe
-#&gt; 26                                                 Haiku R1/beta2 has been released
-#&gt; 27                           Let Game Theory Tell You When It’s Time to Go Shopping
-#&gt; 28          Show HN: XgeneCloud – Instant REST and GraphQL APIs on Any SQL Database
-#&gt; 29                             New inline assembly syntax available in Rust nightly
-#&gt; 30                                 IBM Cloud was down, as well as their status page</div></span></pre>
+#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                           feed_entries$item_title
+#&gt; 1                                  1:60 scale Boeing 777 made from manila folders
+#&gt; 2                                              Decision for 2020-21 Academic Year
+#&gt; 3                     Playstation's secret weapon: a nearly all-automated factory
+#&gt; 4                                              H.266/Versatile Video Coding (VVC)
+#&gt; 5         Berkshire Hathaway buys Dominion Energy natural gas assets in $10B deal
+#&gt; 6                                  My dad got scammed for $3k worth of gift cards
+#&gt; 7                                                 The Fed now owns Walmart's debt
+#&gt; 8                                 Fujitsu announces permanent work-from-home plan
+#&gt; 9                                                     Code only says what it does
+#&gt; 10                                         JazzKeys: Type to improvise Jazz music
+#&gt; 11                                 I made a macro keypad with 3D-printed switches
+#&gt; 12              Around 293 intermediate CAs in violation of CA/Browser guidelines
+#&gt; 13                                     EDEX-UI: science fiction terminal emulator
+#&gt; 14            Brython – A Python 3 implementation for client-side web programming
+#&gt; 15       From the gig economy to the creator economy to the participatory economy
+#&gt; 16                                               Dopamine is not addictive (2017)
+#&gt; 17  Dutch national broadcaster saw ad revenue rise when it stopped tracking users
+#&gt; 18                  Using Babel transforms to inject analytics code at build time
+#&gt; 19                  Giant flywheel project in Scotland could prevent UK blackouts
+#&gt; 20                           Building a CT Scan Covid-19 Classifier Using PyTorch
+#&gt; 21  Mini-LED, Micro-LED and OLED displays: present status and future perspectives
+#&gt; 22                                  Limitations and pitfalls of the job interview
+#&gt; 23                                   Everything I Know: Buckminster Fuller (1975)
+#&gt; 24                                A crash course in just-in-time compilers (2017)
+#&gt; 25 M60 – Open-Source USB&amp;BLE, Hot-Swappable Mechanical Keyboard Powered by Python
+#&gt; 26                             QTile – An XMonad-like tiling WM written in Python
+#&gt; 27                                 The magnetic universe begins to come into view
+#&gt; 28                                                 I Got My Attention Back (2017)
+#&gt; 29                                                           Bullshit Jobs (2018)
+#&gt; 30                                                            At the Type Archive</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

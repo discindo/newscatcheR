@@ -90,19 +90,26 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of newscatcheR from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"newscatcheR"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"newscatcheR"</span>)
+</pre></div>
 <p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"discindo/newscatcheR"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="co"># install.packages("remotes")</span>
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"discindo/newscatcheR"</span>)
+</pre></div>
 <p>Or</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"discindo/newscatcheR"</span>)</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="co"># install.packages("devtools")</span>
+<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"discindo/newscatcheR"</span>)
+</pre></div>
 </div>
 <div id="overview" class="section level2">
 <h2 class="hasAnchor">
 <a href="#overview" class="anchor"></a>Overview</h2>
 <p><code><a href="reference/get_news.html">get_news(website)</a></code> returns the contents of a rss feed of a website.</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
 <span class="fu"><a href="reference/get_news.html">get_news</a></span>(<span class="st">"ycombinator.com"</span>)
@@ -132,11 +139,13 @@
 <span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 A ‘Useles…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
+<span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
+</pre></div>
 <p><code><a href="reference/get_headlines.html">get_headlines(website)</a></code> returns just the headlines of the website’s rss feed.</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)  
 <span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span>(<span class="st">"ycombinator.com"</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
 <span class="co">#&gt;                                                             feed_entries$item_title</span>
@@ -169,9 +178,11 @@
 <span class="co">#&gt; 27                           Let Game Theory Tell You When It’s Time to Go Shopping</span>
 <span class="co">#&gt; 28          Show HN: XgeneCloud – Instant REST and GraphQL APIs on Any SQL Database</span>
 <span class="co">#&gt; 29                             New inline assembly syntax available in Rust nightly</span>
-<span class="co">#&gt; 30                                 IBM Cloud was down, as well as their status page</span></pre></div>
+<span class="co">#&gt; 30                                 IBM Cloud was down, as well as their status page</span>
+</pre></div>
 <p><code><a href="reference/tld_sources.html">tld_sources(tld)</a></code> returns rows from the provided dataset of news sites with the given top level domain</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
 <span class="fu"><a href="reference/tld_sources.html">tld_sources</a></span>(<span class="st">"it"</span>)
 <span class="co">#&gt; # A tibble: 238 x 7</span>
 <span class="co">#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank</span>
@@ -186,17 +197,22 @@
 <span class="co">#&gt;  8 vita.it    it       world         None  None          http://www.… 37772     </span>
 <span class="co">#&gt;  9 vita.it    it       politics      None  None          http://www.… 37772     </span>
 <span class="co">#&gt; 10 vita.it    it       news          1     None          http://www.… 37772     </span>
-<span class="co">#&gt; # … with 228 more rows</span></pre></div>
+<span class="co">#&gt; # … with 228 more rows</span>
+</pre></div>
 </div>
 <div id="use-case" class="section level2">
 <h2 class="hasAnchor">
 <a href="#use-case" class="anchor"></a>Use Case</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="no">sites</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)</pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="kw">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)
+</pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">newscatcheR</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="no">sites</span>, <span class="no">get_news</span>)</pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
+<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="kw">sites</span>, <span class="kw">get_news</span>)
+</pre></div>
 </div>
 </div>
   </div>
