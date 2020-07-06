@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get headlines
-A helper function to get just the headlines of the feed — get_headlines • newscatcheR</title>
+<title>Describe URL — describe_url • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ A helper function to get just the headlines of the feed — get_headlines • ne
 
 
 
-<meta property="og:title" content="Get headlines
-A helper function to get just the headlines of the feed — get_headlines" />
-<meta property="og:description" content="Get headlines
-A helper function to get just the headlines of the feed" />
+<meta property="og:title" content="Describe URL — describe_url" />
+<meta property="og:description" content="Describe URL" />
 
 
 
@@ -117,18 +114,16 @@ A helper function to get just the headlines of the feed" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get headlines
-A helper function to get just the headlines of the feed</h1>
-    <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/get_headlines.R'><code>R/get_headlines.R</code></a></small>
-    <div class="hidden name"><code>get_headlines.Rd</code></div>
+    <h1>Describe URL</h1>
+    <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/describe_url.R'><code>R/describe_url.R</code></a></small>
+    <div class="hidden name"><code>describe_url.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get headlines
-A helper function to get just the headlines of the feed</p>
+    <p>Describe URL</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/describe_url.html'>describe_url</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,51 +141,10 @@ A helper function to get just the headlines of the feed</p>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a tibble containing the headlines contained in the feed</p>
+    <p>A character vector with topics.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
-<span class='co'># simultaneous posts to the API</span>
-<span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Bad</span>
-#&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Good</span>
-#&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                           feed_entries$item_title
-#&gt; 1                                  1:60 scale Boeing 777 made from manila folders
-#&gt; 2                                              Decision for 2020-21 Academic Year
-#&gt; 3                     Playstation's secret weapon: a nearly all-automated factory
-#&gt; 4                                              H.266/Versatile Video Coding (VVC)
-#&gt; 5                                          JazzKeys: Type to improvise Jazz music
-#&gt; 6         Berkshire Hathaway buys Dominion Energy natural gas assets in $10B deal
-#&gt; 7                                 Fujitsu announces permanent work-from-home plan
-#&gt; 8                                  My dad got scammed for $3k worth of gift cards
-#&gt; 9                                                     Code only says what it does
-#&gt; 10                                 I made a macro keypad with 3D-printed switches
-#&gt; 11              Around 293 intermediate CAs in violation of CA/Browser guidelines
-#&gt; 12                                     EDEX-UI: science fiction terminal emulator
-#&gt; 13                                                The Fed now owns Walmart's debt
-#&gt; 14            Brython – A Python 3 implementation for client-side web programming
-#&gt; 15       From the gig economy to the creator economy to the participatory economy
-#&gt; 16                                               Dopamine is not addictive (2017)
-#&gt; 17  Dutch national broadcaster saw ad revenue rise when it stopped tracking users
-#&gt; 18                   A startup is testing a subscription model for search engines
-#&gt; 19                  Using Babel transforms to inject analytics code at build time
-#&gt; 20                  Giant flywheel project in Scotland could prevent UK blackouts
-#&gt; 21                           Building a CT Scan Covid-19 Classifier Using PyTorch
-#&gt; 22                                   Everything I Know: Buckminster Fuller (1975)
-#&gt; 23  Mini-LED, Micro-LED and OLED displays: present status and future perspectives
-#&gt; 24                                  Limitations and pitfalls of the job interview
-#&gt; 25                   San Francisco most intensely gentrified city in new rankings
-#&gt; 26                                A crash course in just-in-time compilers (2017)
-#&gt; 27                             QTile – An XMonad-like tiling WM written in Python
-#&gt; 28 M60 – Open-Source USB&amp;BLE, Hot-Swappable Mechanical Keyboard Powered by Python
-#&gt; 29                                                 I Got My Attention Back (2017)
-#&gt; 30                                 The magnetic universe begins to come into view</div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/describe_url.html'>describe_url</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>Topics available for website ycombinator.com are: tech</span></div><div class='output co'>#&gt; [1] "tech"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
