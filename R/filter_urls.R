@@ -9,7 +9,7 @@
 #' @param rss_table a dataframe with urls and rss feeds in case you
 #' #need to construct your own out of webisites not in the included database.
 #'
-#' @return
+#' @return a tibble filtered according to the given parameters
 #' @export
 #'
 #' @examples
