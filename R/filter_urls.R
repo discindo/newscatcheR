@@ -13,6 +13,18 @@
 #' @examples
 filter_urls <- function(topic = NULL, country = NULL, language = NULL, rss_table = package_rss) {
 
-  filtered <- subset(rss_table, subset=!(topic == NULL | country == NULL | language == NULL))
+  if (!is.null(topic)) {
+    rss_table <- rss_table[rss_table$topic_unified == topic,]
+  }
+
+  if (!is.null(country)) {
+    rss_table <- rss_table[rss_table$clean_country == country,]
+  }
+
+  if (!is.null(language)) {
+    rss_table <- rss_table[rss_table$language == language,]
+  }
+
+  return(rss_table)
 
 }
