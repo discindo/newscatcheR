@@ -22,18 +22,7 @@
 
 get_news <- function(website = "ycombinator.com", rss_table = package_rss, topic = NULL) {
 
-  # check if argument is character
-  if (is.character(website)) {
-    index <- rss_table$clean_url == website
-  } else {
-    stop("'Website' should be character string.")
-  }
-
-  if (!any(index)) {
-    stop(paste("Can't find website:", website, "in our database.
-               Please check if this is a valid website name, or
-               try to fetch the feed directly with tidyfeed()'.", sep = " "))
-  }
+  check_url(website, rss_table)
 
   news_source <- rss_table[rss_table$clean_url == website,]
 

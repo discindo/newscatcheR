@@ -12,22 +12,11 @@
 
 describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
 
-  # check if argument is character
-  if (is.character(website)) {
-    index <- rss_table$clean_url == website
-  } else {
-    stop("'Website' should be character string.")
-  }
-
-  if (!any(index)) {
-    stop(paste("Can't find website:", website, "in our database.
-               Please check if this is a valid website name, or
-               try to fetch the feed directly with tidyfeed()'.", sep = " "))
-  }
+  check_url(website, rss_table)
 
   news_source <- rss_table[rss_table$clean_url == website,]
 
-  news_source <- as.character(news_source$topic_unified)
+  news_source <- news_source$topic_unified
   message(paste(
     "Topics available for website",
     website,
@@ -35,5 +24,4 @@ describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
     paste0(news_source, collapse = ", ")
   ))
 
-  return(news_source)
 }
