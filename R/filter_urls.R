@@ -16,16 +16,50 @@
 #' filter_urls(topic = "tech", country = "US", language =)
 filter_urls <- function(topic = NULL, country = NULL, language = NULL, rss_table = package_rss) {
 
-  if (!is.null(topic)) {
+  if (!is.character(topic)) {
+    stop("'topic' should be character string.")
+  } else if (!any(show_topics() == topic) && !is.null(topic)) {
+    stop(
+      paste(
+        "Can't find topic:",
+        topic,
+        "in our database. See available topic with `show_topics()`.",
+        sep = " "
+      )
+    )
+  } else {
     rss_table <- rss_table[rss_table$topic_unified == topic,]
   }
 
-  if (!is.null(country)) {
+  if (!is.character(country)) {
+    stop("'country' should be character string.")
+  } else if (!any(show_countries() == country) && !is.null(country)) {
+    stop(
+      paste(
+        "Can't find country:",
+        country,
+        "in our database. See available countries with `show_countries()`.",
+        sep = " "
+      )
+    )
+  } else {
     rss_table <- rss_table[rss_table$clean_country == country,]
   }
 
-  if (!is.null(language)) {
-    rss_table <- rss_table[rss_table$language == language,]
+
+  if (!is.character(language)) {
+    stop("'language' should be character string.")
+  } else if (!any(show_languages() == language) && !is.null(language)) {
+    stop(
+      paste(
+        "Can't find language:",
+        language,
+        "in our database. See availale languages with `show_languages()`.",
+        sep = " "
+      )
+    )
+  } else {
+    rss_table <- rss_table[rss_table$clean_country == country,]
   }
 
   return(rss_table)
