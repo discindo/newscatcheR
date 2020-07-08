@@ -17,11 +17,11 @@ describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
   news_source <- rss_table[rss_table$clean_url == website,]
 
   news_source <- news_source$topic_unified
-  message(paste(
-    "Topics available for website",
+  message(paste0(
+    "Topics available for website ",
     website,
-    "are:",
-    paste0(news_source, collapse = ", ")
+    "are: ",
+    paste0(news_source, collapse = ", "), "."
   ))
 
 }
