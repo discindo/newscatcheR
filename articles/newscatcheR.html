@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">newscatcheR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -109,16 +109,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 1:60 scal…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 Decision …</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 Playstati…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 H.266/Ver…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 JazzKeys:…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 Berkshire…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 Fujitsu a…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 My dad go…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 Code only…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-06 16:57:42 I made a …</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Linux Min…</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 CUDA 11.0 </span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Show HN: …</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Flutter f…</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 SUSE to A…</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Podcast S…</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 EasyOCR: …</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 A graphic…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Polynesia…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-08 17:07:17 Tauri – t…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
@@ -133,59 +133,37 @@
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
 <span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span>(website = <span class="st">"ycombinator.com"</span>, rss_table = <span class="kw">package_rss</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                           feed_entries$item_title</span>
-<span class="co">#&gt; 1                                  1:60 scale Boeing 777 made from manila folders</span>
-<span class="co">#&gt; 2                                              Decision for 2020-21 Academic Year</span>
-<span class="co">#&gt; 3                     Playstation's secret weapon: a nearly all-automated factory</span>
-<span class="co">#&gt; 4                                              H.266/Versatile Video Coding (VVC)</span>
-<span class="co">#&gt; 5                                          JazzKeys: Type to improvise Jazz music</span>
-<span class="co">#&gt; 6         Berkshire Hathaway buys Dominion Energy natural gas assets in $10B deal</span>
-<span class="co">#&gt; 7                                 Fujitsu announces permanent work-from-home plan</span>
-<span class="co">#&gt; 8                                  My dad got scammed for $3k worth of gift cards</span>
-<span class="co">#&gt; 9                                                     Code only says what it does</span>
-<span class="co">#&gt; 10                                 I made a macro keypad with 3D-printed switches</span>
-<span class="co">#&gt; 11              Around 293 intermediate CAs in violation of CA/Browser guidelines</span>
-<span class="co">#&gt; 12                                     EDEX-UI: science fiction terminal emulator</span>
-<span class="co">#&gt; 13                                                The Fed now owns Walmart's debt</span>
-<span class="co">#&gt; 14            Brython – A Python 3 implementation for client-side web programming</span>
-<span class="co">#&gt; 15       From the gig economy to the creator economy to the participatory economy</span>
-<span class="co">#&gt; 16                                               Dopamine is not addictive (2017)</span>
-<span class="co">#&gt; 17  Dutch national broadcaster saw ad revenue rise when it stopped tracking users</span>
-<span class="co">#&gt; 18                   A startup is testing a subscription model for search engines</span>
-<span class="co">#&gt; 19                  Using Babel transforms to inject analytics code at build time</span>
-<span class="co">#&gt; 20                  Giant flywheel project in Scotland could prevent UK blackouts</span>
-<span class="co">#&gt; 21                           Building a CT Scan Covid-19 Classifier Using PyTorch</span>
-<span class="co">#&gt; 22                                   Everything I Know: Buckminster Fuller (1975)</span>
-<span class="co">#&gt; 23  Mini-LED, Micro-LED and OLED displays: present status and future perspectives</span>
-<span class="co">#&gt; 24                                  Limitations and pitfalls of the job interview</span>
-<span class="co">#&gt; 25                   San Francisco most intensely gentrified city in new rankings</span>
-<span class="co">#&gt; 26                                A crash course in just-in-time compilers (2017)</span>
-<span class="co">#&gt; 27                             QTile – An XMonad-like tiling WM written in Python</span>
-<span class="co">#&gt; 28 M60 – Open-Source USB&amp;BLE, Hot-Swappable Mechanical Keyboard Powered by Python</span>
-<span class="co">#&gt; 29                                                 I Got My Attention Back (2017)</span>
-<span class="co">#&gt; 30                                 The magnetic universe begins to come into view</span>
-</pre></div>
-</div>
-<div id="tld_sources" class="section level3">
-<h3 class="hasAnchor">
-<a href="#tld_sources" class="anchor"></a>tld_sources()</h3>
-<p>The function <code>tld_sources</code> is a helper function for browsing news sites by top level domains. It’s useful to see which news sites from a country are present in the database.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/tld_sources.html">tld_sources</a></span>(<span class="st">"de"</span>)
-<span class="co">#&gt; # A tibble: 207 x 7</span>
-<span class="co">#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 zdf.de     de       news          1     DE            https://www… 1953      </span>
-<span class="co">#&gt;  2 wz.de      de       news          1     DE            https://www… 30055     </span>
-<span class="co">#&gt;  3 wiwo.de    de       tech          None  DE            http://blog… 4444      </span>
-<span class="co">#&gt;  4 wiwo.de    de       sport         None  DE            http://blog… 4444      </span>
-<span class="co">#&gt;  5 wiwo.de    de       economics     1     DE            http://www.… 4444      </span>
-<span class="co">#&gt;  6 winfuture… de       tech          1     None          http://www.… 9035      </span>
-<span class="co">#&gt;  7 windowsun… de       tech          1     None          http://wind… 159018    </span>
-<span class="co">#&gt;  8 weser-kur… de       sport         None  None          http://www.… 16388     </span>
-<span class="co">#&gt;  9 weser-kur… de       news          1     None          http://www.… 16388     </span>
-<span class="co">#&gt; 10 werra-run… de       news          1     None          http://www.… 489168    </span>
-<span class="co">#&gt; # … with 197 more rows</span>
+<span class="co">#&gt;                                                            feed_entries$item_title</span>
+<span class="co">#&gt; 1                                            Linux Mint drops Ubuntu Snap packages</span>
+<span class="co">#&gt; 2                                                                        CUDA 11.0</span>
+<span class="co">#&gt; 3                                          Show HN: Runnaroo – A new search engine</span>
+<span class="co">#&gt; 4                                                                Flutter for Linux</span>
+<span class="co">#&gt; 5                                                     SUSE to Acquire Rancher Labs</span>
+<span class="co">#&gt; 6                                                                    Podcast Stats</span>
+<span class="co">#&gt; 7                                      EasyOCR: Ready-to-use OCR with 40 languages</span>
+<span class="co">#&gt; 8                  A graphical analysis of women's tops sold on Goodwill's website</span>
+<span class="co">#&gt; 9               Polynesian DNA Suggests Epic Voyage to South America 800 Years Ago</span>
+<span class="co">#&gt; 10       Tauri – toolchain for building secure native apps that have tiny binaries</span>
+<span class="co">#&gt; 11                                                             Concorde ‘B’ (2014)</span>
+<span class="co">#&gt; 12                                          Browser Font Rendering Inconsistencies</span>
+<span class="co">#&gt; 13  ReadMe (YC W15) is hiring a React engineer for our Slate-based markdown editor</span>
+<span class="co">#&gt; 14 Tell HN: Google drops blogspot.in, breaking hundreds of thousands of permalinks</span>
+<span class="co">#&gt; 15                   Improving performance with SIMD intrinsics in three use cases</span>
+<span class="co">#&gt; 16                                                      Show HN: Watchmespendmoney</span>
+<span class="co">#&gt; 17                                                             Software 2.0 (2017)</span>
+<span class="co">#&gt; 18                                                      Firefox Picture-in-Picture</span>
+<span class="co">#&gt; 19                How Developers Stop Learning: Rise of the Expert Beginner (2012)</span>
+<span class="co">#&gt; 20                                   The stable marriage problem and modern dating</span>
+<span class="co">#&gt; 21  Launch HN: ElectroNeek (YC W20) – Automatically find and automate routine work</span>
+<span class="co">#&gt; 22        Git commit accepts several message flags (-m) to allow multiline commits</span>
+<span class="co">#&gt; 23                                             Work on Unimportant Problems (2012)</span>
+<span class="co">#&gt; 24                              Foreign data wrappers: PostgreSQL's secret weapon?</span>
+<span class="co">#&gt; 25                  Investing in Robotics with YC Founder Trevor Blackwell [video]</span>
+<span class="co">#&gt; 26                                             Barebones WebGL in 75 lines of code</span>
+<span class="co">#&gt; 27                             You could have invented fractional cascading (2012)</span>
+<span class="co">#&gt; 28                 Ariane RISC-V CPU – An open source CPU capable of booting Linux</span>
+<span class="co">#&gt; 29                                     Live Reloading for a Production Next.js App</span>
+<span class="co">#&gt; 30   VCs Promised to Help Black Founders – My Experience Shows a Different Reality</span>
 </pre></div>
 </div>
 </div>
@@ -194,70 +172,12 @@
 <a href="#use-case" class="anchor"></a>Use case</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
+<div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="kw">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)
 </pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
+<div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="kw">sites</span>, <span class="kw">get_news</span>)
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; [[1]]</span>
-<span class="co">#&gt; # A tibble: 10 x 10</span>
-<span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 BBC Future https://… The technology,… 2020-07-06 01:00:00 Why tides…</span>
-<span class="co">#&gt;  2 BBC Future https://… The technology,… 2020-07-06 01:00:00 The world…</span>
-<span class="co">#&gt;  3 BBC Future https://… The technology,… 2020-07-06 01:00:00 The mater…</span>
-<span class="co">#&gt;  4 BBC Future https://… The technology,… 2020-07-06 01:00:00 Should we…</span>
-<span class="co">#&gt;  5 BBC Future https://… The technology,… 2020-07-06 01:00:00 Why we sh…</span>
-<span class="co">#&gt;  6 BBC Future https://… The technology,… 2020-07-06 01:00:00 The most …</span>
-<span class="co">#&gt;  7 BBC Future https://… The technology,… 2020-07-06 01:00:00 The WW2 t…</span>
-<span class="co">#&gt;  8 BBC Future https://… The technology,… 2020-07-06 01:00:00 Why a sin…</span>
-<span class="co">#&gt;  9 BBC Future https://… The technology,… 2020-07-06 01:00:00 Which Cov…</span>
-<span class="co">#&gt; 10 BBC Future https://… The technology,… 2020-07-06 01:00:00 The windi…</span>
-<span class="co">#&gt; # … with 5 more variables: item_link &lt;chr&gt;, item_description &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_pub_date &lt;dttm&gt;, item_guid &lt;chr&gt;, item_category &lt;list&gt;</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; [[2]]</span>
-<span class="co">#&gt; # A tibble: 30 x 13</span>
-<span class="co">#&gt;    feed_title feed_link feed_description feed_language feed_pub_date      </span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;         &lt;dttm&gt;             </span>
-<span class="co">#&gt;  1 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  2 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  3 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  4 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  5 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  6 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  7 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  8 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt;  9 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt; 10 DER SPIEG… https://… Deutschlands fü… de            2020-07-06 22:16:17</span>
-<span class="co">#&gt; # … with 20 more rows, and 8 more variables: feed_last_build_date &lt;dttm&gt;,</span>
-<span class="co">#&gt; #   feed_category &lt;chr&gt;, item_title &lt;chr&gt;, item_link &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_guid &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_category &lt;chr&gt;</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; [[3]]</span>
-<span class="co">#&gt; # A tibble: 90 x 11</span>
-<span class="co">#&gt;    feed_title feed_link feed_description feed_language feed_pub_date      </span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;         &lt;dttm&gt;             </span>
-<span class="co">#&gt;  1 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  2 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  3 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  4 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  5 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  6 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  7 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  8 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt;  9 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt; 10 Washingto… http://w… Breaking news a… en-US         2020-07-06 12:26:00</span>
-<span class="co">#&gt; # … with 80 more rows, and 6 more variables: item_title &lt;chr&gt;, item_link &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_guid &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_category &lt;list&gt;</span>
 </pre></div>
 </div>
   </div>

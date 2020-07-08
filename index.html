@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">newscatcheR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -127,16 +127,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Create di…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 SeL4 is v…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Writing a…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Stanford …</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Logic.ly …</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Teaching …</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 First U.S…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 Welcome t…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 No Recent…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-06-10 09:03:49 A ‘Useles…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Searchabl…</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Show HN: …</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Caffenol:…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Dune: The…</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google Co…</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Keeping y…</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Classifyi…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 The Slack…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Nokia to …</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google of…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
@@ -148,42 +148,42 @@
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)  
 <span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span>(<span class="st">"ycombinator.com"</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                             feed_entries$item_title</span>
-<span class="co">#&gt; 1                                          Create diagrams using code with Graphviz</span>
-<span class="co">#&gt; 2                                                        SeL4 is verified on RISC-V</span>
-<span class="co">#&gt; 3                      Writing a full-text search engine using Bloom filters (2013)</span>
-<span class="co">#&gt; 4                               Stanford Class on Deep Multi-Task and Meta-Learning</span>
-<span class="co">#&gt; 5  Logic.ly – Digital logic simulator for teaching logic gates and digital circuits</span>
-<span class="co">#&gt; 6                             Teaching my MIT classes with only free/libre software</span>
-<span class="co">#&gt; 7             First U.S. woman to walk in space dives to deepest point in the ocean</span>
-<span class="co">#&gt; 8                Welcome to the 21st Century: How to Plan for the Post-Covid Future</span>
-<span class="co">#&gt; 9                                                   No Recent Automation Revolution</span>
-<span class="co">#&gt; 10                             A ‘Useless’ Perspective That Transformed Mathematics</span>
-<span class="co">#&gt; 11   Scraping Roger Ebert’s reviews and finding his favorite movies on Amazon Prime</span>
-<span class="co">#&gt; 12                   Windows Privacy Dashboard: GUI for Windows 10 Privacy Settings</span>
-<span class="co">#&gt; 13          A tiny static full-text search engine using Rust and WebAssembly (2019)</span>
-<span class="co">#&gt; 14                                                           Test Anything Protocol</span>
-<span class="co">#&gt; 15                                Unsupervised translation of programming languages</span>
-<span class="co">#&gt; 16                                                                 Whistler (Radio)</span>
-<span class="co">#&gt; 17                                   Way to keep your cool running a Raspberry Pi 4</span>
-<span class="co">#&gt; 18   DeepMind introduces ‘EATS’: adversarial, end-to-end approach to text-to-speech</span>
-<span class="co">#&gt; 19   Browse hundreds of jobs at actively hiring YC companies with Work at a Startup</span>
-<span class="co">#&gt; 20                       Snabb: 100 Gbit/s pure software switching using Lua (2019)</span>
-<span class="co">#&gt; 21                                                       Quotebacks – Quote the Web</span>
-<span class="co">#&gt; 22                                          How Birds Evolved From Dinosaurs (2015)</span>
-<span class="co">#&gt; 23                    Large-Scale Transactional Data Lake at Uber Using Apache Hudi</span>
-<span class="co">#&gt; 24                                                          From chaos to free will</span>
-<span class="co">#&gt; 25                        New hints of volcanism under the heart of northern Europe</span>
-<span class="co">#&gt; 26                                                 Haiku R1/beta2 has been released</span>
-<span class="co">#&gt; 27                           Let Game Theory Tell You When It’s Time to Go Shopping</span>
-<span class="co">#&gt; 28          Show HN: XgeneCloud – Instant REST and GraphQL APIs on Any SQL Database</span>
-<span class="co">#&gt; 29                             New inline assembly syntax available in Rust nightly</span>
-<span class="co">#&gt; 30                                 IBM Cloud was down, as well as their status page</span>
+<span class="co">#&gt;                                                           feed_entries$item_title</span>
+<span class="co">#&gt; 1                                                        Searchable PPP Loan Data</span>
+<span class="co">#&gt; 2                            Show HN: SheetUI – Turn Google Sheets into Web Pages</span>
+<span class="co">#&gt; 3                   Caffenol: Developing Photos with Coffee and Vitamin C [video]</span>
+<span class="co">#&gt; 4                        Dune: The Battle for Arrakis – Extended Reference (2003)</span>
+<span class="co">#&gt; 5                                                  Google Common Lisp style guide</span>
+<span class="co">#&gt; 6                                              Keeping your Go modules compatible</span>
+<span class="co">#&gt; 7                                  Classifying 200k articles in 7 hours using NLP</span>
+<span class="co">#&gt; 8                                                        The Slack Social Network</span>
+<span class="co">#&gt; 9                           Nokia to add open interfaces to its telecom equipment</span>
+<span class="co">#&gt; 10                         Google offers free fabbing for 130nm open-source chips</span>
+<span class="co">#&gt; 11                                                          Stock and Flow (2010)</span>
+<span class="co">#&gt; 12 Show HN: I built a desktop radiation monitor with Raspberry Pi, brass and wood</span>
+<span class="co">#&gt; 13                                         Turn your phone into a wireless webcam</span>
+<span class="co">#&gt; 14                          YouTube deleted an electronics repair channel [video]</span>
+<span class="co">#&gt; 15  Show HN: Reclaim – an adaptive calendar app that plans time for your routines</span>
+<span class="co">#&gt; 16                           A terrible, horrible, no-good, very bad day at Slack</span>
+<span class="co">#&gt; 17                      Coconut: Simple, elegant, Pythonic functional programming</span>
+<span class="co">#&gt; 18  Work at a Startup: Find thousands of engineering roles at active YC companies</span>
+<span class="co">#&gt; 19                                            Whole Earth Software Catalog (1984)</span>
+<span class="co">#&gt; 20                                      Robot Disinfects Greater Boston Food Bank</span>
+<span class="co">#&gt; 21           New Compute Engine A2 VMs–First Nvidia Ampere A100 GPUs in the Cloud</span>
+<span class="co">#&gt; 22   Kosher search engine powered by 4 car batteries on a passively cooled server</span>
+<span class="co">#&gt; 23           The Ayn Rand Institute Takes a Loan from Paycheck Protection Program</span>
+<span class="co">#&gt; 24                          Mike Pompeo Said the US Is Considering Banning TikTok</span>
+<span class="co">#&gt; 25                            Only 9% of visitors give GDPR consent to be tracked</span>
+<span class="co">#&gt; 26            Ask HN: What makes a good technical leader – any recommended books?</span>
+<span class="co">#&gt; 27                                 Disk Spilling in a Vectorized Execution Engine</span>
+<span class="co">#&gt; 28                                                 Algorithms Are Now Commodities</span>
+<span class="co">#&gt; 29                                           Building Domain Driven Microservices</span>
+<span class="co">#&gt; 30                                            Dark patterns in GDPR consent boxes</span>
 </pre></div>
-<p><code><a href="reference/tld_sources.html">tld_sources(tld)</a></code> returns rows from the provided dataset of news sites with the given top level domain</p>
+<p><code>tld_sources(tld)</code> returns rows from the provided dataset of news sites with the given top level domain</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
-<span class="fu"><a href="reference/tld_sources.html">tld_sources</a></span>(<span class="st">"it"</span>)
+<span class="fu">tld_sources</span>(<span class="st">"it"</span>)
 <span class="co">#&gt; # A tibble: 238 x 7</span>
 <span class="co">#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;     </span>
@@ -249,8 +249,8 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://cran.r-project.org/package=newscatcheR"><img src="https://www.r-pkg.org/badges/version/newscatcheR" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="http://cranlogs.r-pkg.org/badges/newscatcheR" alt="CRAN_Download_Badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="http://cranlogs.r-pkg.org/badges/grand-total/newscatcheR" alt="CRAN_Download_Badge"></a></li>
+<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="https://cranlogs.r-pkg.org/badges/newscatcheR" alt="CRAN_Download_Badge"></a></li>
+<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR" alt="CRAN_Download_Badge"></a></li>
 <li><a href="https://codecov.io/gh/discindo/newscatcheR?branch=master"><img src="https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
