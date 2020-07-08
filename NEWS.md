@@ -1,12 +1,16 @@
-# newcatcheR 0.0.3
+# newcatcheR 0.1.0
 
-* updated database of website
+* this update catches up to the changes made in the python package
+
+* updated database of websites and rss feeds
 
 * fixed code to match new database columns
 
 * new functions to get description and topics of URLs
 
-* update documentation
+* removed `tld_sources()`, `filter_urls()` is a replacement
+
+* updated documentation
 
 # newcatcheR 0.0.2
 

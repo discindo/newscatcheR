@@ -5,7 +5,6 @@
 #' @param rss_table a dataframe with urls and rss feeds in case you
 #' #need to construct your own out of webisites not in the included database.
 #'
-#' @return
 #' @export
 #'
 #' @examples

@@ -1,5 +1,5 @@
 #' Filter URLs
-#' FIlter URLS in the provided database.
+#' Filter URLS in the provided database.
 #'
 #' @param topic the topic of the feed see `show_topics()` for more.
 #' @param country the country of origin of the feed using two capital
@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' filter_urls(topic = "tech", country = "US", language =)
+#' filter_urls(topic = "tech", country = "US", language = "en")
 filter_urls <- function(topic = NULL, country = NULL, language = NULL, rss_table = package_rss) {
 
   if (!is.character(topic)) {

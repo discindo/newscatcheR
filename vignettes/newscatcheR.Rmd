@@ -42,14 +42,6 @@ Sys.sleep(3)
 get_headlines(website = "ycombinator.com", rss_table = package_rss)
 ```
 
-### tld_sources()
-
-The function `tld_sources` is a helper function for browsing news sites by top level domains. It's useful to see which news sites from a country are present in the database. 
-
-```{r}
-tld_sources("de")
-```
-
 ## Use case
 
 This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
