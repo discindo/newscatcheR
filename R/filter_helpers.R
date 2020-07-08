@@ -10,8 +10,6 @@
 #'
 #' @return a character vector of available topics
 #' @export
-#'
-#' @examples
 
 show_topics <- function(rss_table = package_rss) {
   return(unique(rss_table$topic_unified))
@@ -30,8 +28,7 @@ show_topics <- function(rss_table = package_rss) {
 #'
 #' @return a character vector of available countries
 #' @export
-#'
-#' @examples
+
 
 show_countries <- function(rss_table = package_rss) {
   return(unique(rss_table$clean_country))
@@ -49,8 +46,6 @@ show_countries <- function(rss_table = package_rss) {
 #'
 #' @return a character vector of available languages
 #' @export
-#'
-#' @examples
 
 show_languages <- function(rss_table = package_rss) {
   return(unique(rss_table$language))
