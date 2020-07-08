@@ -19,8 +19,14 @@ tld_sources <- function(tld = NULL, rss_table = package_rss) {
     rss_table <- rss_table[index, ]
   }
   if (is.data.frame(rss_table) && nrow(rss_table) == 0) {
-    stop(paste("Can't find the TLD", tld, "in our database.
-               Please check if this is a valid TLD.", sep = " "))
+    stop(
+      paste(
+        "Can't find the TLD",
+        tld,
+        "in our database. Please check if this is a valid TLD.",
+        sep = " "
+      )
+    )
   } else {
     return(rss_table) }
 

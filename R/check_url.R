@@ -21,8 +21,13 @@ check_url <- function(website = "ycombinator.com", rss_table = package_rss) {
   }
 
   if (!any(index)) {
-    stop(paste("Can't find website:", website, "in our database.
-               Please check if this is a valid website name, or
-               try to fetch the feed directly with tydyrss::tidyfeed()'.", sep = " "))
+    stop(
+      paste(
+        "Can't find website:",
+        website,
+        "in our database. Please check if this is a valid website name, or try to fetch the feed directly with tydyrss::tidyfeed()'.",
+        sep = " "
+      )
+    )
   }
 }
