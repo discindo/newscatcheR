@@ -33,7 +33,7 @@ get_news <- function(website = "ycombinator.com", rss_table = package_rss, topic
       paste(
         "Website:",
         website,
-        "does not have a feed for the specified topic. Use `topics(\"webiste\")` to check for available feeds.",
+        "does not have a feed for the specified topic. Use `describe_url(\"webiste\")` to check for available topics.",
         sep = " "
       )
     )
