@@ -13,8 +13,6 @@
 [![Codecov test
 coverage](https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://codecov.io/gh/discindo/newscatcheR?branch=master)
 
-<!-- [![Travis Build Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR) -->
-
 <!-- badges: end -->
 
 Programmatically collect normalized news from (almost) any website using
@@ -23,11 +21,14 @@ R
 newscatcheR is an R clone of the python package
 [newscatcher](https://github.com/kotartemiy/newscatcher).
 
-The package provides a dataset of news sites and their rss feeds, and
-two functions that work as a wrapper around
-[tidyRSS](https://github.com/RobertMyles/tidyRSS) to fetch the feed from
-a given site. It also provides a function to check the dataset for news
-sources per top level domain.
+The package provides a dataset of news sites and their rss feeds,
+together with some characteristics of the websites such as the topic,
+country or language of the website.
+
+Two functions that work as a wrapper around
+[tidyRSS](https://github.com/RobertMyles/tidyRSS) can be used to fetch
+the feed from a given website. Two additional functions can be used to
+conveniently browse the websites dataset.
 
 ## Installation
 
@@ -75,16 +76,16 @@ get_news("ycombinator.com")
 #> # A tibble: 30 x 10
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Searchabl…
-#>  2 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Show HN: …
-#>  3 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Caffenol:…
-#>  4 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Dune: The…
-#>  5 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google Co…
-#>  6 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Keeping y…
-#>  7 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Classifyi…
-#>  8 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 The Slack…
-#>  9 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Nokia to …
-#> 10 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google of…
+#>  1 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How much …
+#>  2 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Refined H…
+#>  3 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Split any…
+#>  4 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 CRDTs: Th…
+#>  5 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How to Un…
+#>  6 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Scientist…
+#>  7 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
+#>  8 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Testing F…
+#>  9 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
+#> 10 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 A Doctor …
 #> # … with 20 more rows, and 5 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
 #> #   item_comments <chr>
@@ -99,59 +100,59 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                           feed_entries$item_title
-#> 1                                                        Searchable PPP Loan Data
-#> 2                            Show HN: SheetUI – Turn Google Sheets into Web Pages
-#> 3                   Caffenol: Developing Photos with Coffee and Vitamin C [video]
-#> 4                        Dune: The Battle for Arrakis – Extended Reference (2003)
-#> 5                                                  Google Common Lisp style guide
-#> 6                                              Keeping your Go modules compatible
-#> 7                                  Classifying 200k articles in 7 hours using NLP
-#> 8                                                        The Slack Social Network
-#> 9                           Nokia to add open interfaces to its telecom equipment
-#> 10                         Google offers free fabbing for 130nm open-source chips
-#> 11                                                          Stock and Flow (2010)
-#> 12 Show HN: I built a desktop radiation monitor with Raspberry Pi, brass and wood
-#> 13                                         Turn your phone into a wireless webcam
-#> 14                          YouTube deleted an electronics repair channel [video]
-#> 15  Show HN: Reclaim – an adaptive calendar app that plans time for your routines
-#> 16                           A terrible, horrible, no-good, very bad day at Slack
-#> 17                      Coconut: Simple, elegant, Pythonic functional programming
-#> 18  Work at a Startup: Find thousands of engineering roles at active YC companies
-#> 19                                            Whole Earth Software Catalog (1984)
-#> 20                                      Robot Disinfects Greater Boston Food Bank
-#> 21           New Compute Engine A2 VMs–First Nvidia Ampere A100 GPUs in the Cloud
-#> 22   Kosher search engine powered by 4 car batteries on a passively cooled server
-#> 23           The Ayn Rand Institute Takes a Loan from Paycheck Protection Program
-#> 24                          Mike Pompeo Said the US Is Considering Banning TikTok
-#> 25                            Only 9% of visitors give GDPR consent to be tracked
-#> 26            Ask HN: What makes a good technical leader – any recommended books?
-#> 27                                 Disk Spilling in a Vectorized Execution Engine
-#> 28                                                 Algorithms Are Now Commodities
-#> 29                                           Building Domain Driven Microservices
-#> 30                                            Dark patterns in GDPR consent boxes
+#>                                                            feed_entries$item_title
+#> 1                                 How much your computer can do in a second (2015)
+#> 2                                                              Refined Hacker News
+#> 3        Split any song into its stems – vocals, instrumentals, bass, drums, piano
+#> 4                                                            CRDTs: The Hard Parts
+#> 5                                                         How to Understand Things
+#> 6                Scientists say you can cancel the noise but keep your window open
+#> 7  Show HN: Trail Router – generate running routes that prefer greenery and nature
+#> 8                           Testing Firefox More Efficiently with Machine Learning
+#> 9    Show HN: An extension that removes upvote and comment counts from Hacker News
+#> 10             A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)
+#> 11                                        AES67 (Audio over IP protocol) resources
+#> 12                                    Tracking Pico Balloons Using Ham Radio [pdf]
+#> 13           Favorite Problems: A Practical Framework for Discovering Your Purpose
+#> 14                                           Scanimage: Scan from the Command Line
+#> 15                                                    Soup.io Will Be Discontinued
+#> 16                                                 Virtual Wind Instruments (2018)
+#> 17                    Ask HN: What's the worst piece of software you use everyday?
+#> 18                                                          The Case for Causal AI
+#> 19   A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of
+#> 20                                               Why are toys such a bad business?
+#> 21                                            Decentralized Reinforcement Learning
+#> 22                                            Migrating Away from Google Analytics
+#> 23                         Modes, Medians and Means: A Unifying Perspective (2013)
+#> 24                          Global Decision-Making via Local Economic Transactions
+#> 25                                2000-year-old Iron Age skeleton discovered in UK
+#> 26                                     Eigenquestions: The Art of Framing Problems
+#> 27                Show HN: Form-validation.js – JavaScript form validation library
+#> 28                                                            Oura Ring 2 Teardown
+#> 29                                               Linux kernel in-tree Rust support
+#> 30                Should I buy an Intel Mac today or wait to buy an Arm-based Mac?
 ```
 
-`tld_sources(tld)` returns rows from the provided dataset of news sites
-with the given top level domain
+`describe_url(website)` returns the topics of a given web site.
 
 ``` r
-library(newscatcheR)
-tld_sources("it")
-#> # A tibble: 238 x 7
-#>    clean_url  language topic_unified main  clean_country rss_url      GlobalRank
-#>    <chr>      <chr>    <chr>         <chr> <chr>         <chr>        <chr>     
-#>  1 zonalocal… it       news          1     None          http://www.… 620899    
-#>  2 wittgenst… it       news          1     None          http://www.… 321276    
-#>  3 wired.it   it       tech          1     None          http://www.… 10861     
-#>  4 wired.it   it       science       None  None          http://www.… 10861     
-#>  5 wired.it   it       news          None  None          http://www.… 10861     
-#>  6 wired.it   it       economics     None  None          http://www.… 10861     
-#>  7 webtrek.it it       tech          1     None          http://www.… 546151    
-#>  8 vita.it    it       world         None  None          http://www.… 37772     
-#>  9 vita.it    it       politics      None  None          http://www.… 37772     
-#> 10 vita.it    it       news          1     None          http://www.… 37772     
-#> # … with 228 more rows
+describe_url("bbc.com")
+#> Topics available for website bbc.comare: travel, science, news, business.
+```
+
+`filter_urls(topic, country, language )` can be used to browse the
+dataset by topic, country or language.
+
+``` r
+filter_urls(topic = "tech", country = "IT", language = "it")
+#> # A tibble: 5 x 7
+#>   clean_url  language topic_unified main  clean_country rss_url       GlobalRank
+#>   <chr>      <chr>    <chr>         <chr> <chr>         <chr>         <chr>     
+#> 1 repubblic… it       tech          None  IT            http://www.r… 1086      
+#> 2 lastampa.… it       tech          None  IT            http://www.l… 2413      
+#> 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      
+#> 4 corriere.… it       tech          None  IT            http://www.c… 1328      
+#> 5 ansa.it    it       tech          None  IT            http://www.a… 2248
 ```
 
 ## Use Case
