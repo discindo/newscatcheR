@@ -22,7 +22,7 @@ filter_urls(
 #lowercase letters, for example "en". See `show_languages()` for more.}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.}
+#need to construct your own out of websites not in the included database.}
 }
 \value{
 a tibble filtered according to the given parameters
