@@ -7,7 +7,6 @@
 #' #Be sure to have the same format as the included data. See `R/package_rss.R`
 #' #for details.
 #'
-#' @export
 #'
 #' @examples
 #' check_url(website = "ycombinator.com", rss_table = package_rss)
