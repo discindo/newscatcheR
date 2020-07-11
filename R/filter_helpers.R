@@ -9,7 +9,6 @@
 #' #need to construct your own out of websites not in the included database.
 #'
 #' @return a character vector of available topics
-#' @export
 
 show_topics <- function(rss_table = package_rss) {
   return(unique(rss_table$topic_unified))
@@ -24,8 +23,6 @@ show_topics <- function(rss_table = package_rss) {
 #' #need to construct your own out of websites not in the included database.
 #'
 #' @return a character vector of available countries
-#' @export
-
 
 show_countries <- function(rss_table = package_rss) {
   return(unique(rss_table$clean_country))
@@ -39,7 +36,6 @@ show_countries <- function(rss_table = package_rss) {
 #' #need to construct your own out of websites not in the included database.
 #'
 #' @return a character vector of available languages
-#' @export
 
 show_languages <- function(rss_table = package_rss) {
   return(unique(rss_table$language))
