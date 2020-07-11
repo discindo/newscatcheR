@@ -4,6 +4,6 @@ test_that("describe_url returns a message with topic", {
   output_describe <- describe_url("ycombinator.com")
 
   # What's returned
-  expect_type(output_headlines, "character")
+  expect_type(output_describe, "character")
 
 })
