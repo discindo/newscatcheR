@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Filter URLs
-Filter URLS in the provided database. — filter_urls • newscatcheR</title>
+<title>Filter URLS in the provided database. — filter_urls • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ Filter URLS in the provided database. — filter_urls • newscatcheR</title>
 
 
 
-<meta property="og:title" content="Filter URLs
-Filter URLS in the provided database. — filter_urls" />
-<meta property="og:description" content="Filter URLs
-Filter URLS in the provided database." />
+<meta property="og:title" content="Filter URLS in the provided database. — filter_urls" />
+<meta property="og:description" content="Filter URLS in the provided database." />
 
 
 
@@ -117,15 +114,13 @@ Filter URLS in the provided database." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Filter URLs
-Filter URLS in the provided database.</h1>
+    <h1>Filter URLS in the provided database.</h1>
     <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/filter_urls.R'><code>R/filter_urls.R</code></a></small>
     <div class="hidden name"><code>filter_urls.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Filter URLs
-Filter URLS in the provided database.</p>
+    <p>Filter URLS in the provided database.</p>
     </div>
 
     <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(
@@ -145,17 +140,17 @@ Filter URLS in the provided database.</p>
     <tr>
       <th>country</th>
       <td><p>the country of origin of the feed using two capital
-#letters, for example "US". See `show_countries()` for more.</p></td>
+letters, for example "US". See `show_countries()` for more.</p></td>
     </tr>
     <tr>
       <th>language</th>
       <td><p>the language of the content of the feed using two
-#lowercase letters, for example "en". See `show_languages()` for more.</p></td>
+lowercase letters, for example "en". See `show_languages()` for more.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of websites not in the included database.</p></td>
+need to construct your own out of websites not in the included database.</p></td>
     </tr>
     </table>
 
@@ -164,20 +159,20 @@ Filter URLS in the provided database.</p>
     <p>a tibble filtered according to the given parameters</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(topic = <span class='st'>"tech"</span>, country = <span class='st'>"US"</span>, language = <span class='st'>"en"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 4,505 x 7</span><span>
-#&gt;    clean_url   language topic_unified main  clean_country rss_url     GlobalRank
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
-#&gt; </span><span style='color: #555555;'> 1</span><span> zougla.gr   el       news          1     None          http://www… 47774     
-#&gt; </span><span style='color: #555555;'> 2</span><span> zonalocale… it       news          1     None          http://www… 620899    
-#&gt; </span><span style='color: #555555;'> 3</span><span> zol.com.cn  zh       tech          1     None          http://rss… 1044      
-#&gt; </span><span style='color: #555555;'> 4</span><span> zocalopubl… en       news          1     None          http://www… 47058     
-#&gt; </span><span style='color: #555555;'> 5</span><span> znak.com    ru       news          1     None          http://zna… 15873     
-#&gt; </span><span style='color: #555555;'> 6</span><span> zlinsky.de… cs       news          1     None          http://zli… None      
-#&gt; </span><span style='color: #555555;'> 7</span><span> zive.cz     cs       tech          1     None          http://www… 40049     
-#&gt; </span><span style='color: #555555;'> 8</span><span> ziuaconsta… ro       news          1     None          http://www… 177155    
-#&gt; </span><span style='color: #555555;'> 9</span><span> ziare.com   ro       news          1     None          http://www… 33454     
-#&gt; </span><span style='color: #555555;'>10</span><span> zi-de-zi.ro ro       news          1     None          http://www… 476255    
-#&gt; </span><span style='color: #555555;'># … with 4,495 more rows</span><span></div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(topic = <span class='st'>"tech"</span>, country = <span class='st'>"US"</span>, language = <span class='st'>"en"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 29 x 7</span><span>
+#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
+#&gt; </span><span style='color: #555555;'> 1</span><span> ycombinat… en       tech          1     US            https://new… 1157      
+#&gt; </span><span style='color: #555555;'> 2</span><span> wsj.com    en       tech          None  US            http://blog… 83        
+#&gt; </span><span style='color: #555555;'> 3</span><span> wired.com  en       tech          1     US            http://feed… 146       
+#&gt; </span><span style='color: #555555;'> 4</span><span> washingto… en       tech          None  US            http://feed… 86        
+#&gt; </span><span style='color: #555555;'> 5</span><span> usatoday.… en       tech          None  US            http://cont… 135       
+#&gt; </span><span style='color: #555555;'> 6</span><span> theverge.… en       tech          1     US            http://www.… 225       
+#&gt; </span><span style='color: #555555;'> 7</span><span> thenextwe… en       tech          None  US            http://then… 596       
+#&gt; </span><span style='color: #555555;'> 8</span><span> thehill.c… en       tech          None  US            http://theh… 666       
+#&gt; </span><span style='color: #555555;'> 9</span><span> techradar… en       tech          1     US            http://www.… 715       
+#&gt; </span><span style='color: #555555;'>10</span><span> reuters.c… en       tech          None  US            http://feed… 81        
+#&gt; </span><span style='color: #555555;'># … with 19 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
