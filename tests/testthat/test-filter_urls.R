@@ -4,31 +4,31 @@ test_that("filter_urls filters the feeds dataset", {
   output_filter <- filter_urls(topic = "tech")
 
   # What's returned
-  expect_is(output_filter, "data.frame")
+  expect_s3_class(output_filter, "data.frame")
 
   # Filter country
   output_filter <- filter_urls(country = "US")
 
   # What's returned
-  expect_is(output_filter, "data.frame")
+  expect_s3_class(output_filter, "data.frame")
 
   # Filter languge
   output_filter <- filter_urls(language = "en")
 
   # What's returned
-  expect_is(output_filter, "data.frame")
+  expect_s3_class(output_filter, "data.frame")
 
   # Works with two arguments
   output_filter <- filter_urls(topic = "tech", country = "US")
 
   # What's returned
-  expect_is(output_filter, "data.frame")
+  expect_s3_class(output_filter, "data.frame")
 
   # Works with three arguments
   output_filter <- filter_urls(topic = "tech", country = "US", language = "en")
 
   # What's returned
-  expect_is(output_filter, "data.frame")
+  expect_s3_class(output_filter, "data.frame")
 
   # And check the errors
   expect_error(output_filter = filter_urls(topic = "mytopic"))
