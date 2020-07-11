@@ -23,7 +23,8 @@ newscatcheR is an R clone of the python package
 
 The package provides a dataset of news sites and their rss feeds,
 together with some characteristics of the websites such as the topic,
-country or language of the website.
+country or language of the website, and few functions explore and access
+the feeds from `R`.
 
 Two functions that work as a wrapper around
 [tidyRSS](https://github.com/RobertMyles/tidyRSS) can be used to fetch
@@ -77,15 +78,15 @@ get_news("ycombinator.com")
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
 #>  1 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How much …
-#>  2 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Refined H…
-#>  3 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Split any…
-#>  4 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 CRDTs: Th…
-#>  5 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How to Un…
-#>  6 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Scientist…
+#>  2 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 CRDTs: Th…
+#>  3 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How to Un…
+#>  4 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Scientist…
+#>  5 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
+#>  6 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Testing F…
 #>  7 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
-#>  8 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Testing F…
-#>  9 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
-#> 10 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 A Doctor …
+#>  8 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 A Doctor …
+#>  9 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 AES67 (Au…
+#> 10 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Tracking …
 #> # … with 20 more rows, and 5 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
 #> #   item_comments <chr>
@@ -100,37 +101,37 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                            feed_entries$item_title
-#> 1                                 How much your computer can do in a second (2015)
-#> 2                                                              Refined Hacker News
-#> 3        Split any song into its stems – vocals, instrumentals, bass, drums, piano
-#> 4                                                            CRDTs: The Hard Parts
-#> 5                                                         How to Understand Things
-#> 6                Scientists say you can cancel the noise but keep your window open
-#> 7  Show HN: Trail Router – generate running routes that prefer greenery and nature
-#> 8                           Testing Firefox More Efficiently with Machine Learning
-#> 9    Show HN: An extension that removes upvote and comment counts from Hacker News
-#> 10             A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)
-#> 11                                        AES67 (Audio over IP protocol) resources
-#> 12                                    Tracking Pico Balloons Using Ham Radio [pdf]
-#> 13           Favorite Problems: A Practical Framework for Discovering Your Purpose
-#> 14                                           Scanimage: Scan from the Command Line
-#> 15                                                    Soup.io Will Be Discontinued
-#> 16                                                 Virtual Wind Instruments (2018)
-#> 17                    Ask HN: What's the worst piece of software you use everyday?
-#> 18                                                          The Case for Causal AI
-#> 19   A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of
-#> 20                                               Why are toys such a bad business?
-#> 21                                            Decentralized Reinforcement Learning
-#> 22                                            Migrating Away from Google Analytics
-#> 23                         Modes, Medians and Means: A Unifying Perspective (2013)
-#> 24                          Global Decision-Making via Local Economic Transactions
-#> 25                                2000-year-old Iron Age skeleton discovered in UK
-#> 26                                     Eigenquestions: The Art of Framing Problems
-#> 27                Show HN: Form-validation.js – JavaScript form validation library
-#> 28                                                            Oura Ring 2 Teardown
-#> 29                                               Linux kernel in-tree Rust support
-#> 30                Should I buy an Intel Mac today or wait to buy an Arm-based Mac?
+#>                                                             feed_entries$item_title
+#> 1                                  How much your computer can do in a second (2015)
+#> 2                                                     CRDTs: The Hard Parts [video]
+#> 3                                                          How to Understand Things
+#> 4                 Scientists say you can cancel the noise but keep your window open
+#> 5   Show HN: Trail Router – generate running routes that prefer greenery and nature
+#> 6                            Testing Firefox More Efficiently with Machine Learning
+#> 7     Show HN: An extension that removes upvote and comment counts from Hacker News
+#> 8               A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)
+#> 9                                          AES67 (Audio over IP protocol) resources
+#> 10                                     Tracking Pico Balloons Using Ham Radio [pdf]
+#> 11 CDC director: Keeping schools closed greater health threat to children reopening
+#> 12            Favorite Problems: A Practical Framework for Discovering Your Purpose
+#> 13                                                              Refined Hacker News
+#> 14                                            Scanimage: Scan from the Command Line
+#> 15                                                     Soup.io Will Be Discontinued
+#> 16                     Ask HN: What's the worst piece of software you use everyday?
+#> 17                                                  Virtual Wind Instruments (2018)
+#> 18                                                           The Case for Causal AI
+#> 19                                                          Beware of Being “Right”
+#> 20    A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of
+#> 21                                                Why are toys such a bad business?
+#> 22                                             Decentralized Reinforcement Learning
+#> 23                          Modes, Medians and Means: A Unifying Perspective (2013)
+#> 24                                             Migrating Away from Google Analytics
+#> 25                           Global Decision-Making via Local Economic Transactions
+#> 26                                 2000-year-old Iron Age skeleton discovered in UK
+#> 27                                      Eigenquestions: The Art of Framing Problems
+#> 28                 Show HN: Form-validation.js – JavaScript form validation library
+#> 29                                                             Oura Ring 2 Teardown
+#> 30                                                Linux kernel in-tree Rust support
 ```
 
 `describe_url(website)` returns the topics of a given web site.
