@@ -19,20 +19,28 @@ filter_urls <- function(topic = NULL, country = NULL, language = NULL, rss_table
   if (!is.null(topic)) {
     stopifnot("'topic' should be character string." = is.character(topic))
     rss_table <- rss_table[rss_table$topic_unified == topic, ]
-    stopifnot("Can't find topic the requested topic in our database. See available topics with `show_topics()`." = {nrow(rss_table) > 0})
+    if (nrow(rss_table) == 0) {
+      message("Can't find the requested topic in our database. Choose some of the available topics: ",
+              paste0(show_topics(), collapse = ", "), ".")
+      }
   }
 
   if (!is.null(country)) {
     stopifnot("'country' should be character string." = is.character(country))
     rss_table <- rss_table[rss_table$clean_country == country, ]
-    stopifnot("Can't find country the requested country in our database. See available countries with `show_countries()`." = {nrow(rss_table) > 0})
+    if (nrow(rss_table) == 0) {
+      message("Can't find the requested country in our database. Choose some of the available countries: ",
+              paste0(show_countries(), collapse = ", "), ".")
+      }
   }
 
   if (!is.null(language)) {
     stopifnot("'language' should be character string." = is.character(language))
     rss_table <- rss_table[rss_table$language == language, ]
-    stopifnot(
-      "Can't find the requested language in our database. See available countries with `show_languages()`." = {nrow(rss_table) > 0 })
+    if (nrow(rss_table) == 0) {
+      message("Can't find the requested language in our database. Choose some of the available languages: ",
+              paste0(show_language(), collapse = ", "), ".")
+      }
   }
   return(rss_table)
 }
