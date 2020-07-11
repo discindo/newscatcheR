@@ -9,7 +9,9 @@ show_countries(rss_table = package_rss)
 }
 \arguments{
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-#need to construct your own out of websites not in the included database.}
+#need to construct your own out of websites not in the included database.
+#Be sure to have the same format as the included data. See `R/package_rss.R`
+#for details.}
 }
 \value{
 a character vector of available countries

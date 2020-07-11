@@ -4,6 +4,8 @@
 #' @param website a url of a new source in the format "news.ycombinator.com"
 #' @param rss_table a dataframe with urls and rss feeds in case you
 #' #need to construct your own out of webisites not in the included database.
+#' #Be sure to have the same format as the included data. See `R/package_rss.R`
+#' #for details.
 #'
 #' @return a tibble containing the headlines contained in the feed
 #'

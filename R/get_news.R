@@ -3,11 +3,13 @@
 #' @param website a url of a new source in the format "news.ycombinator.com"
 #' @param rss_table a dataframe with urls and rss feeds in case you
 #' #need to construct your own out of webisites not in the included database.
+#' #Be sure to have the same format as the included data. See `R/package_rss.R`
+#' #for details.
 #' @param topic the topic of the feed, by default it is NULL which means it
 #' #will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 #' #'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 #' #'music', 'sport', 'world', but not all site have all topics.
-#' #use `topics("webiste")` to check for available feeds.
+#' #use `describe_url("webiste")` to check for available feeds.
 #'
 #' @return a tibble containing the contents of the rss feed
 #'
