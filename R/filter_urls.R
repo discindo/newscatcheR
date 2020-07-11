@@ -1,13 +1,12 @@
-#' Filter URLs
-#' Filter URLS in the provided database.
+#' Search for URLs in the provided database based on topic, country and language
 #'
-#' @param topic the topic of the feed see `show_topics()` for more.
+#' @param topic the topic of the feed see `show_topics()` for more info.
 #' @param country the country of origin of the feed using two capital
-#' #letters, for example "US". See `show_countries()` for more.
+#' letters, for example "US". See `show_countries()` for more info.
 #' @param language the language of the content of the feed using two
-#' #lowercase letters, for example "en". See `show_languages()` for more.
+#' lowercase letters, for example "en". See `show_languages()` for more info.
 #' @param rss_table a dataframe with urls and rss feeds in case you
-#' #need to construct your own out of websites not in the included database.
+#' need to construct your own out of websites not in the included database.
 #'
 #' @return a tibble filtered according to the given parameters
 #' @export
@@ -78,5 +77,5 @@ filter_urls <-
       }
     }
 
-    return(rss_table)
+    return(work_table)
   }
