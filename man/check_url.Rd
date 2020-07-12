@@ -19,6 +19,3 @@ check_url(website = "ycombinator.com", rss_table = package_rss)
 Check URL
 A helper function to verify user input before fetching the feed.
 }
-\examples{
-check_url(website = "ycombinator.com", rss_table = package_rss)
-}

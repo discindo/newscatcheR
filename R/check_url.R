@@ -8,8 +8,6 @@
 #' #for details.
 #'
 #'
-#' @examples
-#' check_url(website = "ycombinator.com", rss_table = package_rss)
 
 check_url <- function(website = "ycombinator.com", rss_table = package_rss) {
 
