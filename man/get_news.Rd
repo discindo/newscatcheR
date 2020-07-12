@@ -13,10 +13,10 @@ get_news(website = "ycombinator.com", topic = NULL, rss_table = package_rss)
 #will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 #'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 #'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("webiste")` to check for available feeds.}
+#use `describe_url("website")` to check for available feeds.}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.
+#need to construct your own out of websites not in the included database.
 #Be sure to have the same format as the included data. See `R/package_rss.R`
 #for details.}
 }
