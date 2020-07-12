@@ -1,4 +1,5 @@
 #' Get news
+#' Get the contents of a rss feed
 #'
 #' @param website a url of a new source in the format "news.ycombinator.com"
 #' @param topic the topic of the feed, by default it is NULL which means it

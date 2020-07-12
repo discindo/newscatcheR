@@ -2,7 +2,8 @@
 % Please edit documentation in R/filter_urls.R
 \name{filter_urls}
 \alias{filter_urls}
-\title{Search for URLs in the provided database based on topic, country and language}
+\title{Filter URLs
+Filter URLs in the provided database based on topic, country and language}
 \usage{
 filter_urls(
   topic = NULL,
@@ -29,7 +30,8 @@ need to construct your own out of websites not in the included database.
 a tibble filtered according to the given parameters
 }
 \description{
-Search for URLs in the provided database based on topic, country and language
+Filter URLs
+Filter URLs in the provided database based on topic, country and language
 }
 \examples{
 filter_urls(topic = "tech", country = "US", language = "en")

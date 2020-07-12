@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_news.R
 \name{get_news}
 \alias{get_news}
-\title{Get news}
+\title{Get news
+Get the contents of a rss feed}
 \usage{
 get_news(website = "ycombinator.com", topic = NULL, rss_table = package_rss)
 }
@@ -25,6 +26,7 @@ a tibble containing the contents of the rss feed
 }
 \description{
 Get news
+Get the contents of a rss feed
 }
 \examples{
 Sys.sleep(3) # adding a small time delay to avoid

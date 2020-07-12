@@ -1,4 +1,5 @@
-#' Search for URLs in the provided database based on topic, country and language
+#' Filter URLs
+#' Filter URLs in the provided database based on topic, country and language
 #'
 #' @param topic the topic of the feed see `show_topics()` for more info.
 #' @param country the country of origin of the feed using two capital
