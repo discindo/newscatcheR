@@ -23,7 +23,7 @@ describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
   message(paste0(
     "Topics available for website ",
     website,
-    " are: ",
+    ": ",
     paste0(news_source, collapse = ", "), "."
   ))
 

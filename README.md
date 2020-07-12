@@ -77,16 +77,16 @@ get_news("ycombinator.com")
 #> # A tibble: 30 x 10
 #>    feed_title feed_link feed_description feed_pub_date       item_title
 #>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How much …
-#>  2 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 CRDTs: Th…
-#>  3 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How to Un…
-#>  4 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Scientist…
-#>  5 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
-#>  6 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Testing F…
-#>  7 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …
-#>  8 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 A Doctor …
-#>  9 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 AES67 (Au…
-#> 10 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Tracking …
+#>  1 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Wt – C++ …
+#>  2 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 The Futur…
+#>  3 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Robot Gam…
+#>  4 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Apple Sil…
+#>  5 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 SAS Rescu…
+#>  6 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Do not re…
+#>  7 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Rust for …
+#>  8 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Cockroach…
+#>  9 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Candy Lan…
+#> 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 A gentle …
 #> # … with 20 more rows, and 5 more variables: item_link <chr>,
 #> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
 #> #   item_comments <chr>
@@ -101,44 +101,44 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                             feed_entries$item_title
-#> 1                                  How much your computer can do in a second (2015)
-#> 2                                                     CRDTs: The Hard Parts [video]
-#> 3                                                          How to Understand Things
-#> 4                 Scientists say you can cancel the noise but keep your window open
-#> 5   Show HN: Trail Router – generate running routes that prefer greenery and nature
-#> 6                            Testing Firefox More Efficiently with Machine Learning
-#> 7     Show HN: An extension that removes upvote and comment counts from Hacker News
-#> 8               A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)
-#> 9                                          AES67 (Audio over IP protocol) resources
-#> 10                                     Tracking Pico Balloons Using Ham Radio [pdf]
-#> 11 CDC director: Keeping schools closed greater health threat to children reopening
-#> 12            Favorite Problems: A Practical Framework for Discovering Your Purpose
-#> 13                                                              Refined Hacker News
-#> 14                                            Scanimage: Scan from the Command Line
-#> 15                                                     Soup.io Will Be Discontinued
-#> 16                     Ask HN: What's the worst piece of software you use everyday?
-#> 17                                                  Virtual Wind Instruments (2018)
-#> 18                                                           The Case for Causal AI
-#> 19                                                          Beware of Being “Right”
-#> 20    A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of
-#> 21                                                Why are toys such a bad business?
-#> 22                                             Decentralized Reinforcement Learning
-#> 23                          Modes, Medians and Means: A Unifying Perspective (2013)
-#> 24                                             Migrating Away from Google Analytics
-#> 25                           Global Decision-Making via Local Economic Transactions
-#> 26                                 2000-year-old Iron Age skeleton discovered in UK
-#> 27                                      Eigenquestions: The Art of Framing Problems
-#> 28                 Show HN: Form-validation.js – JavaScript form validation library
-#> 29                                                             Oura Ring 2 Teardown
-#> 30                                                Linux kernel in-tree Rust support
+#>                                                       feed_entries$item_title
+#> 1                                                        Wt – C++ Web Toolkit
+#> 2                              The Future of Online Identity Is Decentralized
+#> 3                                        Apple Silicon: The Passing of Wintel
+#> 4                           Robot Game: Comparing 6502 C, Assembly, and Forth
+#> 5                           SAS Rescue 3 Trapped British Diplomats in Albania
+#> 6                                   Do not remain nameless to yourself (1966)
+#> 7                                 Show HN: Sed to C translator written in sed
+#> 8                 Rust for JavaScript Developers – Pattern Matching and Enums
+#> 9                              Candy Land Was Invented for Polio Wards (2019)
+#> 10                   Cockroachdb/copyist: Mocking an SQL database in Go tests
+#> 11              A gentle introduction to HDBSCAN and density-based clustering
+#> 12  Underwater caves in Mexico preserve one of the world’s oldest ochre mines
+#> 13   Sirum (YC W15 Nonprofit) hiring back end engineer to automate a pharmacy
+#> 14                        Digital Audio on VHS – The Technics SV-P100 [video]
+#> 15 Lava tubes may be havens for ancient alien life and future human explorers
+#> 16                               The company that sells lost airplane luggage
+#> 17           Sandboxie-Plus – a fork of Sandboxie with improved functionality
+#> 18          Show HN: Learnawesome.org – Open-source learning map for humanity
+#> 19                                               MariaDB Temporal Data Tables
+#> 20                                                         Just Too Efficient
+#> 21                                                 Ruby lib/irb/easter-egg.rb
+#> 22                                                               Tour of Rust
+#> 23                         Building a self-updating profile README for GitHub
+#> 24                                          Linux kernel in-tree Rust support
+#> 25                     US citizens warned they face arbitrary arrest in China
+#> 26                                                      Dealing with Insomnia
+#> 27                   An F-22 test pilot on the Raptor's flight control system
+#> 28                                                   How to Understand Things
+#> 29                                                      The Polymath Playbook
+#> 30                Moving from Siloed Organizations to Distributed Individuals
 ```
 
 `describe_url(website)` returns the topics of a given web site.
 
 ``` r
 describe_url("bbc.com")
-#> Topics available for website bbc.comare: travel, science, news, business.
+#> Topics available for website bbc.com: business, news, science, travel.
 ```
 
 `filter_urls(topic, country, language )` can be used to browse the
@@ -146,14 +146,18 @@ dataset by topic, country or language.
 
 ``` r
 filter_urls(topic = "tech", country = "IT", language = "it")
-#> # A tibble: 5 x 7
-#>   clean_url  language topic_unified main  clean_country rss_url       GlobalRank
-#>   <chr>      <chr>    <chr>         <chr> <chr>         <chr>         <chr>     
-#> 1 repubblic… it       tech          None  IT            http://www.r… 1086      
-#> 2 lastampa.… it       tech          None  IT            http://www.l… 2413      
-#> 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      
-#> 4 corriere.… it       tech          None  IT            http://www.c… 1328      
-#> 5 ansa.it    it       tech          None  IT            http://www.a… 2248
+#>            clean_url language topic_unified main clean_country
+#> 1204   repubblica.it       it          tech None            IT
+#> 2276     lastampa.it       it          tech None            IT
+#> 2673 ilsole24ore.com       it          tech None            IT
+#> 3618     corriere.it       it          tech None            IT
+#> 4159         ansa.it       it          tech None            IT
+#>                                                              rss_url GlobalRank
+#> 1204    http://www.repubblica.it/rss/scienza_e_tecnologia/rss2.0.xml       1086
+#> 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413
+#> 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681
+#> 3618                       http://www.corriere.it/rss/tecnologia.xml       1328
+#> 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248
 ```
 
 ## Use Case
