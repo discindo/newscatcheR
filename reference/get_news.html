@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get news — get_news • newscatcheR</title>
+<title>Get news
+Get the contents of a rss feed — get_news • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -39,8 +40,10 @@
 
 
 
-<meta property="og:title" content="Get news — get_news" />
-<meta property="og:description" content="Get news" />
+<meta property="og:title" content="Get news
+Get the contents of a rss feed — get_news" />
+<meta property="og:description" content="Get news
+Get the contents of a rss feed" />
 
 
 
@@ -114,13 +117,15 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get news</h1>
+    <h1>Get news
+Get the contents of a rss feed</h1>
     <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/get_news.R'><code>R/get_news.R</code></a></small>
     <div class="hidden name"><code>get_news.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get news</p>
+    <p>Get news
+Get the contents of a rss feed</p>
     </div>
 
     <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_news.html'>get_news</a></span>(website = <span class='st'>"ycombinator.com"</span>, topic = <span class='kw'>NULL</span>, rss_table = <span class='kw'>package_rss</span>)</pre>
@@ -138,12 +143,12 @@
 #will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 #'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 #'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("webiste")` to check for available feeds.</p></td>
+#use `describe_url("website")` to check for available feeds.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.
+#need to construct your own out of websites not in the included database.
 #Be sure to have the same format as the included data. See `R/package_rss.R`
 #for details.</p></td>
     </tr>
@@ -151,7 +156,7 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a tibble containing the contents of the rss feed</p>
+    <p>a dataframe containing the contents of the rss feed</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
@@ -159,16 +164,16 @@
 <span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_news.html'>get_news</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 30 x 10</span><span>
 #&gt;    feed_title feed_link feed_description feed_pub_date       item_title
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
-#&gt; </span><span style='color: #555555;'> 1</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Do not re…
-#&gt; </span><span style='color: #555555;'> 2</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Building …
-#&gt; </span><span style='color: #555555;'> 3</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> An F-22 t…
-#&gt; </span><span style='color: #555555;'> 4</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> How to Un…
-#&gt; </span><span style='color: #555555;'> 5</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Show HN: …
-#&gt; </span><span style='color: #555555;'> 6</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> The Polym…
-#&gt; </span><span style='color: #555555;'> 7</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Reflectio…
-#&gt; </span><span style='color: #555555;'> 8</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Venice te…
-#&gt; </span><span style='color: #555555;'> 9</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Scientist…
-#&gt; </span><span style='color: #555555;'>10</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> The illus…
+#&gt; </span><span style='color: #555555;'> 1</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> The Futur…
+#&gt; </span><span style='color: #555555;'> 2</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Rust for …
+#&gt; </span><span style='color: #555555;'> 3</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> SAS Rescu…
+#&gt; </span><span style='color: #555555;'> 4</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Do not re…
+#&gt; </span><span style='color: #555555;'> 5</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Candy Lan…
+#&gt; </span><span style='color: #555555;'> 6</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Cockroach…
+#&gt; </span><span style='color: #555555;'> 7</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Building …
+#&gt; </span><span style='color: #555555;'> 8</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> Digital A…
+#&gt; </span><span style='color: #555555;'> 9</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> The compa…
+#&gt; </span><span style='color: #555555;'>10</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>14:30:35</span><span> US citize…
 #&gt; </span><span style='color: #555555;'># … with 20 more rows, and 5 more variables: item_link </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   item_description </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, item_pub_date </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, item_category </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   item_comments </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>

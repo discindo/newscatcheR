@@ -147,12 +147,12 @@ A helper function to get just the headlines of the feed</p>
 #will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 #'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 #'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("webiste")` to check for available feeds.</p></td>
+#use `describe_url("website")` to check for available feeds.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.
+#need to construct your own out of websites not in the included database.
 #Be sure to have the same format as the included data. See `R/package_rss.R`
 #for details.</p></td>
     </tr>
@@ -160,7 +160,7 @@ A helper function to get just the headlines of the feed</p>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a tibble containing the headlines contained in the feed</p>
+    <p>a dataframe containing the headlines contained in the feed</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
@@ -174,37 +174,37 @@ A helper function to get just the headlines of the feed</p>
 #&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
 #&gt; <span class='warning'></span>
 #&gt; <span class='warning'><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                            feed_entries$item_title
-#&gt; 1                                        Do not remain nameless to yourself (1966)
-#&gt; 2                               Building a self-updating profile README for GitHub
-#&gt; 3                         An F-22 test pilot on the Raptor's flight control system
-#&gt; 4                                                         How to Understand Things
-#&gt; 5  Show HN: Trail Router – generate running routes that prefer greenery and nature
-#&gt; 6                                                            The Polymath Playbook
-#&gt; 7                                       Reflections on Trusting Trust (1984) [pdf]
-#&gt; 8                                  Venice test brings up floodgates for first time
-#&gt; 9                Scientists say you can cancel the noise but keep your window open
-#&gt; 10                                  The illusion of control, and how to give it up
-#&gt; 11                                                    MariaDB Temporal Data Tables
-#&gt; 12                    PG: The biggest source of stress for me at YC was running HN
-#&gt; 13                                               Linux kernel in-tree Rust support
-#&gt; 14                  Build a No-Slot MIDI Interface on the Apple ][ Game I/O Socket
-#&gt; 15                                 Porting a Wolfenstein-type engine to the MEGA65
-#&gt; 16                                              Make Your Own ColecoVision at Home
-#&gt; 17   Show HN: Tiny password manager with all data stored encrypted on your machine
-#&gt; 18                                          Complete Guide to Buying Lumber (2015)
-#&gt; 19  Show HN: HN Demetricator – An extension that removes upvote and comment counts
-#&gt; 20                                    Tracking Pico Balloons Using Ham Radio [pdf]
-#&gt; 21                    Ask HN: What's the worst piece of software you use everyday?
-#&gt; 22                                                  Epigrams on Programming (1982)
-#&gt; 23                                                         Beware of Being “Right”
-#&gt; 24                                                    Soup.io Will Be Discontinued
-#&gt; 25                                How much your computer can do in a second (2015)
-#&gt; 26                                                   CRDTs: The Hard Parts [video]
-#&gt; 27                                               Millennials Are Killing Ham Radio
-#&gt; 28                                            Migrating Away from Google Analytics
-#&gt; 29             A doctor who championed hand-washing and briefly saved lives (2015)
-#&gt; 30                                          Announcing The Zig Software Foundation</div></span></pre>
+#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                       feed_entries$item_title
+#&gt; 1                              The Future of Online Identity Is Decentralized
+#&gt; 2                 Rust for JavaScript Developers – Pattern Matching and Enums
+#&gt; 3                           SAS Rescue 3 Trapped British Diplomats in Albania
+#&gt; 4                                   Do not remain nameless to yourself (1966)
+#&gt; 5                              Candy Land Was Invented for Polio Wards (2019)
+#&gt; 6                    Cockroachdb/copyist: Mocking an SQL database in Go tests
+#&gt; 7                          Building a self-updating profile README for GitHub
+#&gt; 8                         Digital Audio on VHS – The Technics SV-P100 [video]
+#&gt; 9                                The company that sells lost airplane luggage
+#&gt; 10                     US citizens warned they face arbitrary arrest in China
+#&gt; 11           Sandboxie-Plus – a fork of Sandboxie with improved functionality
+#&gt; 12              A gentle introduction to HDBSCAN and density-based clustering
+#&gt; 13                                               MariaDB Temporal Data Tables
+#&gt; 14 Lava tubes may be havens for ancient alien life and future human explorers
+#&gt; 15                                                               Tour of Rust
+#&gt; 16                                                 Ruby lib/irb/easter-egg.rb
+#&gt; 17                                                      Dealing with Insomnia
+#&gt; 18                                                         Just Too Efficient
+#&gt; 19                              Thinking about a New Type System for Perl/Cor
+#&gt; 20                Moving from Siloed Organizations to Distributed Individuals
+#&gt; 21                                          Linux kernel in-tree Rust support
+#&gt; 22                              The growing short case on Facebook and Google
+#&gt; 23                Hosting your entire web application using S3 and CloudFront
+#&gt; 24                             The illusion of control, and how to give it up
+#&gt; 25                   An F-22 test pilot on the Raptor's flight control system
+#&gt; 26                                                      The Polymath Playbook
+#&gt; 27                                                   How to Understand Things
+#&gt; 28               PG: The biggest source of stress for me at YC was running HN
+#&gt; 29             Build a No-Slot MIDI Interface on the Apple ][ Game I/O Socket
+#&gt; 30                                             Epigrams on Programming (1982)</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
