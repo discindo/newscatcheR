@@ -123,7 +123,7 @@
     <p>Get news</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_news.html'>get_news</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>, topic = <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_news.html'>get_news</a></span>(website = <span class='st'>"ycombinator.com"</span>, topic = <span class='kw'>NULL</span>, rss_table = <span class='kw'>package_rss</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -133,19 +133,19 @@
       <td><p>a url of a new source in the format "news.ycombinator.com"</p></td>
     </tr>
     <tr>
-      <th>rss_table</th>
-      <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.</p></td>
-    </tr>
-    <tr>
       <th>topic</th>
       <td><p>the topic of the feed, by default it is NULL which means it
 #will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 #'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 #'music', 'sport', 'world', but not all site have all topics.
 #use `describe_url("webiste")` to check for available feeds.</p></td>
+    </tr>
+    <tr>
+      <th>rss_table</th>
+      <td><p>a dataframe with urls and rss feeds in case you
+#need to construct your own out of webisites not in the included database.
+#Be sure to have the same format as the included data. See `R/package_rss.R`
+#for details.</p></td>
     </tr>
     </table>
 
@@ -164,11 +164,11 @@
 #&gt; </span><span style='color: #555555;'> 3</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> An F-22 t…
 #&gt; </span><span style='color: #555555;'> 4</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> How to Un…
 #&gt; </span><span style='color: #555555;'> 5</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Show HN: …
-#&gt; </span><span style='color: #555555;'> 6</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Reflectio…
-#&gt; </span><span style='color: #555555;'> 7</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> CRDTs: Th…
-#&gt; </span><span style='color: #555555;'> 8</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> The Polym…
-#&gt; </span><span style='color: #555555;'> 9</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Complete …
-#&gt; </span><span style='color: #555555;'>10</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Venice te…
+#&gt; </span><span style='color: #555555;'> 6</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> The Polym…
+#&gt; </span><span style='color: #555555;'> 7</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Reflectio…
+#&gt; </span><span style='color: #555555;'> 8</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Venice te…
+#&gt; </span><span style='color: #555555;'> 9</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> Scientist…
+#&gt; </span><span style='color: #555555;'>10</span><span> Hacker Ne… https://… Links for the i… 2020-07-12 </span><span style='color: #555555;'>02:58:11</span><span> The illus…
 #&gt; </span><span style='color: #555555;'># … with 20 more rows, and 5 more variables: item_link </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   item_description </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, item_pub_date </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, item_category </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   item_comments </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
