@@ -1,3 +1,31 @@
+# version 0.1.0
+
+* this update catches up to the changes made in the python package
+
+the news sites database has been updated and 
+functions are modified to reflect that
+
+## Test environments
+* local 5.7.7-arch1-1 linux install, R 4.0.2
+
+## R CMD check results
+There were no ERRORs, WARNINGs or NOTEs. 
+
+## Github RMD check 
+Test on Windows latest, MacOS latest and devel, and Ubuntu 16.04 passing
+
+## Rhub / Win-builder
+devtools::check_rhub() returned an error about
+Warning: `...` is not empty. We detected these problematic arguments:
+* `needs_dots`
+But it seems it is connected to issue in tibble, which has been 
+resolved in tibble 3.0.3, while rhub uses 3.0.2
+rebuilding vignette aslo failed with:
+there is no package called 'utf8'
+
+devtools::check_win_devel() didn't return any errors.
+
+
 # version 0.0.2
 
 Updated dependency for tidyRSS >= 2.0.2 which requires dplyr 1.0.0
