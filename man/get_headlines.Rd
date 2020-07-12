@@ -26,7 +26,7 @@ get_headlines(
 #for details.}
 }
 \value{
-a tibble containing the headlines contained in the feed
+a dataframe containing the headlines contained in the feed
 }
 \description{
 Get headlines

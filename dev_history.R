@@ -38,5 +38,5 @@ glimpse(rss_table_raw)
 #   mutate(rss_url = if_else(str_detect(rss_url,
 #                          "hakolhayehudi"), hakolhayehudi, rss_url))
 
-package_rss <- rss_table_raw
+package_rss <- as.data.frame(rss_table_raw)
 usethis::use_data(package_rss, overwrite = TRUE)

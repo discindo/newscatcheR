@@ -11,7 +11,7 @@
 #' #Be sure to have the same format as the included data. See `R/package_rss.R`
 #' #for details.
 #'
-#' @return a tibble filtered according to the given parameters
+#' @return a dataframe filtered according to the given parameters
 #' @export
 #'
 #' @examples

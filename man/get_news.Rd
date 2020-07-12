@@ -22,7 +22,7 @@ get_news(website = "ycombinator.com", topic = NULL, rss_table = package_rss)
 #for details.}
 }
 \value{
-a tibble containing the contents of the rss feed
+a dataframe containing the contents of the rss feed
 }
 \description{
 Get news
