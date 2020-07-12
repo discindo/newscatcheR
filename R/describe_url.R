@@ -18,7 +18,8 @@ describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
 
   news_source <- rss_table[rss_table$clean_url == website,]
 
-  news_source <- news_source$topic_unified
+  news_source <- sort(news_source$topic_unified)
+
   message(paste0(
     "Topics available for website ",
     website,
@@ -27,3 +28,4 @@ describe_url <- function(website = "ycombinator.com", rss_table = package_rss) {
   ))
 
 }
+
