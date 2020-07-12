@@ -140,7 +140,9 @@ A helper function to get just the headlines of the feed</p>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.</p></td>
+#need to construct your own out of webisites not in the included database.
+#Be sure to have the same format as the included data. See `R/package_rss.R`
+#for details.</p></td>
     </tr>
     </table>
 
@@ -160,37 +162,37 @@ A helper function to get just the headlines of the feed</p>
 #&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
 #&gt; <span class='warning'></span>
 #&gt; <span class='warning'><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                          feed_entries$item_title
-#&gt; 1                                                          CRDTs: The Hard Parts
-#&gt; 2                                                     The Modern-Day Mind-Killer
-#&gt; 3                         Testing Firefox More Efficiently with Machine Learning
-#&gt; 4                                                       How to Understand Things
-#&gt; 5                                   Tracking Pico Balloons Using Ham Radio [pdf]
-#&gt; 6            A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)
-#&gt; 7          Favorite Problems: A Practical Framework for Discovering Your Purpose
-#&gt; 8              Scientists Say You Can Cancel the Noise but Keep Your Window Open
-#&gt; 9                                                        Beware of Being “Right”
-#&gt; 10                               Porting a Wolfenstein-type engine to the MEGA65
-#&gt; 11                                             Linux kernel in-tree Rust support
-#&gt; 12                       Modes, Medians and Means: A Unifying Perspective (2013)
-#&gt; 13                                                          Oura Ring 2 Teardown
-#&gt; 14                Scientists warn of potential wave of Covid-linked brain damage
-#&gt; 15              Show HN: Form-validation.js – JavaScript form validation library
-#&gt; 16                                                            Healthy Self-Doubt
-#&gt; 17                                      PureDarwin – Darwin-based open source OS
-#&gt; 18                        Comet streaking past Earth, providing spectacular show
-#&gt; 19                              2000-year-old Iron Age skeleton discovered in UK
-#&gt; 20                                          Learnings from a Year of Being Indie
-#&gt; 21                                                          Scachs D’amor (2009)
-#&gt; 22  A voice separation model that distinguishes multiple speakers simultaneously
-#&gt; 23          Big Tech marshals a right-leaning army of allies for antitrust fight
-#&gt; 24 A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of
-#&gt; 25                                                        Scraping Isn't Hacking
-#&gt; 26 Show HN: Tiny password manager with all data stored encrypted on your machine
-#&gt; 27                          Commander X16 8 bit computer now has its own website
-#&gt; 28                                           The Frink Is Good, the Unit Is Evil
-#&gt; 29                       'Street Fighter II' Wasn’t Just a Game, It Was a Portal
-#&gt; 30                         Don't close your MacBook with a cover over the camera</div></span></pre>
+#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                            feed_entries$item_title
+#&gt; 1                                        Do not remain nameless to yourself (1966)
+#&gt; 2                               Building a self-updating profile README for GitHub
+#&gt; 3                         An F-22 test pilot on the Raptor's flight control system
+#&gt; 4                                                         How to Understand Things
+#&gt; 5  Show HN: Trail Router – generate running routes that prefer greenery and nature
+#&gt; 6                                       Reflections on Trusting Trust (1984) [pdf]
+#&gt; 7                                                    CRDTs: The Hard Parts [video]
+#&gt; 8                                           Complete Guide to Buying Lumber (2015)
+#&gt; 9                                                            The Polymath Playbook
+#&gt; 10                                 Venice test brings up floodgates for first time
+#&gt; 11               Scientists say you can cancel the noise but keep your window open
+#&gt; 12                                  The illusion of control, and how to give it up
+#&gt; 13                    PG: The biggest source of stress for me at YC was running HN
+#&gt; 14                  Build a No-Slot MIDI Interface on the Apple ][ Game I/O Socket
+#&gt; 15            The battle to outlaw end-to-end encryption in the U.S. is heating up
+#&gt; 16  Show HN: HN Demetricator – An extension that removes upvote and comment counts
+#&gt; 17                                              Make Your Own ColecoVision at Home
+#&gt; 18   Show HN: Tiny password manager with all data stored encrypted on your machine
+#&gt; 19                                               Linux kernel in-tree Rust support
+#&gt; 20                                    Tracking Pico Balloons Using Ham Radio [pdf]
+#&gt; 21                                                    Soup.io Will Be Discontinued
+#&gt; 22                    Ask HN: What's the worst piece of software you use everyday?
+#&gt; 23                                                         Beware of Being “Right”
+#&gt; 24                                How much your computer can do in a second (2015)
+#&gt; 25             A doctor who championed hand-washing and briefly saved lives (2015)
+#&gt; 26                                            Migrating Away from Google Analytics
+#&gt; 27                                          Announcing The Zig Software Foundation
+#&gt; 28       Should children do more enrichment activities? Correcting for endogeneity
+#&gt; 29                                           How to Write a Ray Tracer Intuitively
+#&gt; 30                                        AES67 resources – Audio over IP protocol</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

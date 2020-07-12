@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Filter URLS in the provided database. — filter_urls • newscatcheR</title>
+<title>Search for URLs in the provided database based on topic, country and language — filter_urls • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Filter URLS in the provided database. — filter_urls" />
-<meta property="og:description" content="Filter URLS in the provided database." />
+<meta property="og:title" content="Search for URLs in the provided database based on topic, country and language — filter_urls" />
+<meta property="og:description" content="Search for URLs in the provided database based on topic, country and language" />
 
 
 
@@ -114,13 +114,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Filter URLS in the provided database.</h1>
+    <h1>Search for URLs in the provided database based on topic, country and language</h1>
     <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/filter_urls.R'><code>R/filter_urls.R</code></a></small>
     <div class="hidden name"><code>filter_urls.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Filter URLS in the provided database.</p>
+    <p>Search for URLs in the provided database based on topic, country and language</p>
     </div>
 
     <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(
@@ -135,22 +135,24 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>topic</th>
-      <td><p>the topic of the feed see `show_topics()` for more.</p></td>
+      <td><p>the topic of the feed see `show_topics()` for more info.</p></td>
     </tr>
     <tr>
       <th>country</th>
       <td><p>the country of origin of the feed using two capital
-letters, for example "US". See `show_countries()` for more.</p></td>
+letters, for example "US". See `show_countries()` for more info.</p></td>
     </tr>
     <tr>
       <th>language</th>
       <td><p>the language of the content of the feed using two
-lowercase letters, for example "en". See `show_languages()` for more.</p></td>
+lowercase letters, for example "en". See `show_languages()` for more info.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-need to construct your own out of websites not in the included database.</p></td>
+need to construct your own out of websites not in the included database.
+#Be sure to have the same format as the included data. See `R/package_rss.R`
+#for details.</p></td>
     </tr>
     </table>
 

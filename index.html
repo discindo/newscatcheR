@@ -81,11 +81,11 @@
 <a href="#newscatcher" class="anchor"></a>newscatcheR</h1></div>
 <!-- badges: start -->
 
-<!-- [![Travis Build Status](https://travis-ci.com/discindo/newscatcheR.svg?branch=master)](https://travis-ci.com/discindo/newscatcheR) -->
 <!-- badges: end -->
 <p>Programmatically collect normalized news from (almost) any website using R</p>
 <p>newscatcheR is an R clone of the python package <a href="https://github.com/kotartemiy/newscatcher">newscatcher</a>.</p>
-<p>The package provides a dataset of news sites and their rss feeds, and two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS">tidyRSS</a> to fetch the feed from a given site. It also provides a function to check the dataset for news sources per top level domain.</p>
+<p>The package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from <code>R</code>.</p>
+<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -127,16 +127,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Searchabl…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Show HN: …</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Caffenol:…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Dune: The…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google Co…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Keeping y…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Classifyi…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 The Slack…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Nokia to …</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-07 16:50:50 Google of…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How much …</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 CRDTs: Th…</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 How to Un…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Scientist…</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Testing F…</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Show HN: …</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 A Doctor …</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 AES67 (Au…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-11 18:22:03 Tracking …</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
@@ -148,56 +148,54 @@
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)  
 <span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span>(<span class="st">"ycombinator.com"</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                           feed_entries$item_title</span>
-<span class="co">#&gt; 1                                                        Searchable PPP Loan Data</span>
-<span class="co">#&gt; 2                            Show HN: SheetUI – Turn Google Sheets into Web Pages</span>
-<span class="co">#&gt; 3                   Caffenol: Developing Photos with Coffee and Vitamin C [video]</span>
-<span class="co">#&gt; 4                        Dune: The Battle for Arrakis – Extended Reference (2003)</span>
-<span class="co">#&gt; 5                                                  Google Common Lisp style guide</span>
-<span class="co">#&gt; 6                                              Keeping your Go modules compatible</span>
-<span class="co">#&gt; 7                                  Classifying 200k articles in 7 hours using NLP</span>
-<span class="co">#&gt; 8                                                        The Slack Social Network</span>
-<span class="co">#&gt; 9                           Nokia to add open interfaces to its telecom equipment</span>
-<span class="co">#&gt; 10                         Google offers free fabbing for 130nm open-source chips</span>
-<span class="co">#&gt; 11                                                          Stock and Flow (2010)</span>
-<span class="co">#&gt; 12 Show HN: I built a desktop radiation monitor with Raspberry Pi, brass and wood</span>
-<span class="co">#&gt; 13                                         Turn your phone into a wireless webcam</span>
-<span class="co">#&gt; 14                          YouTube deleted an electronics repair channel [video]</span>
-<span class="co">#&gt; 15  Show HN: Reclaim – an adaptive calendar app that plans time for your routines</span>
-<span class="co">#&gt; 16                           A terrible, horrible, no-good, very bad day at Slack</span>
-<span class="co">#&gt; 17                      Coconut: Simple, elegant, Pythonic functional programming</span>
-<span class="co">#&gt; 18  Work at a Startup: Find thousands of engineering roles at active YC companies</span>
-<span class="co">#&gt; 19                                            Whole Earth Software Catalog (1984)</span>
-<span class="co">#&gt; 20                                      Robot Disinfects Greater Boston Food Bank</span>
-<span class="co">#&gt; 21           New Compute Engine A2 VMs–First Nvidia Ampere A100 GPUs in the Cloud</span>
-<span class="co">#&gt; 22   Kosher search engine powered by 4 car batteries on a passively cooled server</span>
-<span class="co">#&gt; 23           The Ayn Rand Institute Takes a Loan from Paycheck Protection Program</span>
-<span class="co">#&gt; 24                          Mike Pompeo Said the US Is Considering Banning TikTok</span>
-<span class="co">#&gt; 25                            Only 9% of visitors give GDPR consent to be tracked</span>
-<span class="co">#&gt; 26            Ask HN: What makes a good technical leader – any recommended books?</span>
-<span class="co">#&gt; 27                                 Disk Spilling in a Vectorized Execution Engine</span>
-<span class="co">#&gt; 28                                                 Algorithms Are Now Commodities</span>
-<span class="co">#&gt; 29                                           Building Domain Driven Microservices</span>
-<span class="co">#&gt; 30                                            Dark patterns in GDPR consent boxes</span>
+<span class="co">#&gt;                                                             feed_entries$item_title</span>
+<span class="co">#&gt; 1                                  How much your computer can do in a second (2015)</span>
+<span class="co">#&gt; 2                                                     CRDTs: The Hard Parts [video]</span>
+<span class="co">#&gt; 3                                                          How to Understand Things</span>
+<span class="co">#&gt; 4                 Scientists say you can cancel the noise but keep your window open</span>
+<span class="co">#&gt; 5   Show HN: Trail Router – generate running routes that prefer greenery and nature</span>
+<span class="co">#&gt; 6                            Testing Firefox More Efficiently with Machine Learning</span>
+<span class="co">#&gt; 7     Show HN: An extension that removes upvote and comment counts from Hacker News</span>
+<span class="co">#&gt; 8               A Doctor Who Championed Hand-Washing And Briefly Saved Lives (2015)</span>
+<span class="co">#&gt; 9                                          AES67 (Audio over IP protocol) resources</span>
+<span class="co">#&gt; 10                                     Tracking Pico Balloons Using Ham Radio [pdf]</span>
+<span class="co">#&gt; 11 CDC director: Keeping schools closed greater health threat to children reopening</span>
+<span class="co">#&gt; 12            Favorite Problems: A Practical Framework for Discovering Your Purpose</span>
+<span class="co">#&gt; 13                                                              Refined Hacker News</span>
+<span class="co">#&gt; 14                                            Scanimage: Scan from the Command Line</span>
+<span class="co">#&gt; 15                                                     Soup.io Will Be Discontinued</span>
+<span class="co">#&gt; 16                     Ask HN: What's the worst piece of software you use everyday?</span>
+<span class="co">#&gt; 17                                                  Virtual Wind Instruments (2018)</span>
+<span class="co">#&gt; 18                                                           The Case for Causal AI</span>
+<span class="co">#&gt; 19                                                          Beware of Being “Right”</span>
+<span class="co">#&gt; 20    A Little Startup That Could: Aquarius Builds an Engine Others Only Dreamed Of</span>
+<span class="co">#&gt; 21                                                Why are toys such a bad business?</span>
+<span class="co">#&gt; 22                                             Decentralized Reinforcement Learning</span>
+<span class="co">#&gt; 23                          Modes, Medians and Means: A Unifying Perspective (2013)</span>
+<span class="co">#&gt; 24                                             Migrating Away from Google Analytics</span>
+<span class="co">#&gt; 25                           Global Decision-Making via Local Economic Transactions</span>
+<span class="co">#&gt; 26                                 2000-year-old Iron Age skeleton discovered in UK</span>
+<span class="co">#&gt; 27                                      Eigenquestions: The Art of Framing Problems</span>
+<span class="co">#&gt; 28                 Show HN: Form-validation.js – JavaScript form validation library</span>
+<span class="co">#&gt; 29                                                             Oura Ring 2 Teardown</span>
+<span class="co">#&gt; 30                                                Linux kernel in-tree Rust support</span>
 </pre></div>
-<p><code>tld_sources(tld)</code> returns rows from the provided dataset of news sites with the given top level domain</p>
+<p><code><a href="reference/describe_url.html">describe_url(website)</a></code> returns the topics of a given web site.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
-<span class="fu">tld_sources</span>(<span class="st">"it"</span>)
-<span class="co">#&gt; # A tibble: 238 x 7</span>
-<span class="co">#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 zonalocal… it       news          1     None          http://www.… 620899    </span>
-<span class="co">#&gt;  2 wittgenst… it       news          1     None          http://www.… 321276    </span>
-<span class="co">#&gt;  3 wired.it   it       tech          1     None          http://www.… 10861     </span>
-<span class="co">#&gt;  4 wired.it   it       science       None  None          http://www.… 10861     </span>
-<span class="co">#&gt;  5 wired.it   it       news          None  None          http://www.… 10861     </span>
-<span class="co">#&gt;  6 wired.it   it       economics     None  None          http://www.… 10861     </span>
-<span class="co">#&gt;  7 webtrek.it it       tech          1     None          http://www.… 546151    </span>
-<span class="co">#&gt;  8 vita.it    it       world         None  None          http://www.… 37772     </span>
-<span class="co">#&gt;  9 vita.it    it       politics      None  None          http://www.… 37772     </span>
-<span class="co">#&gt; 10 vita.it    it       news          1     None          http://www.… 37772     </span>
-<span class="co">#&gt; # … with 228 more rows</span>
+<span class="fu"><a href="reference/describe_url.html">describe_url</a></span>(<span class="st">"bbc.com"</span>)
+<span class="co">#&gt; Topics available for website bbc.comare: travel, science, news, business.</span>
+</pre></div>
+<p><code><a href="reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country or language.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="reference/filter_urls.html">filter_urls</a></span>(topic = <span class="st">"tech"</span>, country = <span class="st">"IT"</span>, language = <span class="st">"it"</span>)
+<span class="co">#&gt; # A tibble: 5 x 7</span>
+<span class="co">#&gt;   clean_url  language topic_unified main  clean_country rss_url       GlobalRank</span>
+<span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;     </span>
+<span class="co">#&gt; 1 repubblic… it       tech          None  IT            http://www.r… 1086      </span>
+<span class="co">#&gt; 2 lastampa.… it       tech          None  IT            http://www.l… 2413      </span>
+<span class="co">#&gt; 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      </span>
+<span class="co">#&gt; 4 corriere.… it       tech          None  IT            http://www.c… 1328      </span>
+<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span>
 </pre></div>
 </div>
 <div id="use-case" class="section level2">
@@ -205,11 +203,11 @@
 <a href="#use-case" class="anchor"></a>Use Case</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
+<div class="sourceCode" id="cb8"><pre class="downlit">
 <span class="kw">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)
 </pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
+<div class="sourceCode" id="cb9"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/discindo/newscatcheR">newscatcheR</a></span>)
 <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="kw">sites</span>, <span class="kw">get_news</span>)
 </pre></div>
