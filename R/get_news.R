@@ -31,14 +31,18 @@ get_news <- function(website = "ycombinator.com", topic = NULL, rss_table = pack
   if (is.null(topic)) {
     news_source <- news_source[news_source$main == 1,]
   } else if (!any(topic %in% news_source$topic_unified)) {
-    stop(
+    message(
       paste(
         "Website:",
         website,
-        "does not have a feed for the specified topic. Use `describe_url(\"webiste\")` to check for available topics.",
+        "does not have a feed for the specified topic.",
         sep = " "
       )
     )
+    describe_url("bbc.com")
+
+    return(invisible(NULL))
+
   } else {
     news_source <- news_source[news_source$topic_unified == topic,]
   }
