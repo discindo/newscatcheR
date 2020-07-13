@@ -111,16 +111,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Wt – C++ …</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 The Futur…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Apple Sil…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Show HN: …</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Robot Gam…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Do not re…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Rust for …</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 SAS Rescu…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Candy Lan…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Cockroach…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Show HN: …</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Google to…</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 You shoul…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Libtorren…</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 The Most …</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Show HN: …</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Website a…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Your DS18…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Dark Web …</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 WindowSwa…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
@@ -135,37 +135,37 @@
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
 <span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span>(website = <span class="st">"ycombinator.com"</span>, rss_table = <span class="kw">package_rss</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                       feed_entries$item_title</span>
-<span class="co">#&gt; 1                                                        Wt – C++ Web Toolkit</span>
-<span class="co">#&gt; 2                              The Future of Online Identity Is Decentralized</span>
-<span class="co">#&gt; 3                                        Apple Silicon: The Passing of Wintel</span>
-<span class="co">#&gt; 4                                 Show HN: Sed to C translator written in sed</span>
-<span class="co">#&gt; 5                           Robot Game: Comparing 6502 C, Assembly, and Forth</span>
-<span class="co">#&gt; 6                                   Do not remain nameless to yourself (1966)</span>
-<span class="co">#&gt; 7                 Rust for JavaScript Developers – Pattern Matching and Enums</span>
-<span class="co">#&gt; 8                           SAS Rescue 3 Trapped British Diplomats in Albania</span>
-<span class="co">#&gt; 9                              Candy Land Was Invented for Polio Wards (2019)</span>
-<span class="co">#&gt; 10                   Cockroachdb/copyist: Mocking an SQL database in Go tests</span>
-<span class="co">#&gt; 11  Underwater caves in Mexico preserve one of the world’s oldest ochre mines</span>
-<span class="co">#&gt; 12              A gentle introduction to HDBSCAN and density-based clustering</span>
-<span class="co">#&gt; 13                        Digital Audio on VHS – The Technics SV-P100 [video]</span>
-<span class="co">#&gt; 14   Sirum (YC W15 Nonprofit) hiring back end engineer to automate a pharmacy</span>
-<span class="co">#&gt; 15          Show HN: Learnawesome.org – Open-source learning map for humanity</span>
-<span class="co">#&gt; 16           Sandboxie-Plus – a fork of Sandboxie with improved functionality</span>
-<span class="co">#&gt; 17 Lava tubes may be havens for ancient alien life and future human explorers</span>
-<span class="co">#&gt; 18                               The company that sells lost airplane luggage</span>
-<span class="co">#&gt; 19                                               MariaDB Temporal Data Tables</span>
-<span class="co">#&gt; 20                                                         Just Too Efficient</span>
-<span class="co">#&gt; 21                                                 Ruby lib/irb/easter-egg.rb</span>
-<span class="co">#&gt; 22                                                               Tour of Rust</span>
-<span class="co">#&gt; 23                         Building a self-updating profile README for GitHub</span>
-<span class="co">#&gt; 24                                          Linux kernel in-tree Rust support</span>
-<span class="co">#&gt; 25                     US citizens warned they face arbitrary arrest in China</span>
-<span class="co">#&gt; 26                   An F-22 test pilot on the Raptor's flight control system</span>
-<span class="co">#&gt; 27                                                   How to Understand Things</span>
-<span class="co">#&gt; 28                                                      The Polymath Playbook</span>
-<span class="co">#&gt; 29                                                      Dealing with Insomnia</span>
-<span class="co">#&gt; 30               PG: The biggest source of stress for me at YC was running HN</span>
+<span class="co">#&gt;                                                           feed_entries$item_title</span>
+<span class="co">#&gt; 1  Show HN: Primo – all-in-one IDE, CMS, component library, static site generator</span>
+<span class="co">#&gt; 2                                                  Google to Invest $10B in India</span>
+<span class="co">#&gt; 3                          You shouldn't use ENV variables for secret data (2017)</span>
+<span class="co">#&gt; 4                             Libtorrent adds support for the WebTorrent protocol</span>
+<span class="co">#&gt; 5                                   The Most Remarkable Legacy System I Have Seen</span>
+<span class="co">#&gt; 6                             Show HN: A thread hierarchy management library in C</span>
+<span class="co">#&gt; 7          Website allows you to experience what it is like to live with dyslexia</span>
+<span class="co">#&gt; 8            Your DS18B20 temperature sensor is likely a fake, counterfeit, clone</span>
+<span class="co">#&gt; 9                                                       Dark Web Price Index 2020</span>
+<span class="co">#&gt; 10                       WindowSwap: View someone's window somewhere in the world</span>
+<span class="co">#&gt; 11              Google Search Upgrades Make It Harder for Websites to Win Traffic</span>
+<span class="co">#&gt; 12               Uncleftish Beholding: An Uploosening of English Cleanness (2018)</span>
+<span class="co">#&gt; 13                 Pulsar – an open-source distributed pub-sub messaging platform</span>
+<span class="co">#&gt; 14                           Insecam: Directory of Unsecured Surveillance Cameras</span>
+<span class="co">#&gt; 15                                  Writing a software book and making over $100k</span>
+<span class="co">#&gt; 16                            Two Black Holes Colliding Not Enough? Make It Three</span>
+<span class="co">#&gt; 17                               Self Host a Wiki or Knowledge Base for Your Team</span>
+<span class="co">#&gt; 18                              13% of my website visitors block Google Analytics</span>
+<span class="co">#&gt; 19                                  11,000 year old ocher mine in underwater cave</span>
+<span class="co">#&gt; 20                                                       Text-Only Social Network</span>
+<span class="co">#&gt; 21                                     LibreOffice 2020/2025 Marketing Plan [pdf]</span>
+<span class="co">#&gt; 22                                          GNU: A Heuristic for Bad Cryptography</span>
+<span class="co">#&gt; 23                       Frank Gehry started off building cities with his grandma</span>
+<span class="co">#&gt; 24  Exploring how different framings of the same learning task affect performance</span>
+<span class="co">#&gt; 25                 Operators and Sidecars Are the New Model for Software Delivery</span>
+<span class="co">#&gt; 26                                 Rust Is Surprisingly Good as a Server Language</span>
+<span class="co">#&gt; 27                        What Can Bonobos Teach Us About the Nature of Language?</span>
+<span class="co">#&gt; 28                                           Apple Silicon: The Passing of Wintel</span>
+<span class="co">#&gt; 29                                             Do We Need a Theory of Everything?</span>
+<span class="co">#&gt; 30                                      Do not remain nameless to yourself (1966)</span>
 </pre></div>
 </div>
 <div id="describe_url" class="section level3">
@@ -183,18 +183,14 @@
 <p>Finally, <code><a href="../reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country, or language.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span>(topic = <span class="st">"tech"</span>, country = <span class="st">"IT"</span>, language = <span class="st">"it"</span>)
-<span class="co">#&gt;            clean_url language topic_unified main clean_country</span>
-<span class="co">#&gt; 1204   repubblica.it       it          tech None            IT</span>
-<span class="co">#&gt; 2276     lastampa.it       it          tech None            IT</span>
-<span class="co">#&gt; 2673 ilsole24ore.com       it          tech None            IT</span>
-<span class="co">#&gt; 3618     corriere.it       it          tech None            IT</span>
-<span class="co">#&gt; 4159         ansa.it       it          tech None            IT</span>
-<span class="co">#&gt;                                                              rss_url GlobalRank</span>
-<span class="co">#&gt; 1204    http://www.repubblica.it/rss/scienza_e_tecnologia/rss2.0.xml       1086</span>
-<span class="co">#&gt; 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413</span>
-<span class="co">#&gt; 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681</span>
-<span class="co">#&gt; 3618                       http://www.corriere.it/rss/tecnologia.xml       1328</span>
-<span class="co">#&gt; 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248</span>
+<span class="co">#&gt; # A tibble: 5 x 7</span>
+<span class="co">#&gt;   clean_url  language topic_unified main  clean_country rss_url       GlobalRank</span>
+<span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;     </span>
+<span class="co">#&gt; 1 repubblic… it       tech          None  IT            http://www.r… 1086      </span>
+<span class="co">#&gt; 2 lastampa.… it       tech          None  IT            http://www.l… 2413      </span>
+<span class="co">#&gt; 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      </span>
+<span class="co">#&gt; 4 corriere.… it       tech          None  IT            http://www.c… 1328      </span>
+<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span>
 </pre></div>
 </div>
 </div>

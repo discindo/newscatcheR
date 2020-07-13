@@ -163,99 +163,23 @@ need to construct your own out of websites not in the included database.
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a dataframe filtered according to the given parameters</p>
+    <p>a tibble filtered according to the given parameters</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(topic = <span class='st'>"tech"</span>, country = <span class='st'>"US"</span>, language = <span class='st'>"en"</span>)</div><div class='output co'>#&gt;                clean_url language topic_unified main clean_country
-#&gt; 33       ycombinator.com       en          tech    1            US
-#&gt; 71               wsj.com       en          tech None            US
-#&gt; 115            wired.com       en          tech    1            US
-#&gt; 218   washingtonpost.com       en          tech None            US
-#&gt; 325         usatoday.com       en          tech None            US
-#&gt; 500         theverge.com       en          tech    1            US
-#&gt; 553       thenextweb.com       en          tech None            US
-#&gt; 592          thehill.com       en          tech None            US
-#&gt; 719        techradar.com       en          tech    1            US
-#&gt; 1190         reuters.com       en          tech None            US
-#&gt; 1229          reddit.com       en          tech None            US
-#&gt; 1599           nymag.com       en          tech None            US
-#&gt; 1739          newser.com       en          tech None            US
-#&gt; 1747    newscientist.com       en          tech None            US
-#&gt; 1924             mnn.com       en          tech None            US
-#&gt; 2021        mashable.com       en          tech    1            US
-#&gt; 2405           kinja.com       en          tech None            US
-#&gt; 2878          google.com       en          tech None            US
-#&gt; 3028         fortune.com       en          tech None            US
-#&gt; 3234        engadget.com       en          tech    1            US
-#&gt; 3437            digg.com       en          tech    1            US
-#&gt; 3478      denverpost.com       en          tech None            US
-#&gt; 3548        dailydot.com       en          tech    1            US
-#&gt; 3677             cnn.com       en          tech None            US
-#&gt; 3686            cnbc.com       en          tech None            US
-#&gt; 3796         cbsnews.com       en          tech None            US
-#&gt; 3851        buzzfeed.com       en          tech None            US
-#&gt; 3876 businessinsider.com       en          tech None            US
-#&gt; 4399       seattlepi.com       en          tech None            US
-#&gt;                                                                               rss_url
-#&gt; 33                                                   https://news.ycombinator.com/rss
-#&gt; 71                                                     http://blogs.wsj.com/cio/feed/
-#&gt; 115                                                http://feeds.wired.com/wired/index
-#&gt; 218                           http://feeds.washingtonpost.com/rss/business/technology
-#&gt; 325         http://content.usatoday.com/feed/stories/technologylive%5Ecommunities/rss
-#&gt; 500                                              http://www.theverge.com/rss/full.xml
-#&gt; 553                                          http://thenextweb.com/section/tech/feed/
-#&gt; 592                                          http://thehill.com/taxonomy/term/27/feed
-#&gt; 719                                                      http://www.techradar.com/rss
-#&gt; 1190                                  http://feeds.reuters.com/reuters/technologyNews
-#&gt; 1229                                          http://www.reddit.com/r/technology/.rss
-#&gt; 1599                                                    http://nymag.com/rss/Tech.xml
-#&gt; 1739                                          http://rss.newser.com/rss/section/7.rss
-#&gt; 1747                                               http://feeds.newscientist.com/tech
-#&gt; 1924                                           http://www.mnn.com/rss/green-tech-news
-#&gt; 2021                                               http://feeds.mashable.com/Mashable
-#&gt; 2405                                                       http://front.kinja.com/rss
-#&gt; 2878                                https://developers.google.com/web/updates/rss.xml
-#&gt; 3028                                                    http://fortune.com/tech/feed/
-#&gt; 3234                                             http://www.engadget.com/rss-full.xml
-#&gt; 3437                                                    http://digg.com/rss/index.xml
-#&gt; 3478                               http://feeds.denverpost.com/dp-business-technology
-#&gt; 3548                                     http://www.dailydot.com/feed/summary/latest/
-#&gt; 3677                                              http://rss.cnn.com/rss/cnn_tech.rss
-#&gt; 3686                              http://www.cnbc.com/id/19854910/device/rss/rss.html
-#&gt; 3796                                          http://feeds.cbsnews.com/CBSNewsSciTech
-#&gt; 3851                                                 http://www.buzzfeed.com/tech.xml
-#&gt; 3876                                    http://www.businessinsider.com/sai/mobile.rss
-#&gt; 4399 http://www.seattlepi.com/business/tech/collectionRss/Tech-CP-Headlines-12589.php
-#&gt;      GlobalRank
-#&gt; 33         1157
-#&gt; 71           83
-#&gt; 115         146
-#&gt; 218          86
-#&gt; 325         135
-#&gt; 500         225
-#&gt; 553         596
-#&gt; 592         666
-#&gt; 719         715
-#&gt; 1190         81
-#&gt; 1229         43
-#&gt; 1599        662
-#&gt; 1739       5629
-#&gt; 1747        526
-#&gt; 1924       1991
-#&gt; 2021        232
-#&gt; 2405       1433
-#&gt; 2878          2
-#&gt; 3028        315
-#&gt; 3234        282
-#&gt; 3437        183
-#&gt; 3478       1016
-#&gt; 3548       1971
-#&gt; 3677         55
-#&gt; 3686        159
-#&gt; 3796        212
-#&gt; 3851        249
-#&gt; 3876        115
-#&gt; 4399       2124</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/filter_urls.html'>filter_urls</a></span>(topic = <span class='st'>"tech"</span>, country = <span class='st'>"US"</span>, language = <span class='st'>"en"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 29 x 7</span><span>
+#&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
+#&gt; </span><span style='color: #555555;'> 1</span><span> ycombinat… en       tech          1     US            https://new… 1157      
+#&gt; </span><span style='color: #555555;'> 2</span><span> wsj.com    en       tech          None  US            http://blog… 83        
+#&gt; </span><span style='color: #555555;'> 3</span><span> wired.com  en       tech          1     US            http://feed… 146       
+#&gt; </span><span style='color: #555555;'> 4</span><span> washingto… en       tech          None  US            http://feed… 86        
+#&gt; </span><span style='color: #555555;'> 5</span><span> usatoday.… en       tech          None  US            http://cont… 135       
+#&gt; </span><span style='color: #555555;'> 6</span><span> theverge.… en       tech          1     US            http://www.… 225       
+#&gt; </span><span style='color: #555555;'> 7</span><span> thenextwe… en       tech          None  US            http://then… 596       
+#&gt; </span><span style='color: #555555;'> 8</span><span> thehill.c… en       tech          None  US            http://theh… 666       
+#&gt; </span><span style='color: #555555;'> 9</span><span> techradar… en       tech          1     US            http://www.… 715       
+#&gt; </span><span style='color: #555555;'>10</span><span> reuters.c… en       tech          None  US            http://feed… 81        
+#&gt; </span><span style='color: #555555;'># … with 19 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
