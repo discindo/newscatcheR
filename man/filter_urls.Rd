@@ -27,7 +27,7 @@ need to construct your own out of websites not in the included database.
 #for details.}
 }
 \value{
-a dataframe filtered according to the given parameters
+a tibble filtered according to the given parameters
 }
 \description{
 Filter URLs

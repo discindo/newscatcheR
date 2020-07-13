@@ -12,7 +12,7 @@
 #' #Be sure to have the same format as the included data. See `R/package_rss.R`
 #' #for details.
 #'
-#' @return a dataframe containing the headlines contained in the feed
+#' @return a tibble containing the headlines contained in the feed
 #'
 #' @export
 #'

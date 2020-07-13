@@ -12,7 +12,7 @@
 #' #Be sure to have the same format as the included data. See `R/package_rss.R`
 #' #for details.
 #'
-#' @return a dataframe containing the contents of the rss feed
+#' @return a tibble containing the contents of the rss feed
 #'
 #' @importFrom tidyRSS tidyfeed
 #'
