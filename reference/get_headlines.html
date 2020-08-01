@@ -128,10 +128,10 @@ A helper function to get just the headlines of the feed</h1>
 A helper function to get just the headlines of the feed</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(
-  website = <span class='st'>"ycombinator.com"</span>,
-  topic = <span class='kw'>NULL</span>,
-  rss_table = <span class='kw'>package_rss</span>
+    <pre class="usage"><span class='fu'>get_headlines</span>(
+  <span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>,
+  <span class='kw'>topic</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -165,7 +165,8 @@ A helper function to get just the headlines of the feed</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
 <span class='co'># simultaneous posts to the API</span>
-<span class='fu'><a href='https://rdrr.io/pkg/newscatcheR/man/get_headlines.html'>get_headlines</a></span>(website = <span class='st'>"ycombinator.com"</span>, rss_table = <span class='kw'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
+<span class='fu'>get_headlines</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Problem with `mutate()` input `..1`.</span>
+#&gt; <span class='warning'><span style='color: #BB0000;'>✖</span><span> Predicate functions must be wrapped in `where()`.</span>
 #&gt; <span class='warning'></span>
 #&gt; <span class='warning'>  # Bad</span>
 #&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
@@ -173,38 +174,48 @@ A helper function to get just the headlines of the feed</p>
 #&gt; <span class='warning'>  # Good</span>
 #&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
 #&gt; <span class='warning'></span>
-#&gt; <span class='warning'><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                           feed_entries$item_title
-#&gt; 1  Show HN: Primo – all-in-one IDE, CMS, component library, static site generator
-#&gt; 2                                                  Google to Invest $10B in India
-#&gt; 3                          You shouldn't use ENV variables for secret data (2017)
-#&gt; 4                             Libtorrent adds support for the WebTorrent protocol
-#&gt; 5                                   The Most Remarkable Legacy System I Have Seen
-#&gt; 6                             Show HN: A thread hierarchy management library in C
-#&gt; 7          Website allows you to experience what it is like to live with dyslexia
-#&gt; 8            Your DS18B20 temperature sensor is likely a fake, counterfeit, clone
-#&gt; 9                                                       Dark Web Price Index 2020
-#&gt; 10                       WindowSwap: View someone's window somewhere in the world
-#&gt; 11              Google Search Upgrades Make It Harder for Websites to Win Traffic
-#&gt; 12               Uncleftish Beholding: An Uploosening of English Cleanness (2018)
-#&gt; 13                 Pulsar – an open-source distributed pub-sub messaging platform
-#&gt; 14                           Insecam: Directory of Unsecured Surveillance Cameras
-#&gt; 15                                  Writing a software book and making over $100k
-#&gt; 16                            Two Black Holes Colliding Not Enough? Make It Three
-#&gt; 17                               Self Host a Wiki or Knowledge Base for Your Team
-#&gt; 18                              13% of my website visitors block Google Analytics
-#&gt; 19                                  11,000 year old ocher mine in underwater cave
-#&gt; 20                                                       Text-Only Social Network
-#&gt; 21                                     LibreOffice 2020/2025 Marketing Plan [pdf]
-#&gt; 22                                          GNU: A Heuristic for Bad Cryptography
-#&gt; 23                       Frank Gehry started off building cities with his grandma
-#&gt; 24  Exploring how different framings of the same learning task affect performance
-#&gt; 25                 Operators and Sidecars Are the New Model for Software Delivery
-#&gt; 26                                 Rust Is Surprisingly Good as a Server Language
-#&gt; 27                        What Can Bonobos Teach Us About the Nature of Language?
-#&gt; 28                                           Apple Silicon: The Passing of Wintel
-#&gt; 29                                             Do We Need a Theory of Everything?
-#&gt; 30                                      Do not remain nameless to yourself (1966)</div></span></pre>
+#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
+#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span>
+#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Input `..1` is `across(...)`.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
+#&gt; <span class='warning'></span>
+#&gt; <span class='warning'>  # Bad</span>
+#&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
+#&gt; <span class='warning'></span>
+#&gt; <span class='warning'>  # Good</span>
+#&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
+#&gt; <span class='warning'></span>
+#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
+#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                          feed_entries$item_title
+#&gt; 1                         We’re a Lot Better at Fighting Cancer Than We Realized
+#&gt; 2    TikTok’s Chinese owner offers to forego stake to clinch U.S. deal – sources
+#&gt; 3                                           JS1024 Results – 1k JavaScript Demos
+#&gt; 4               Show HN: A platform for beginners to learn programming in Python
+#&gt; 5                                             Derek Sivers and the Art of Enough
+#&gt; 6                                  Show HN: JavaScript-free personal bio hosting
+#&gt; 7                                                        The semver trick (2019)
+#&gt; 8                                                      Incentivized Guardianship
+#&gt; 9                                                                Bootstrap Icons
+#&gt; 10                               Instagram Morphs into an Information Powerhouse
+#&gt; 11 Data isn't just being collected from your phone, it's being used to score you
+#&gt; 12                                          Conventions for Command Line Options
+#&gt; 13                                                     Perl7 is a fork of values
+#&gt; 14         IBM completes successful field trials on Fully Homomorphic Encryption
+#&gt; 15                Show HN: Odin – The Observable and Distributed Workflow System
+#&gt; 16                            Stock Market: What Happens If Tesla Enters S&amp;P 500
+#&gt; 17             What I learned from doing over 60 technical interviews in 30 days
+#&gt; 18                                              Show HN: SpaceVim Release v1.5.0
+#&gt; 19                                                     One Byte to rule them all
+#&gt; 20              Samsung to halt production at its last computer factory in China
+#&gt; 21                                         PlayCanvas, the Web-first game engine
+#&gt; 22            T-Mobile: Are you blocking specific words and suspending accounts?
+#&gt; 23                                                    Designing a Physics Engine
+#&gt; 24                                               StackExchange Performance Stats
+#&gt; 25                     Ask HN: Starting a SaaS business as non-technical founder
+#&gt; 26        Nvidia is reportedly in ‘advanced talks’ to buy ARM for more than $32B
+#&gt; 27            Ask HN: I have $450K cash, what should I do to maximize my return?
+#&gt; 28             Red Hat and CentOS systems aren’t booting due to BootHole patches
+#&gt; 29    Pkg.go.dev is more concerned with Google's interests than good engineering
+#&gt; 30     Show HN: Add popups to your website ️ backed with Google Sheets (for free)</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -220,7 +231,7 @@ A helper function to get just the headlines of the feed</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

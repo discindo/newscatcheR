@@ -93,11 +93,22 @@
 <h3 class="hasAnchor">
 <a href="#get_news" class="anchor"></a>get_news()</h3>
 <p>The first function <code><a href="../reference/get_news.html">get_news()</a></code> returns a tibble of the rss feed of a given site.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="../reference/get_news.html">get_news</a></span>(website = <span class="st">"ycombinator.com"</span>, rss_table = <span class="kw">package_rss</span>)
+<span class="fu"><a href="../reference/get_news.html">get_news</a></span>(<span class="kw">website</span> <span class="kw">=</span> <span class="st">"ycombinator.com"</span>, <span class="kw">rss_table</span> <span class="kw">=</span> <span class="no">package_rss</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
+<span class="co">#&gt; Warning: Problem with `mutate()` input `..1`.</span>
+<span class="co">#&gt; ✖ Predicate functions must be wrapped in `where()`.</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   # Bad</span>
+<span class="co">#&gt;   data %&gt;% select(is.character)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;   # Good</span>
+<span class="co">#&gt;   data %&gt;% select(where(is.character))</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ℹ Please update your code.</span>
+<span class="co">#&gt; This message is displayed once per session.</span>
+<span class="co">#&gt; ℹ Input `..1` is `across(...)`.</span>
 <span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt;   # Bad</span>
@@ -111,78 +122,72 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Show HN: …</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Google to…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 You shoul…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Libtorren…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 The Most …</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Show HN: …</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Website a…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Your DS18…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 Dark Web …</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-13 12:51:50 WindowSwa…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 We’re a L…</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 TikTok’s …</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 JS1024 Re…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Show HN: …</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Derek Siv…</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Show HN: …</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 The semve…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Incentivi…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Bootstrap…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-08-01 15:57:37 Instagram…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span>
-</pre></div>
+<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></body></html></div>
 </div>
 <div id="get_headlines" class="section level3">
 <h3 class="hasAnchor">
 <a href="#get_headlines" class="anchor"></a>get_headlines()</h3>
 <p>The second function <code>get_headlines</code> is a helper function that returns a tibble of just the headlines, instead of the full rss feed.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span>(website = <span class="st">"ycombinator.com"</span>, rss_table = <span class="kw">package_rss</span>)
+<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span>(<span class="kw">website</span> <span class="kw">=</span> <span class="st">"ycombinator.com"</span>, <span class="kw">rss_table</span> <span class="kw">=</span> <span class="no">package_rss</span>)
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                           feed_entries$item_title</span>
-<span class="co">#&gt; 1  Show HN: Primo – all-in-one IDE, CMS, component library, static site generator</span>
-<span class="co">#&gt; 2                                                  Google to Invest $10B in India</span>
-<span class="co">#&gt; 3                          You shouldn't use ENV variables for secret data (2017)</span>
-<span class="co">#&gt; 4                             Libtorrent adds support for the WebTorrent protocol</span>
-<span class="co">#&gt; 5                                   The Most Remarkable Legacy System I Have Seen</span>
-<span class="co">#&gt; 6                             Show HN: A thread hierarchy management library in C</span>
-<span class="co">#&gt; 7          Website allows you to experience what it is like to live with dyslexia</span>
-<span class="co">#&gt; 8            Your DS18B20 temperature sensor is likely a fake, counterfeit, clone</span>
-<span class="co">#&gt; 9                                                       Dark Web Price Index 2020</span>
-<span class="co">#&gt; 10                       WindowSwap: View someone's window somewhere in the world</span>
-<span class="co">#&gt; 11              Google Search Upgrades Make It Harder for Websites to Win Traffic</span>
-<span class="co">#&gt; 12               Uncleftish Beholding: An Uploosening of English Cleanness (2018)</span>
-<span class="co">#&gt; 13                 Pulsar – an open-source distributed pub-sub messaging platform</span>
-<span class="co">#&gt; 14                           Insecam: Directory of Unsecured Surveillance Cameras</span>
-<span class="co">#&gt; 15                                  Writing a software book and making over $100k</span>
-<span class="co">#&gt; 16                            Two Black Holes Colliding Not Enough? Make It Three</span>
-<span class="co">#&gt; 17                               Self Host a Wiki or Knowledge Base for Your Team</span>
-<span class="co">#&gt; 18                              13% of my website visitors block Google Analytics</span>
-<span class="co">#&gt; 19                                  11,000 year old ocher mine in underwater cave</span>
-<span class="co">#&gt; 20                                                       Text-Only Social Network</span>
-<span class="co">#&gt; 21                                     LibreOffice 2020/2025 Marketing Plan [pdf]</span>
-<span class="co">#&gt; 22                                          GNU: A Heuristic for Bad Cryptography</span>
-<span class="co">#&gt; 23                       Frank Gehry started off building cities with his grandma</span>
-<span class="co">#&gt; 24  Exploring how different framings of the same learning task affect performance</span>
-<span class="co">#&gt; 25                 Operators and Sidecars Are the New Model for Software Delivery</span>
-<span class="co">#&gt; 26                                 Rust Is Surprisingly Good as a Server Language</span>
-<span class="co">#&gt; 27                        What Can Bonobos Teach Us About the Nature of Language?</span>
-<span class="co">#&gt; 28                                           Apple Silicon: The Passing of Wintel</span>
-<span class="co">#&gt; 29                                             Do We Need a Theory of Everything?</span>
-<span class="co">#&gt; 30                                      Do not remain nameless to yourself (1966)</span>
-</pre></div>
+<span class="co">#&gt;                                                          feed_entries$item_title</span>
+<span class="co">#&gt; 1                         We’re a Lot Better at Fighting Cancer Than We Realized</span>
+<span class="co">#&gt; 2    TikTok’s Chinese owner offers to forego stake to clinch U.S. deal – sources</span>
+<span class="co">#&gt; 3                                           JS1024 Results – 1k JavaScript Demos</span>
+<span class="co">#&gt; 4               Show HN: A platform for beginners to learn programming in Python</span>
+<span class="co">#&gt; 5                                             Derek Sivers and the Art of Enough</span>
+<span class="co">#&gt; 6                                  Show HN: JavaScript-free personal bio hosting</span>
+<span class="co">#&gt; 7                                                        The semver trick (2019)</span>
+<span class="co">#&gt; 8                                                      Incentivized Guardianship</span>
+<span class="co">#&gt; 9                                                                Bootstrap Icons</span>
+<span class="co">#&gt; 10                               Instagram Morphs into an Information Powerhouse</span>
+<span class="co">#&gt; 11 Data isn't just being collected from your phone, it's being used to score you</span>
+<span class="co">#&gt; 12                                          Conventions for Command Line Options</span>
+<span class="co">#&gt; 13                                                     Perl7 is a fork of values</span>
+<span class="co">#&gt; 14         IBM completes successful field trials on Fully Homomorphic Encryption</span>
+<span class="co">#&gt; 15                Show HN: Odin – The Observable and Distributed Workflow System</span>
+<span class="co">#&gt; 16                            Stock Market: What Happens If Tesla Enters S&amp;P 500</span>
+<span class="co">#&gt; 17             What I learned from doing over 60 technical interviews in 30 days</span>
+<span class="co">#&gt; 18                                              Show HN: SpaceVim Release v1.5.0</span>
+<span class="co">#&gt; 19                                                     One Byte to rule them all</span>
+<span class="co">#&gt; 20              Samsung to halt production at its last computer factory in China</span>
+<span class="co">#&gt; 21                                         PlayCanvas, the Web-first game engine</span>
+<span class="co">#&gt; 22            T-Mobile: Are you blocking specific words and suspending accounts?</span>
+<span class="co">#&gt; 23                                                    Designing a Physics Engine</span>
+<span class="co">#&gt; 24                                               StackExchange Performance Stats</span>
+<span class="co">#&gt; 25                     Ask HN: Starting a SaaS business as non-technical founder</span>
+<span class="co">#&gt; 26        Nvidia is reportedly in ‘advanced talks’ to buy ARM for more than $32B</span>
+<span class="co">#&gt; 27            Ask HN: I have $450K cash, what should I do to maximize my return?</span>
+<span class="co">#&gt; 28             Red Hat and CentOS systems aren’t booting due to BootHole patches</span>
+<span class="co">#&gt; 29    Pkg.go.dev is more concerned with Google's interests than good engineering</span>
+<span class="co">#&gt; 30     Show HN: Add popups to your website ️ backed with Google Sheets (for free)</span></pre></body></html></div>
 </div>
 <div id="describe_url" class="section level3">
 <h3 class="hasAnchor">
 <a href="#describe_url" class="anchor"></a>describe_url()</h3>
 <p>Because some website have multiple feeds divided by topics, <code><a href="../reference/describe_url.html">describe_url(website)</a></code> can be helpful to see the topics of a given website.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/describe_url.html">describe_url</a></span>(<span class="st">"bbc.com"</span>)
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span>
-</pre></div>
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/describe_url.html">describe_url</a></span>(<span class="st">"bbc.com"</span>)
+<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></pre></body></html></div>
 </div>
 <div id="filter_urls" class="section level3">
 <h3 class="hasAnchor">
 <a href="#filter_urls" class="anchor"></a>filter_urls()</h3>
 <p>Finally, <code><a href="../reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country, or language.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span>(topic = <span class="st">"tech"</span>, country = <span class="st">"IT"</span>, language = <span class="st">"it"</span>)
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span>(<span class="kw">topic</span> <span class="kw">=</span> <span class="st">"tech"</span>, <span class="kw">country</span> <span class="kw">=</span> <span class="st">"IT"</span>, <span class="kw">language</span> <span class="kw">=</span> <span class="st">"it"</span>)
 <span class="co">#&gt; # A tibble: 5 x 7</span>
 <span class="co">#&gt;   clean_url  language topic_unified main  clean_country rss_url       GlobalRank</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;     </span>
@@ -190,8 +195,7 @@
 <span class="co">#&gt; 2 lastampa.… it       tech          None  IT            http://www.l… 2413      </span>
 <span class="co">#&gt; 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      </span>
 <span class="co">#&gt; 4 corriere.… it       tech          None  IT            http://www.c… 1328      </span>
-<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span>
-</pre></div>
+<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span></pre></body></html></div>
 </div>
 </div>
 <div id="use-case" class="section level2">
@@ -199,13 +203,9 @@
 <a href="#use-case" class="anchor"></a>Use case</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)
-</pre></div>
+<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">sites</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)</pre></body></html></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="kw">sites</span>, <span class="kw">get_news</span>)
-</pre></div>
+<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="no">sites</span>, <span class="no">get_news</span>)</pre></body></html></div>
 </div>
   </div>
 
@@ -224,7 +224,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

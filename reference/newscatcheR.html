@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • newscatcheR</title>
+<title>newscatcheR: Programmatically collect normalized news from (almost) any website using R — newscatcheR • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="newscatcheR: Programmatically collect normalized news from (almost) any website using R — newscatcheR" />
+<meta property="og:description" content="Two functions that work as a wrapper around tidyRSS can be used to fetch the feed from a given website.
+Two additional functions can be used to conveniently browse the websites dataset." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -111,103 +113,31 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>newscatcheR: Programmatically collect normalized news from (almost) any website using R</h1>
+    <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/newscatcheR.R'><code>R/newscatcheR.R</code></a></small>
+    <div class="hidden name"><code>newscatcheR.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Two functions that work as a wrapper around tidyRSS can be used to fetch the feed from a given website.
+Two additional functions can be used to conveniently browse the websites dataset.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="check_url.html">check_url()</a></code> </p>
-        </td>
-        <td><p>Check URL
-A helper function to verify user input before fetching the feed.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="describe_url.html">describe_url()</a></code> </p>
-        </td>
-        <td><p>Describe URL</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="filter_urls.html">filter_urls()</a></code> </p>
-        </td>
-        <td><p>Filter URLs
-Filter URLs in the provided database based on topic, country and language</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_headlines.html">get_headlines()</a></code> </p>
-        </td>
-        <td><p>Get headlines
-A helper function to get just the headlines of the feed</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_news.html">get_news()</a></code> </p>
-        </td>
-        <td><p>Get news
-Get the contents of a rss feed</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="newscatcheR.html">newscatcheR</a></code> </p>
-        </td>
-        <td><p>newscatcheR: Programmatically collect normalized news from (almost) any website using R</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="package_rss.html">package_rss</a></code> </p>
-        </td>
-        <td><p>RSS table from python package newscatcher</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="show_countries.html">show_countries()</a></code> </p>
-        </td>
-        <td><p>Show countries
-Show all countries in the database.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="show_languages.html">show_languages()</a></code> </p>
-        </td>
-        <td><p>Show languages
-Show all languages in the database.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="show_topics.html">show_topics()</a></code> </p>
-        </td>
-        <td><p>Show topics
-Show all topics in the database.</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="newscatcher-functions-are"><a class="anchor" href="#newscatcher-functions-are"></a>newscatcheR functions are</h2>
+
+    
+
+<p>get_news(website) returns the contents of a rss feed of a website.
+get_headlines(website) returns just the headlines of the website’s rss feed.
+describe_url(website) returns the topics of a given web site.
+filter_urls(topic, country, language ) can be used to browse the dataset by topic, country or language.
+See more in the vignette.</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
