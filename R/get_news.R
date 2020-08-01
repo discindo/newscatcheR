@@ -14,8 +14,6 @@
 #'
 #' @return a tibble containing the contents of the rss feed
 #'
-#' @importFrom tidyRSS tidyfeed
-#'
 #' @export
 #'
 #' @examples
