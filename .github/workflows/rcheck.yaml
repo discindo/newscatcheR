@@ -79,14 +79,3 @@ jobs:
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
-
-      - name: Generate coverage report
-        if: matrix.config.os == 'ubuntu-20.04' && matrix.config.r == 'release'
-        run: covr::codecov()
-        shell: Rscript {0}
-
-      - name: Upload coverage to Codecov
-        if: matrix.config.os == 'ubuntu-20.04' && matrix.config.r == 'release'
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
