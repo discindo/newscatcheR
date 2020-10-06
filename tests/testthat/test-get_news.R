@@ -8,6 +8,12 @@ test_that("get_news returns a tibble with feed contents", {
   # What's returned
   expect_s3_class(output_news, "data.frame")
 
+  # Get the news
+  output_news <- get_news("bbc.com", topic = "travel")
+
+  # What's returned
+  expect_s3_class(output_news, "data.frame")
+
   # numbers return an error
   expect_error(output_news = get_news(123))
 

@@ -11,12 +11,11 @@ check_url(website = "ycombinator.com", rss_table = package_rss)
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-#need to construct your own out of webisites not in the included database.}
+#need to construct your own out of websites not in the included database.
+#Be sure to have the same format as the included data. See `R/package_rss.R`
+#for details.}
 }
 \description{
 Check URL
 A helper function to verify user input before fetching the feed.
-}
-\examples{
-check_url(website = "ycombinator.com", rss_table = package_rss)
 }

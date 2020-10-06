@@ -2,7 +2,7 @@
 % Please edit documentation in R/filter_urls.R
 \name{filter_urls}
 \alias{filter_urls}
-\title{Search for URLs in the provided database based on topic, country and language}
+\title{Filter URLs in the provided database based on topic, country and language}
 \usage{
 filter_urls(
   topic = NULL,
@@ -21,13 +21,15 @@ letters, for example "US". See `show_countries()` for more info.}
 lowercase letters, for example "en". See `show_languages()` for more info.}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-need to construct your own out of websites not in the included database.}
+need to construct your own out of websites not in the included database.
+Be sure to have the same format as the included data. See `R/package_rss.R`
+for details.}
 }
 \value{
 a tibble filtered according to the given parameters
 }
 \description{
-Search for URLs in the provided database based on topic, country and language
+Filter URLs in the provided database based on topic, country and language
 }
 \examples{
 filter_urls(topic = "tech", country = "US", language = "en")

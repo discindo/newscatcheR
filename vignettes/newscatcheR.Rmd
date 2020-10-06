@@ -21,7 +21,11 @@ library(tidyRSS)
 
 ## Overview
 
-The _newscatcheR_ package provides three simple functions for reading RSS feeds from news outlets and have them conveniently returned as a tibble.
+The  package provides three simple functions for reading RSS feeds from news outlets and have them conveniently returned as a tibble.
+
+The _newscatcheR_ package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from `R`.
+
+Two functions that work as a wrapper around [tidyRSS](https://github.com/RobertMyles/tidyRSS) can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.
 
 ### get_news()
 
@@ -42,6 +46,22 @@ Sys.sleep(3)
 get_headlines(website = "ycombinator.com", rss_table = package_rss)
 ```
 
+### describe_url()
+
+Because some website have multiple feeds divided by topics,  `describe_url(website)` can be helpful to see the topics of a given website. 
+
+```{r example_3}
+describe_url("bbc.com")
+```
+
+### filter_urls()
+
+Finally, `filter_urls(topic, country, language )` can be used to browse the dataset by topic, country, or language.
+
+```{r example_4}
+filter_urls(topic = "tech", country = "IT", language = "it")
+```
+
 ## Use case
 
 This package can be convenient if you need to fetch news from various websites for further analysis and you don't want to search manually for the URL of their RSS feeds.
@@ -54,6 +74,6 @@ sites = c("bbc.com", "spiegel.de", "washingtonpost.com")
 
 We can get a list of data frames with:
 
-```{r, eval = F}
+```{r, eval = FALSE}
 lapply(sites, get_news)
 ```
