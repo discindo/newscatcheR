@@ -2,9 +2,9 @@
 #'
 #' @param website a url of a new source in the format "news.ycombinator.com"
 #' @param rss_table a dataframe with urls and rss feeds in case you
-#' #need to construct your own out of websites not in the included database.
-#' #Be sure to have the same format as the included data. See `R/package_rss.R`
-#' #for details.
+#' need to construct your own out of websites not in the included database.
+#' Be sure to have the same format as the included data. See \code{package_rss.R}
+#' for details.
 #'
 #' @return A character vector with topics.
 #' @export
