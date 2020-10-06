@@ -33,7 +33,9 @@ Get headlines
 A helper function to get just the headlines of the feed
 }
 \examples{
+\dontrun{
 Sys.sleep(3) # adding a small time delay to avoid
 # simultaneous posts to the API
 get_headlines(website = "ycombinator.com", rss_table = package_rss)
+}
 }

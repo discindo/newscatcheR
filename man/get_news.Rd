@@ -29,7 +29,9 @@ Get news
 Get the contents of a rss feed
 }
 \examples{
+\dontrun{
 Sys.sleep(3) # adding a small time delay to avoid
 # simultaneous posts to the API
 get_news(website = "ycombinator.com", rss_table = package_rss)
+}
 }

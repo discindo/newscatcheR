@@ -17,9 +17,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' Sys.sleep(3) # adding a small time delay to avoid
 #' # simultaneous posts to the API
 #' get_news(website = "ycombinator.com", rss_table = package_rss)
+#' }
 
 get_news <- function(website = "ycombinator.com", topic = NULL, rss_table = package_rss) {
 
