@@ -128,11 +128,11 @@ A helper function to get just the headlines of the feed</h1>
 A helper function to get just the headlines of the feed</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_headlines</span>(
-  <span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>,
-  <span class='kw'>topic</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>
-)</pre>
+    <pre class="usage"><span class='fu'>get_headlines</span><span class='op'>(</span>
+  website <span class='op'>=</span> <span class='st'>"ycombinator.com"</span>,
+  topic <span class='op'>=</span> <span class='cn'>NULL</span>,
+  rss_table <span class='op'>=</span> <span class='va'>package_rss</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -144,17 +144,17 @@ A helper function to get just the headlines of the feed</p>
     <tr>
       <th>topic</th>
       <td><p>the topic of the feed, by default it is NULL which means it
-#will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
-#'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
-#'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("website")` to check for available feeds.</p></td>
+will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
+'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
+'music', 'sport', 'world', but not all site have all topics.
+use <code><a href='describe_url.html'>describe_url("website")</a></code> to check for available feeds.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of websites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.</p></td>
+need to construct your own out of websites not in the included database.
+Be sure to have the same format as the included data. See <code>package_rss</code>
+for details.</p></td>
     </tr>
     </table>
 
@@ -163,59 +163,12 @@ A helper function to get just the headlines of the feed</p>
     <p>a tibble containing the headlines contained in the feed</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span> <span class='co'># adding a small time delay to avoid</span>
 <span class='co'># simultaneous posts to the API</span>
-<span class='fu'>get_headlines</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Problem with `mutate()` input `..1`.</span>
-#&gt; <span class='warning'><span style='color: #BB0000;'>✖</span><span> Predicate functions must be wrapped in `where()`.</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Bad</span>
-#&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Good</span>
-#&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span>
-#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Input `..1` is `across(...)`.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Predicate functions must be wrapped in `where()`.</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Bad</span>
-#&gt; <span class='warning'>  data %&gt;% select(is.character)</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>  # Good</span>
-#&gt; <span class='warning'>  data %&gt;% select(where(is.character))</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'></span><span style='color: #0000BB;'>ℹ</span><span> Please update your code.</span>
-#&gt; <span class='warning'></span><span style='color: #555555;'>This message is displayed once per session.</span><span></span></div><div class='output co'>#&gt;                                                             feed_entries$item_title
-#&gt; 1                              Germany plans to dim lights at night to save insects
-#&gt; 2                                                  Y Combinator Startup Library 2.0
-#&gt; 3                   Lab mice have a chill, and that may be messing up study results
-#&gt; 4                                    Simdjson: Parsing gigabytes of JSON per second
-#&gt; 5                        Launch HN: Datafold (YC S20) – Diff Tool for SQL Databases
-#&gt; 6                               Show HN: Auth is now available in Supabase (YC S20)
-#&gt; 7        OpenCore bootloader – open-sourced Apple UEFI drivers, enabling Hackintosh
-#&gt; 8    Usbkill – anti-forensic tool to halt computer when new USB device is connected
-#&gt; 9         Show HN: Create your WebAssembly Calling Card–visual creativity with WASM
-#&gt; 10                        Georgia School Reopening Photo Even Worse Than It Appears
-#&gt; 11                       Google discontinues the Pixel 4, nine months after release
-#&gt; 12                               Feds move to block California’s net neutrality law
-#&gt; 13     Scientists rename human genes to stop MS Excel from misreading them as dates
-#&gt; 14             NeRF in the Wild: reconstructing 3D scenes from internet photography
-#&gt; 15                                                       The Math of Card Shuffling
-#&gt; 16                                                           Frances Allen has died
-#&gt; 17              Twitter web app now runs ES6+, reducing polyfill bundle size by 83%
-#&gt; 18                                                 Adam Shostack on Threat Modeling
-#&gt; 19            A new design ship in the Philippines is partly powered by wave energy
-#&gt; 20                                        How we scaled Google Meet during Covid-19
-#&gt; 21          The Largest Commercial Cylindrical Slide Rule Has a Scale Length of 24m
-#&gt; 22 Cluster of 295 Chrome extensions caught hijacking Google and Bing search results
-#&gt; 23                                                  An Inside Look at CloudKitchens
-#&gt; 24                  Pulse oximeters give biased results for people with darker skin
-#&gt; 25         Substack (YC W18) is hiring to build a better business model for writing
-#&gt; 26                                                                Simon's Algorithm
-#&gt; 27                                     Blackstone to Acquire Ancestry.com for $4.7B
-#&gt; 28 MicroBlocks: Scratch and Smalltalk-inspired MCU VM for live embedded programming
-#&gt; 29                  Show HN: SameTunes – A Music Compatibility Platform for Spotify
-#&gt; 30        Take Gitlab to the command line with GLab, an open-source Gitlab CLI tool</div></span></pre>
+<span class='fu'>get_headlines</span><span class='op'>(</span>website <span class='op'>=</span> <span class='st'>"ycombinator.com"</span>, rss_table <span class='op'>=</span> <span class='va'>package_rss</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -231,7 +184,7 @@ A helper function to get just the headlines of the feed</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Filter URLs
-Filter URLs in the provided database based on topic, country and language — filter_urls • newscatcheR</title>
+<title>Filter URLs in the provided database based on topic, country and language — filter_urls • newscatcheR</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ Filter URLs in the provided database based on topic, country and language — fi
 
 
 
-<meta property="og:title" content="Filter URLs
-Filter URLs in the provided database based on topic, country and language — filter_urls" />
-<meta property="og:description" content="Filter URLs
-Filter URLs in the provided database based on topic, country and language" />
+<meta property="og:title" content="Filter URLs in the provided database based on topic, country and language — filter_urls" />
+<meta property="og:description" content="Filter URLs in the provided database based on topic, country and language" />
 
 
 
@@ -117,47 +114,45 @@ Filter URLs in the provided database based on topic, country and language" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Filter URLs
-Filter URLs in the provided database based on topic, country and language</h1>
+    <h1>Filter URLs in the provided database based on topic, country and language</h1>
     <small class="dont-index">Source: <a href='https://github.com/discindo/newscatcheR/blob/master/R/filter_urls.R'><code>R/filter_urls.R</code></a></small>
     <div class="hidden name"><code>filter_urls.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Filter URLs
-Filter URLs in the provided database based on topic, country and language</p>
+    <p>Filter URLs in the provided database based on topic, country and language</p>
     </div>
 
-    <pre class="usage"><span class='fu'>filter_urls</span>(
-  <span class='kw'>topic</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>country</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>language</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>
-)</pre>
+    <pre class="usage"><span class='fu'>filter_urls</span><span class='op'>(</span>
+  topic <span class='op'>=</span> <span class='cn'>NULL</span>,
+  country <span class='op'>=</span> <span class='cn'>NULL</span>,
+  language <span class='op'>=</span> <span class='cn'>NULL</span>,
+  rss_table <span class='op'>=</span> <span class='va'>package_rss</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>topic</th>
-      <td><p>the topic of the feed see `show_topics()` for more info.</p></td>
+      <td><p>the topic of the feed see <code><a href='show_topics.html'>show_topics()</a></code> for more info.</p></td>
     </tr>
     <tr>
       <th>country</th>
       <td><p>the country of origin of the feed using two capital
-letters, for example "US". See `show_countries()` for more info.</p></td>
+letters, for example "US". See <code><a href='show_countries.html'>show_countries()</a></code> for more info.</p></td>
     </tr>
     <tr>
       <th>language</th>
       <td><p>the language of the content of the feed using two
-lowercase letters, for example "en". See `show_languages()` for more info.</p></td>
+lowercase letters, for example "en". See <code><a href='show_languages.html'>show_languages()</a></code> for more info.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
 need to construct your own out of websites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.</p></td>
+Be sure to have the same format as the included data. See <code>package_rss.R</code>
+for details.</p></td>
     </tr>
     </table>
 
@@ -166,7 +161,8 @@ need to construct your own out of websites not in the included database.
     <p>a tibble filtered according to the given parameters</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>filter_urls</span>(<span class='kw'>topic</span> <span class='kw'>=</span> <span class='st'>"tech"</span>, <span class='kw'>country</span> <span class='kw'>=</span> <span class='st'>"US"</span>, <span class='kw'>language</span> <span class='kw'>=</span> <span class='st'>"en"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 29 x 7</span><span>
+    <pre class="examples"><div class='input'><span class='fu'>filter_urls</span><span class='op'>(</span>topic <span class='op'>=</span> <span class='st'>"tech"</span>, country <span class='op'>=</span> <span class='st'>"US"</span>, language <span class='op'>=</span> <span class='st'>"en"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 29 x 7</span><span>
 #&gt;    clean_url  language topic_unified main  clean_country rss_url      GlobalRank
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
 #&gt; </span><span style='color: #555555;'> 1</span><span> ycombinat… en       tech          1     US            https://new… 1157      
@@ -195,7 +191,7 @@ need to construct your own out of websites not in the included database.
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

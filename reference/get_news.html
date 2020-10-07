@@ -128,7 +128,7 @@ Get the contents of a rss feed</h1>
 Get the contents of a rss feed</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_news</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>topic</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</pre>
+    <pre class="usage"><span class='fu'>get_news</span><span class='op'>(</span>website <span class='op'>=</span> <span class='st'>"ycombinator.com"</span>, topic <span class='op'>=</span> <span class='cn'>NULL</span>, rss_table <span class='op'>=</span> <span class='va'>package_rss</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,17 +140,17 @@ Get the contents of a rss feed</p>
     <tr>
       <th>topic</th>
       <td><p>the topic of the feed, by default it is NULL which means it
-#will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
-#'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
-#'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("website")` to check for available feeds.</p></td>
+will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
+'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
+'music', 'sport', 'world', but not all site have all topics.
+use <code><a href='describe_url.html'>describe_url("website")</a></code> to check for available feeds.</p></td>
     </tr>
     <tr>
       <th>rss_table</th>
       <td><p>a dataframe with urls and rss feeds in case you
-#need to construct your own out of websites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.</p></td>
+need to construct your own out of websites not in the included database.
+Be sure to have the same format as the included data. See <code><a href='package_rss.html'>?package_rss</a></code>
+for details.</p></td>
     </tr>
     </table>
 
@@ -159,24 +159,12 @@ Get the contents of a rss feed</p>
     <p>a tibble containing the contents of the rss feed</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span>(<span class='fl'>3</span>) <span class='co'># adding a small time delay to avoid</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.sleep.html'>Sys.sleep</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span> <span class='co'># adding a small time delay to avoid</span>
 <span class='co'># simultaneous posts to the API</span>
-<span class='fu'>get_news</span>(<span class='kw'>website</span> <span class='kw'>=</span> <span class='st'>"ycombinator.com"</span>, <span class='kw'>rss_table</span> <span class='kw'>=</span> <span class='no'>package_rss</span>)</div><div class='output co'>#&gt; <span class='message'>GET request successful. Parsing...</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 30 x 10</span><span>
-#&gt;    feed_title feed_link feed_description feed_pub_date       item_title
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
-#&gt; </span><span style='color: #555555;'> 1</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Germany p…
-#&gt; </span><span style='color: #555555;'> 2</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Y Combina…
-#&gt; </span><span style='color: #555555;'> 3</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Lab mice …
-#&gt; </span><span style='color: #555555;'> 4</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Simdjson:…
-#&gt; </span><span style='color: #555555;'> 5</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Launch HN…
-#&gt; </span><span style='color: #555555;'> 6</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Show HN: …
-#&gt; </span><span style='color: #555555;'> 7</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> OpenCore …
-#&gt; </span><span style='color: #555555;'> 8</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Usbkill –…
-#&gt; </span><span style='color: #555555;'> 9</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Show HN: …
-#&gt; </span><span style='color: #555555;'>10</span><span> Hacker Ne… https://… Links for the i… 2020-08-06 </span><span style='color: #555555;'>14:09:04</span><span> Georgia S…
-#&gt; </span><span style='color: #555555;'># … with 20 more rows, and 5 more variables: item_link </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   item_description </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, item_pub_date </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, item_category </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   item_comments </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
+<span class='fu'>get_news</span><span class='op'>(</span>website <span class='op'>=</span> <span class='st'>"ycombinator.com"</span>, rss_table <span class='op'>=</span> <span class='va'>package_rss</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -192,7 +180,7 @@ Get the contents of a rss feed</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -93,101 +93,83 @@
 <h3 class="hasAnchor">
 <a href="#get_news" class="anchor"></a>get_news()</h3>
 <p>The first function <code><a href="../reference/get_news.html">get_news()</a></code> returns a tibble of the rss feed of a given site.</p>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="../reference/get_news.html">get_news</a></span>(<span class="kw">website</span> <span class="kw">=</span> <span class="st">"ycombinator.com"</span>, <span class="kw">rss_table</span> <span class="kw">=</span> <span class="no">package_rss</span>)
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="../reference/get_news.html">get_news</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span>
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; Warning: Problem with `mutate()` input `..1`.</span>
-<span class="co">#&gt; ✖ Predicate functions must be wrapped in `where()`.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Bad</span>
-<span class="co">#&gt;   data %&gt;% select(is.character)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Good</span>
-<span class="co">#&gt;   data %&gt;% select(where(is.character))</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ℹ Please update your code.</span>
-<span class="co">#&gt; This message is displayed once per session.</span>
-<span class="co">#&gt; ℹ Input `..1` is `across(...)`.</span>
-<span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Bad</span>
-<span class="co">#&gt;   data %&gt;% select(is.character)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Good</span>
-<span class="co">#&gt;   data %&gt;% select(where(is.character))</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ℹ Please update your code.</span>
-<span class="co">#&gt; This message is displayed once per session.</span>
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Germany p…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Y Combina…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Lab mice …</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Simdjson:…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Launch HN…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Show HN: …</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 OpenCore …</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Usbkill –…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Show HN: …</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-08-06 14:09:04 Georgia S…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Show HN: …</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Lessons l…</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Vapor – D…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 I made a …</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 From its …</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Verticall…</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Leaving M…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Quest for…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Crouching…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 The Compl…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></body></html></div>
+<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
 </div>
 <div id="get_headlines" class="section level3">
 <h3 class="hasAnchor">
 <a href="#get_headlines" class="anchor"></a>get_headlines()</h3>
 <p>The second function <code>get_headlines</code> is a helper function that returns a tibble of just the headlines, instead of the full rss feed.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span>(<span class="fl">3</span>)
-<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span>(<span class="kw">website</span> <span class="kw">=</span> <span class="st">"ycombinator.com"</span>, <span class="kw">rss_table</span> <span class="kw">=</span> <span class="no">package_rss</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span>
 <span class="co">#&gt; GET request successful. Parsing...</span>
 <span class="co">#&gt;                                                             feed_entries$item_title</span>
-<span class="co">#&gt; 1                              Germany plans to dim lights at night to save insects</span>
-<span class="co">#&gt; 2                                                  Y Combinator Startup Library 2.0</span>
-<span class="co">#&gt; 3                   Lab mice have a chill, and that may be messing up study results</span>
-<span class="co">#&gt; 4                                    Simdjson: Parsing gigabytes of JSON per second</span>
-<span class="co">#&gt; 5                        Launch HN: Datafold (YC S20) – Diff Tool for SQL Databases</span>
-<span class="co">#&gt; 6                               Show HN: Auth is now available in Supabase (YC S20)</span>
-<span class="co">#&gt; 7        OpenCore bootloader – open-sourced Apple UEFI drivers, enabling Hackintosh</span>
-<span class="co">#&gt; 8    Usbkill – anti-forensic tool to halt computer when new USB device is connected</span>
-<span class="co">#&gt; 9         Show HN: Create your WebAssembly Calling Card–visual creativity with WASM</span>
-<span class="co">#&gt; 10                        Georgia School Reopening Photo Even Worse Than It Appears</span>
-<span class="co">#&gt; 11                       Google discontinues the Pixel 4, nine months after release</span>
-<span class="co">#&gt; 12                               Feds move to block California’s net neutrality law</span>
-<span class="co">#&gt; 13     Scientists rename human genes to stop MS Excel from misreading them as dates</span>
-<span class="co">#&gt; 14             NeRF in the Wild: reconstructing 3D scenes from internet photography</span>
-<span class="co">#&gt; 15                                                       The Math of Card Shuffling</span>
-<span class="co">#&gt; 16                                                           Frances Allen has died</span>
-<span class="co">#&gt; 17              Twitter web app now runs ES6+, reducing polyfill bundle size by 83%</span>
-<span class="co">#&gt; 18                                                 Adam Shostack on Threat Modeling</span>
-<span class="co">#&gt; 19            A new design ship in the Philippines is partly powered by wave energy</span>
-<span class="co">#&gt; 20                                        How we scaled Google Meet during Covid-19</span>
-<span class="co">#&gt; 21          The Largest Commercial Cylindrical Slide Rule Has a Scale Length of 24m</span>
-<span class="co">#&gt; 22 Cluster of 295 Chrome extensions caught hijacking Google and Bing search results</span>
-<span class="co">#&gt; 23                                                  An Inside Look at CloudKitchens</span>
-<span class="co">#&gt; 24                  Pulse oximeters give biased results for people with darker skin</span>
-<span class="co">#&gt; 25         Substack (YC W18) is hiring to build a better business model for writing</span>
-<span class="co">#&gt; 26                                                                Simon's Algorithm</span>
-<span class="co">#&gt; 27                                     Blackstone to Acquire Ancestry.com for $4.7B</span>
-<span class="co">#&gt; 28 MicroBlocks: Scratch and Smalltalk-inspired MCU VM for live embedded programming</span>
-<span class="co">#&gt; 29                  Show HN: SameTunes – A Music Compatibility Platform for Spotify</span>
-<span class="co">#&gt; 30        Take Gitlab to the command line with GLab, an open-source Gitlab CLI tool</span></pre></body></html></div>
+<span class="co">#&gt; 1            Show HN: I built a Rotten Tomatoes-style platform for durable products</span>
+<span class="co">#&gt; 2                       Lessons learned from onboarding emails with no HTML styling</span>
+<span class="co">#&gt; 3                                   Vapor – Decentralized Web over Bitcoinized HTTP</span>
+<span class="co">#&gt; 4                             I made a simple Alexa knockoff that doesn’t spy on me</span>
+<span class="co">#&gt; 5    From its name to its drug interactions, there’s a lot going on with grapefruit</span>
+<span class="co">#&gt; 6       Vertically aligned carbon nanotubes triple the density of lithium batteries</span>
+<span class="co">#&gt; 7                                                                   Leaving Mozilla</span>
+<span class="co">#&gt; 8                                                     Quest for the Whistler Button</span>
+<span class="co">#&gt; 9                                                       Crouching T2, Hidden Danger</span>
+<span class="co">#&gt; 10                                   The Complete AWS Lambda Handbook for Beginners</span>
+<span class="co">#&gt; 11               AI training method exceeds GPT-3 performance with fewer parameters</span>
+<span class="co">#&gt; 12                                                           VSCode on Google Colab</span>
+<span class="co">#&gt; 13  Lawn Love (YC S14) Is Hiring a Tech Leader to Run Our Engineering Team (Remote)</span>
+<span class="co">#&gt; 14                                                The Nobel Prize in Chemistry 2020</span>
+<span class="co">#&gt; 15   The Absolute No-Frills Quite Ignorant Incomplete Beginner’s Guide to Smalltalk</span>
+<span class="co">#&gt; 16      An AI can simulate an economy millions of times to create fairer tax policy</span>
+<span class="co">#&gt; 17                       An/TVs 3 Searchlight – 20 kW Xenon Arc viewable from space</span>
+<span class="co">#&gt; 18 Trump administration announces overhaul of H1B visa program requiring higher pay</span>
+<span class="co">#&gt; 19           A socialite who hated washing dishes invented the automated dishwasher</span>
+<span class="co">#&gt; 20   Why Do Mirrors Flip Things Horizontally but Not Vertically? Here's the Physics</span>
+<span class="co">#&gt; 21                                            USB3: Why it's a bit harder than USB2</span>
+<span class="co">#&gt; 22      DuckDuckGo Founding Member in Global Privacy Control (GPC) Standards Effort</span>
+<span class="co">#&gt; 23                                                                     PS5 Teardown</span>
+<span class="co">#&gt; 24                                                The Basic Internet Fanzine (1995)</span>
+<span class="co">#&gt; 25      Eliminating Task Processing Outages by Replacing RabbitMQ with Apache Kafka</span>
+<span class="co">#&gt; 26           Google and Oracle's Decade-Long Copyright Battle Reaches Supreme Court</span>
+<span class="co">#&gt; 27                                                The discovery of a new taste cell</span>
+<span class="co">#&gt; 28                                            Developing with Squeak on a Cellphone</span>
+<span class="co">#&gt; 29                    How the Starship Enterprise Almost Landed in Las Vegas (2016)</span>
+<span class="co">#&gt; 30       Show HN: I made a site where you practice typing by retyping entire novels</span></pre></div>
 </div>
 <div id="describe_url" class="section level3">
 <h3 class="hasAnchor">
 <a href="#describe_url" class="anchor"></a>describe_url()</h3>
 <p>Because some website have multiple feeds divided by topics, <code><a href="../reference/describe_url.html">describe_url(website)</a></code> can be helpful to see the topics of a given website.</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/describe_url.html">describe_url</a></span>(<span class="st">"bbc.com"</span>)
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></pre></body></html></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
+<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></pre></div>
 </div>
 <div id="filter_urls" class="section level3">
 <h3 class="hasAnchor">
 <a href="#filter_urls" class="anchor"></a>filter_urls()</h3>
 <p>Finally, <code><a href="../reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country, or language.</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span>(<span class="kw">topic</span> <span class="kw">=</span> <span class="st">"tech"</span>, <span class="kw">country</span> <span class="kw">=</span> <span class="st">"IT"</span>, <span class="kw">language</span> <span class="kw">=</span> <span class="st">"it"</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 5 x 7</span>
 <span class="co">#&gt;   clean_url  language topic_unified main  clean_country rss_url       GlobalRank</span>
 <span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;     </span>
@@ -195,7 +177,7 @@
 <span class="co">#&gt; 2 lastampa.… it       tech          None  IT            http://www.l… 2413      </span>
 <span class="co">#&gt; 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      </span>
 <span class="co">#&gt; 4 corriere.… it       tech          None  IT            http://www.c… 1328      </span>
-<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span></pre></body></html></div>
+<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span></pre></div>
 </div>
 </div>
 <div id="use-case" class="section level2">
@@ -203,9 +185,11 @@
 <a href="#use-case" class="anchor"></a>Use case</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="no">sites</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(<span class="no">sites</span>, <span class="no">get_news</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></pre></div>
 </div>
   </div>
 
@@ -224,7 +208,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
