@@ -2,8 +2,7 @@
 % Please edit documentation in R/filter_urls.R
 \name{filter_urls}
 \alias{filter_urls}
-\title{Filter URLs
-Filter URLs in the provided database based on topic, country and language}
+\title{Filter URLs in the provided database based on topic, country and language}
 \usage{
 filter_urls(
   topic = NULL,
@@ -13,24 +12,23 @@ filter_urls(
 )
 }
 \arguments{
-\item{topic}{the topic of the feed see `show_topics()` for more info.}
+\item{topic}{the topic of the feed see \code{show_topics()} for more info.}
 
 \item{country}{the country of origin of the feed using two capital
-letters, for example "US". See `show_countries()` for more info.}
+letters, for example "US". See \code{show_countries()} for more info.}
 
 \item{language}{the language of the content of the feed using two
-lowercase letters, for example "en". See `show_languages()` for more info.}
+lowercase letters, for example "en". See \code{show_languages()} for more info.}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
 need to construct your own out of websites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.}
+Be sure to have the same format as the included data. See \code{package_rss.R}
+for details.}
 }
 \value{
 a tibble filtered according to the given parameters
 }
 \description{
-Filter URLs
 Filter URLs in the provided database based on topic, country and language
 }
 \examples{

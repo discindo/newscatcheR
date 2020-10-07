@@ -11,15 +11,15 @@ get_news(website = "ycombinator.com", topic = NULL, rss_table = package_rss)
 \item{website}{a url of a new source in the format "news.ycombinator.com"}
 
 \item{topic}{the topic of the feed, by default it is NULL which means it
-#will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
-#'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
-#'music', 'sport', 'world', but not all site have all topics.
-#use `describe_url("website")` to check for available feeds.}
+will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
+'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
+'music', 'sport', 'world', but not all site have all topics.
+use \code{describe_url("website")} to check for available feeds.}
 
 \item{rss_table}{a dataframe with urls and rss feeds in case you
-#need to construct your own out of websites not in the included database.
-#Be sure to have the same format as the included data. See `R/package_rss.R`
-#for details.}
+need to construct your own out of websites not in the included database.
+Be sure to have the same format as the included data. See \code{?package_rss}
+for details.}
 }
 \value{
 a tibble containing the contents of the rss feed
@@ -29,7 +29,9 @@ Get news
 Get the contents of a rss feed
 }
 \examples{
+\dontrun{
 Sys.sleep(3) # adding a small time delay to avoid
 # simultaneous posts to the API
 get_news(website = "ycombinator.com", rss_table = package_rss)
+}
 }
