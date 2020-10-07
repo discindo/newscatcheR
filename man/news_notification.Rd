@@ -2,24 +2,30 @@
 % Please edit documentation in R/news_notify.R
 \name{news_notification}
 \alias{news_notification}
+\alias{news_progress}
 \title{News feed Shiny notification}
 \usage{
 news_notification(text, website, rss_table = package_rss, ...)
+
+news_progress(text, website, rss_table = package_rss, ...)
 }
 \arguments{
-\item{text}{character, the content of the notification. To be combined with a random headline.}
+\item{text}{character, the content of the notification. To be combined with a random headline.
+For \code{news_notification} this is combined with the headline with HTML separated by a
+horizontal rule. For \code{news_progress}, this is passed onto the \code{message}
+argument of \code{shiny::withProgress}, while the headline is sent to the \code{detail} argument.}
 
-\item{website}{character, news source to fetch headlines}
+\item{website}{character, news source to fetch headlines (see \code{?get_headlines})}
 
-\item{rss_table}{data.frame, in case a custom RSS table is needed (default = \code{package_rss})}
+\item{rss_table}{data.frame, in case a custom RSS table is needed (default = \code{package_rss}) (see \code{?get_headlines})}
 
-\item{...}{additional arguments passed onto \code{shiny::showNotification}}
+\item{...}{additional arguments passed onto \code{shiny::showNotification} or \code{shiny::withProgress}}
 }
 \description{
-This is a simple wrapper around \code{shiny::showNotification}
-             that fetches headlines from a news source and shows it as part
+These are simple wrappers around \code{shiny::showNotification} and \code{shiny::withProgress}
+             that fetch headlines from a news source and shows it as part
              of a Shiny notification. The intent is to provide informative or
-             funny message as the user is interacting with the app.
+             funny message as the user is interacting with the app or waiting for a computation to finish.
 }
 \examples{
 \dontrun{
@@ -72,4 +78,25 @@ if (interactive()) {
   shinyApp(ui, server)
 }
 
+# And a progress notification
+
+
+if (interactive()) {
+  library(shiny)
+
+  ui <- fluidPage(
+    actionButton(inputId = "go", label = "Go")
+  )
+
+  server <- function(input, output, session) {
+    observeEvent(input$go, {
+      news_progress(text = "From The Onion:",
+                    website = "theonion.com",
+                    rss_table = onion_rss,
+                    expr = Sys.sleep(10))
+    })
+  }
+
+  shinyApp(ui, server)
+}
 }

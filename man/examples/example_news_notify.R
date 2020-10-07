@@ -48,3 +48,24 @@ if (interactive()) {
   shinyApp(ui, server)
 }
 
+# And a progress notification
+
+
+if (interactive()) {
+  library(shiny)
+
+  ui <- fluidPage(
+    actionButton(inputId = "go", label = "Go")
+  )
+
+  server <- function(input, output, session) {
+    observeEvent(input$go, {
+      news_progress(text = "From The Onion:",
+                    website = "theonion.com",
+                    rss_table = onion_rss,
+                    expr = Sys.sleep(10))
+    })
+  }
+
+  shinyApp(ui, server)
+}
