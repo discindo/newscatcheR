@@ -70,7 +70,8 @@
 
       
 
-      </header><script src="newscatcheR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="newscatcheR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="newscatcheR_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="newscatcheR_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>newscatcheR</h1>
@@ -101,16 +102,16 @@
 <span class="co">#&gt; # A tibble: 30 x 10</span>
 <span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
 <span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Show HN: …</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Lessons l…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Vapor – D…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 I made a …</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 From its …</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Verticall…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Leaving M…</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Quest for…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 Crouching…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-10-07 12:14:38 The Compl…</span>
+<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 YouTube-d…</span>
+<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 BL602/BL6…</span>
+<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 A convers…</span>
+<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 Six lesso…</span>
+<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 The Right…</span>
+<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 Quantum T…</span>
+<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 GitTorren…</span>
+<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 Google Pl…</span>
+<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 Deprecati…</span>
+<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-10-23 19:26:35 Rust-GPU:…</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
 <span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
@@ -124,37 +125,37 @@
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
 <span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span>
 <span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                             feed_entries$item_title</span>
-<span class="co">#&gt; 1            Show HN: I built a Rotten Tomatoes-style platform for durable products</span>
-<span class="co">#&gt; 2                       Lessons learned from onboarding emails with no HTML styling</span>
-<span class="co">#&gt; 3                                   Vapor – Decentralized Web over Bitcoinized HTTP</span>
-<span class="co">#&gt; 4                             I made a simple Alexa knockoff that doesn’t spy on me</span>
-<span class="co">#&gt; 5    From its name to its drug interactions, there’s a lot going on with grapefruit</span>
-<span class="co">#&gt; 6       Vertically aligned carbon nanotubes triple the density of lithium batteries</span>
-<span class="co">#&gt; 7                                                                   Leaving Mozilla</span>
-<span class="co">#&gt; 8                                                     Quest for the Whistler Button</span>
-<span class="co">#&gt; 9                                                       Crouching T2, Hidden Danger</span>
-<span class="co">#&gt; 10                                   The Complete AWS Lambda Handbook for Beginners</span>
-<span class="co">#&gt; 11               AI training method exceeds GPT-3 performance with fewer parameters</span>
-<span class="co">#&gt; 12                                                           VSCode on Google Colab</span>
-<span class="co">#&gt; 13  Lawn Love (YC S14) Is Hiring a Tech Leader to Run Our Engineering Team (Remote)</span>
-<span class="co">#&gt; 14                                                The Nobel Prize in Chemistry 2020</span>
-<span class="co">#&gt; 15   The Absolute No-Frills Quite Ignorant Incomplete Beginner’s Guide to Smalltalk</span>
-<span class="co">#&gt; 16      An AI can simulate an economy millions of times to create fairer tax policy</span>
-<span class="co">#&gt; 17                       An/TVs 3 Searchlight – 20 kW Xenon Arc viewable from space</span>
-<span class="co">#&gt; 18 Trump administration announces overhaul of H1B visa program requiring higher pay</span>
-<span class="co">#&gt; 19           A socialite who hated washing dishes invented the automated dishwasher</span>
-<span class="co">#&gt; 20   Why Do Mirrors Flip Things Horizontally but Not Vertically? Here's the Physics</span>
-<span class="co">#&gt; 21                                            USB3: Why it's a bit harder than USB2</span>
-<span class="co">#&gt; 22      DuckDuckGo Founding Member in Global Privacy Control (GPC) Standards Effort</span>
-<span class="co">#&gt; 23                                                                     PS5 Teardown</span>
-<span class="co">#&gt; 24                                                The Basic Internet Fanzine (1995)</span>
-<span class="co">#&gt; 25      Eliminating Task Processing Outages by Replacing RabbitMQ with Apache Kafka</span>
-<span class="co">#&gt; 26           Google and Oracle's Decade-Long Copyright Battle Reaches Supreme Court</span>
-<span class="co">#&gt; 27                                                The discovery of a new taste cell</span>
-<span class="co">#&gt; 28                                            Developing with Squeak on a Cellphone</span>
-<span class="co">#&gt; 29                    How the Starship Enterprise Almost Landed in Las Vegas (2016)</span>
-<span class="co">#&gt; 30       Show HN: I made a site where you practice typing by retyping entire novels</span></pre></div>
+<span class="co">#&gt;                                                           feed_entries$item_title</span>
+<span class="co">#&gt; 1                               YouTube-dl has received a DMCA takedown from RIAA</span>
+<span class="co">#&gt; 2  BL602/BL604 RISC-V WiFi and Bluetooth 5.0 SoC will sell at ESP8266 price point</span>
+<span class="co">#&gt; 3                 A conversation with Shel Kaphan, Amazon’s first employee (2016)</span>
+<span class="co">#&gt; 4                                          Six lessons from six months at Shopify</span>
+<span class="co">#&gt; 5                                                        The Right to Read (1997)</span>
+<span class="co">#&gt; 6                     Quantum Tunnel Shows Particles Can Break the Speed of Light</span>
+<span class="co">#&gt; 7                                       GitTorrent: A Decentralized GitHub (2015)</span>
+<span class="co">#&gt; 8            Google Play Music, Music Play Store and Music Manager are going away</span>
+<span class="co">#&gt; 9                                                                Deprecating SHA1</span>
+<span class="co">#&gt; 10        Rust-GPU: Making Rust a first-class language and ecosystem for GPU code</span>
+<span class="co">#&gt; 11                  Cryo–electron microscopy breaks the atomic resolution barrier</span>
+<span class="co">#&gt; 12                                    Four features that justify a new Unix shell</span>
+<span class="co">#&gt; 13                                      LiveCode is a modern day HyperCard (2019)</span>
+<span class="co">#&gt; 14            Ask HN: Why isn’t finance a part of the core curriculum at schools?</span>
+<span class="co">#&gt; 15       Show HN: Built a timeline component for React with multiple layout modes</span>
+<span class="co">#&gt; 16                                            Palo Alto Tiny BASIC in the Browser</span>
+<span class="co">#&gt; 17                 The world needs nuclear power and we shouldn’t be afraid of it</span>
+<span class="co">#&gt; 18                                                Electoral College Decision Tree</span>
+<span class="co">#&gt; 19                                              Old Laptops as Secondary Monitors</span>
+<span class="co">#&gt; 20    Facebook Seeks Shutdown of NYU Research Project into Political Ad Targeting</span>
+<span class="co">#&gt; 21                             Show HN: My book, The Common Lisp Condition System</span>
+<span class="co">#&gt; 22                           Mozilla Hubs – Private social VR in your web browser</span>
+<span class="co">#&gt; 23                                                                Master of Magic</span>
+<span class="co">#&gt; 24                            My own C compiler on my own compiler infrastructure</span>
+<span class="co">#&gt; 25                                            Show HN: Perfect Pitch Ear Training</span>
+<span class="co">#&gt; 26                      Jerry, Inc. (YC S17) Is Hiring a Data Engineer in Toronto</span>
+<span class="co">#&gt; 27                                                      The Children of the Opera</span>
+<span class="co">#&gt; 28                          How Debuggers Work: Getting and Setting x86 Registers</span>
+<span class="co">#&gt; 29  Senior member of NXIVM told FBI about blackmail and branding, got no response</span>
+<span class="co">#&gt; 30                        War Elephants, Part II: Elephants Against Wolves (2019)</span></pre></div>
 </div>
 <div id="describe_url" class="section level3">
 <h3 class="hasAnchor">
