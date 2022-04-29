@@ -1,3 +1,8 @@
+# version 0.1.1
+
+* adding skip_on_cran() for some tests to avoid errors
+
+
 # version 0.1.0
 
 * this update catches up to the changes made in the python package

@@ -1,3 +1,10 @@
+# newcatcheR 0.1.1
+
+* add `skip_on_cran()` for tests that require fetching online resources
+
+* update vignette accordingly
+
+
 # newcatcheR 0.1.0
 
 * this update catches up to the changes made in the python package
@@ -20,7 +27,7 @@
 
 * adding github url to DESCRIPTION
 
-* fixing lines as per  `goodpractice::gp()` report
+* fixing lines as per `goodpractice::gp()` report
 
 # newcatcheR 0.0.1
 

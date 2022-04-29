@@ -30,7 +30,7 @@ Two functions that work as a wrapper around [tidyRSS](https://github.com/RobertM
 ### get_news()
 
 The first function `get_news()` returns a tibble of the rss feed of a given site.
-```{r}
+```{r, eval = FALSE}
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
 get_news(website = "ycombinator.com", rss_table = package_rss)
@@ -40,7 +40,7 @@ get_news(website = "ycombinator.com", rss_table = package_rss)
 
 The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
 
-```{r}
+```{r, eval = FALSE}
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
 get_headlines(website = "ycombinator.com", rss_table = package_rss)

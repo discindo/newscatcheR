@@ -2,8 +2,8 @@ test_that("get_news returns a tibble with feed contents", {
   # adding a small time delay to avoid simultaneous posts to the api
   Sys.sleep(3)
 
-  # Skip if the website could not be loaded
-  skip_if_offline("ycombinator.com")
+  # Skip when tests are run on CRAN
+  skip_on_cran()
 
   # Get the news
   output_news <- get_news("ycombinator.com")
