@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">newscatcheR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/newscatcheR.html">Get started</a>
 </li>
@@ -55,8 +51,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/discindo/newscatcheR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/discindo/newscatcheR/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -70,127 +66,77 @@
 
       
 
-      </header><script src="newscatcheR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="newscatcheR_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="newscatcheR_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="newscatcheR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>newscatcheR</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/discindo/newscatcheR/blob/master/vignettes/newscatcheR.Rmd"><code>vignettes/newscatcheR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/discindo/newscatcheR/blob/HEAD/vignettes/newscatcheR.Rmd" class="external-link"><code>vignettes/newscatcheR.Rmd</code></a></small>
       <div class="hidden name"><code>newscatcheR.Rmd</code></div>
 
     </div>
 
     
     
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
 <p>The package provides three simple functions for reading RSS feeds from news outlets and have them conveniently returned as a tibble.</p>
 <p>The <em>newscatcheR</em> package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from <code>R</code>.</p>
-<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
-<div id="get_news" class="section level3">
-<h3 class="hasAnchor">
-<a href="#get_news" class="anchor"></a>get_news()</h3>
+<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS" class="external-link">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
+<div class="section level3">
+<h3 id="get_news">get_news()<a class="anchor" aria-label="anchor" href="#get_news"></a>
+</h3>
 <p>The first function <code><a href="../reference/get_news.html">get_news()</a></code> returns a tibble of the rss feed of a given site.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="../reference/get_news.html">get_news</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; # A tibble: 30 x 10</span>
-<span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 Wikimedia…</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 On Abando…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 Spy agenc…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 AMD Revea…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 That comp…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 SparkFun …</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 BaseDash …</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 Show HN: …</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 Sony: Flu…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-10-28 15:04:50 Grafana T…</span>
-<span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="../reference/get_news.html">get_news</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="get_headlines" class="section level3">
-<h3 class="hasAnchor">
-<a href="#get_headlines" class="anchor"></a>get_headlines()</h3>
+<div class="section level3">
+<h3 id="get_headlines">get_headlines()<a class="anchor" aria-label="anchor" href="#get_headlines"></a>
+</h3>
 <p>The second function <code>get_headlines</code> is a helper function that returns a tibble of just the headlines, instead of the full rss feed.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                                 feed_entries$item_title</span>
-<span class="co">#&gt; 1                                                         Wikimedia is moving to Gitlab</span>
-<span class="co">#&gt; 2                                                            On Abandoning the X Server</span>
-<span class="co">#&gt; 3                        Spy agency ducks questions about 'back doors' in tech products</span>
-<span class="co">#&gt; 4                           AMD Reveals the Radeon RX 6000 Series, Coming November 18th</span>
-<span class="co">#&gt; 5                          That company whose name used to contain HTML script tags Ltd</span>
-<span class="co">#&gt; 6                                                                   SparkFun À La Carte</span>
-<span class="co">#&gt; 7                               BaseDash (YC S20) is hiring remote full stack engineers</span>
-<span class="co">#&gt; 8                                          Show HN: You had a productive day, until now</span>
-<span class="co">#&gt; 9  Sony: Flutter and Wayland is the best practice in embedded systems using Linux [pdf]</span>
-<span class="co">#&gt; 10                                 Grafana Tempo, a scalable distributed tracing system</span>
-<span class="co">#&gt; 11                UV B LEDs More Effective in Producing Vitamin D3 in Human Skin (2017)</span>
-<span class="co">#&gt; 12                                                                       Stripe Climate</span>
-<span class="co">#&gt; 13                          Dutch flying car gets permission to drive on European roads</span>
-<span class="co">#&gt; 14                                                            Jetson Nano Developer Kit</span>
-<span class="co">#&gt; 15        Launch HN: Artifact (YC S20) – Personal podcasts with the people in your life</span>
-<span class="co">#&gt; 16                                                 Ask HN: Good C++ code bases to read?</span>
-<span class="co">#&gt; 17                                               Are we losing our ability to remember?</span>
-<span class="co">#&gt; 18                               Microsoft: No Driver Updates Allowed for Win7 and Win8</span>
-<span class="co">#&gt; 19        Florida Gov. DeSantis attempts to vote, discovers someone changed his address</span>
-<span class="co">#&gt; 20                               The Key Points of Working Effectively with Legacy Code</span>
-<span class="co">#&gt; 21                                                    A Theory of Software Architecture</span>
-<span class="co">#&gt; 22       Pika parsing: reformulating packrat parsing as a dynamic programming algorithm</span>
-<span class="co">#&gt; 23        'Who the hell elected you?' U.S. Senate tech hearing becomes political tussle</span>
-<span class="co">#&gt; 24                                                       Strict APIs vs. Forgiving APIs</span>
-<span class="co">#&gt; 25         Security Blueprints of Many Companies Leaked in Hack of Swedish Firm Gunnebo</span>
-<span class="co">#&gt; 26                              Show HN: Uncover how your funds spend money in politics</span>
-<span class="co">#&gt; 27              Consumer Reports: Cadillac's Super Cruise Outperforms Tesla's Autopilot</span>
-<span class="co">#&gt; 28     SARS-CoV-2 spike D614G variant confers enhanced replication and transmissibility</span>
-<span class="co">#&gt; 29                            What SOFIA’s discovery of water on the Moon is, and isn’t</span>
-<span class="co">#&gt; 30                                                The self-driving car is a red herring</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="describe_url" class="section level3">
-<h3 class="hasAnchor">
-<a href="#describe_url" class="anchor"></a>describe_url()</h3>
-<p>Because some website have multiple feeds divided by topics, <code><a href="../reference/describe_url.html">describe_url(website)</a></code> can be helpful to see the topics of a given website.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="../reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></pre></div>
+<div class="section level3">
+<h3 id="describe_url">describe_url()<a class="anchor" aria-label="anchor" href="#describe_url"></a>
+</h3>
+<p>Because some website have multiple feeds divided by topics, <code>describe_url(website)</code> can be helpful to see the topics of a given website.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
+<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></code></pre></div>
 </div>
-<div id="filter_urls" class="section level3">
-<h3 class="hasAnchor">
-<a href="#filter_urls" class="anchor"></a>filter_urls()</h3>
-<p>Finally, <code><a href="../reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country, or language.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 5 x 7</span>
-<span class="co">#&gt;   clean_url  language topic_unified main  clean_country rss_url       GlobalRank</span>
-<span class="co">#&gt;   &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;     </span>
-<span class="co">#&gt; 1 repubblic… it       tech          None  IT            http://www.r… 1086      </span>
-<span class="co">#&gt; 2 lastampa.… it       tech          None  IT            http://www.l… 2413      </span>
-<span class="co">#&gt; 3 ilsole24o… it       tech          None  IT            http://nova.… 2681      </span>
-<span class="co">#&gt; 4 corriere.… it       tech          None  IT            http://www.c… 1328      </span>
-<span class="co">#&gt; 5 ansa.it    it       tech          None  IT            http://www.a… 2248</span></pre></div>
+<div class="section level3">
+<h3 id="filter_urls">filter_urls()<a class="anchor" aria-label="anchor" href="#filter_urls"></a>
+</h3>
+<p>Finally, <code>filter_urls(topic, country, language )</code> can be used to browse the dataset by topic, country, or language.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span>
+<span class="co">#&gt;   clean_url       language topic_unified main  clean_country rss_url  GlobalRank</span>
+<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> repubblica.it   it       tech          None  IT            http://… 1086      </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> lastampa.it     it       tech          None  IT            http://… 2413      </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ilsole24ore.com it       tech          None  IT            http://… 2681      </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> corriere.it     it       tech          None  IT            http://… 1328      </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">5</span> ansa.it         it       tech          None  IT            http://… 2248</span></code></pre></div>
 </div>
 </div>
-<div id="use-case" class="section level2">
-<h2 class="hasAnchor">
-<a href="#use-case" class="anchor"></a>Use case</h2>
+<div class="section level2">
+<h2 id="use-case">Use case<a class="anchor" aria-label="anchor" href="#use-case"></a>
+</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></code></pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></code></pre></div>
 </div>
   </div>
 
@@ -205,11 +151,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Novica Nakov.</p>
+  <p></p>
+<p>Developed by Novica Nakov.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -217,6 +165,8 @@
 
   
 
+
+  
 
   </body>
 </html>

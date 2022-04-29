@@ -23,6 +23,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -35,18 +37,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">newscatcheR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="articles/newscatcheR.html">Get started</a>
 </li>
@@ -59,8 +55,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/discindo/newscatcheR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/discindo/newscatcheR/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -76,39 +72,37 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="newscatcher" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#newscatcher" class="anchor"></a>newscatcheR</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="newscatcher">newscatcheR<a class="anchor" aria-label="anchor" href="#newscatcher"></a>
+</h1></div>
 <!-- badges: start -->
-
-<!-- badges: end -->
-<p>Programmatically collect normalized news from (almost) any website using R</p>
-<p>newscatcheR is an R clone of the python package <a href="https://github.com/kotartemiy/newscatcher">newscatcher</a>.</p>
+<!-- badges: end --><p>Programmatically collect normalized news from (almost) any website using R</p>
+<p>newscatcheR is an R clone of the python package <a href="https://github.com/kotartemiy/newscatcher" class="external-link">newscatcher</a>.</p>
 <p>The package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from <code>R</code>.</p>
-<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of newscatcheR from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"newscatcheR"</span><span class="op">)</span></pre></div>
-<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></pre></div>
+<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS" class="external-link">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the released version of newscatcheR from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"newscatcheR"</span><span class="op">)</span></code></pre></div>
+<p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></code></pre></div>
 <p>Or</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
-<p><code><a href="reference/get_news.html">get_news(website)</a></code> returns the contents of a rss feed of a website.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/">newscatcheR</a></span><span class="op">)</span>
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
+<p><code>get_news(website)</code> returns the contents of a rss feed of a website.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
 <span class="fu"><a href="reference/get_news.html">get_news</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span>
 <span class="co">#&gt; GET request successful. Parsing...</span>
 <span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span>
@@ -136,12 +130,12 @@
 <span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 A gentle …</span>
 <span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
 <span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></pre></div>
-<p><code><a href="reference/get_headlines.html">get_headlines(website)</a></code> returns just the headlines of the website’s rss feed.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/">newscatcheR</a></span><span class="op">)</span>
+<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></code></pre></div>
+<p><code>get_headlines(website)</code> returns just the headlines of the website’s rss feed.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
 <span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>  
+<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>  
 <span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span>
 <span class="co">#&gt; GET request successful. Parsing...</span>
 <span class="co">#&gt;                                                       feed_entries$item_title</span>
@@ -174,14 +168,14 @@
 <span class="co">#&gt; 27                   An F-22 test pilot on the Raptor's flight control system</span>
 <span class="co">#&gt; 28                                                   How to Understand Things</span>
 <span class="co">#&gt; 29                                                      The Polymath Playbook</span>
-<span class="co">#&gt; 30                Moving from Siloed Organizations to Distributed Individuals</span></pre></div>
-<p><code><a href="reference/describe_url.html">describe_url(website)</a></code> returns the topics of a given web site.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></pre></div>
-<p><code><a href="reference/filter_urls.html">filter_urls(topic, country, language )</a></code> can be used to browse the dataset by topic, country or language.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
+<span class="co">#&gt; 30                Moving from Siloed Organizations to Distributed Individuals</span></code></pre></div>
+<p><code>describe_url(website)</code> returns the topics of a given web site.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
+<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></code></pre></div>
+<p><code>filter_urls(topic, country, language )</code> can be used to browse the dataset by topic, country or language.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
 <span class="co">#&gt;            clean_url language topic_unified main clean_country</span>
 <span class="co">#&gt; 1204   repubblica.it       it          tech None            IT</span>
 <span class="co">#&gt; 2276     lastampa.it       it          tech None            IT</span>
@@ -193,70 +187,80 @@
 <span class="co">#&gt; 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413</span>
 <span class="co">#&gt; 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681</span>
 <span class="co">#&gt; 3618                       http://www.corriere.it/rss/tecnologia.xml       1328</span>
-<span class="co">#&gt; 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248</span></pre></div>
+<span class="co">#&gt; 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248</span></code></pre></div>
 </div>
-<div id="use-case" class="section level2">
-<h2 class="hasAnchor">
-<a href="#use-case" class="anchor"></a>Use Case</h2>
+<div class="section level2">
+<h2 id="use-case">Use Case<a class="anchor" aria-label="anchor" href="#use-case"></a>
+</h2>
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></code></pre></div>
 <p>We can get a list of data frames with:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/">newscatcheR</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=newscatcheR">https://​cloud.r-project.org/​package=newscatcheR</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/discindo/newscatcheR/">https://​github.com/​discindo/​newscatcheR/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/discindo/newscatcheR/issues/">https://​github.com/​discindo/​newscatcheR/​issues/​</a>
-</li>
-</ul>
-</div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
-</li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>Novica Nakov <br><small class="roles"> Author, maintainer </small>  </li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="https://cloud.r-project.org/package=newscatcheR" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/discindo/newscatcheR/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/discindo/newscatcheR/issues/" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="license">
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=newscatcheR"><img src="https://www.r-pkg.org/badges/version/newscatcheR" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="https://cranlogs.r-pkg.org/badges/newscatcheR" alt="CRAN_Download_Badge"></a></li>
-<li><a href="https://CRAN.R-project.org/package=newscatcheR"><img src="https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR" alt="CRAN_Download_Badge"></a></li>
-<li><a href="https://codecov.io/gh/discindo/newscatcheR?branch=master"><img src="https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+</li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing newscatcheR</a></li>
+</ul>
 </div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Novica Nakov <br><small class="roles"> Author, maintainer </small>  </li>
+<li><a href="authors.html">More about authors...</a></li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://cran.r-project.org/package=newscatcheR" class="external-link"><img src="https://www.r-pkg.org/badges/version/newscatcheR" alt="CRAN_Status_Badge"></a></li>
+<li><a href="https://CRAN.R-project.org/package=newscatcheR" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/newscatcheR" alt="CRAN_Download_Badge"></a></li>
+<li><a href="https://CRAN.R-project.org/package=newscatcheR" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR" alt="CRAN_Download_Badge"></a></li>
+<li><a href="https://codecov.io/gh/discindo/newscatcheR?branch=master" class="external-link"><img src="https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Novica Nakov.</p>
+  <p></p>
+<p>Developed by Novica Nakov.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -264,6 +268,8 @@
 
   
 
+
+  
 
   </body>
 </html>
