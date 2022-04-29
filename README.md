@@ -11,7 +11,7 @@
 ![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
 ![pkgdown](https://github.com/discindo/newscatcheR/workflows/pkgdown/badge.svg)
 [![Codecov test
-coverage](https://codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://codecov.io/gh/discindo/newscatcheR?branch=master)
+coverage](https://app.codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/discindo/newscatcheR?branch=master)
 
 <!-- badges: end -->
 
