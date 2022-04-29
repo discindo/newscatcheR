@@ -1,7 +1,21 @@
 # version 0.1.1
 
 * adding skip_on_cran() for some tests to avoid errors
+when pulling internet resources
 
+## Test environments
+* local 5.17.5-arch1-1 linux install, R 4.2.0
+
+## R CMD check results
+There were no ERRORs, WARNINGs or NOTEs. 
+
+## Rhub / Win-builder
+There were no ERRORs or WARNINGs.
+NOTE about 
+* checking for detritus in the temp directory ... NOTE
+Found the following files/directories:
+  'lastMiKTeXException'
+on Windows Server 2022, R-devel, 64 bit
 
 # version 0.1.0
 
