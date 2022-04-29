@@ -1,6 +1,6 @@
 on:
   push:
-    paths: ['Readme.Rmd']
+    paths: ['README.Rmd']
 
 name: render-rmarkdown
 
