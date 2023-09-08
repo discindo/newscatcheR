@@ -56,27 +56,32 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">describe_url</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">describe_url</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>website</dt>
 <dd><p>a url of a new source in the format "news.ycombinator.com"</p></dd>
+
+
 <dt>rss_table</dt>
 <dd><p>a dataframe with urls and rss feeds in case you
 need to construct your own out of websites not in the included database.
 Be sure to have the same format as the included data. See <code>package_rss.R</code>
 for details.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A character vector with topics.</p>
+    
+
+<p>A character vector with topics.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">describe_url</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">describe_url</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Topics available for website ycombinator.com: tech.</span>
 </code></pre></div>
     </div>
@@ -92,7 +97,7 @@ for details.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

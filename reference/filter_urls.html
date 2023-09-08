@@ -56,38 +56,47 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">filter_urls</span><span class="op">(</span>
-  topic <span class="op">=</span> <span class="cn">NULL</span>,
-  country <span class="op">=</span> <span class="cn">NULL</span>,
-  language <span class="op">=</span> <span class="cn">NULL</span>,
-  rss_table <span class="op">=</span> <span class="va">package_rss</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">filter_urls</span><span class="op">(</span></span>
+<span>  topic <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  country <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  language <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  rss_table <span class="op">=</span> <span class="va">package_rss</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>topic</dt>
 <dd><p>the topic of the feed see <code><a href="show_topics.html">show_topics()</a></code> for more info.</p></dd>
+
+
 <dt>country</dt>
 <dd><p>the country of origin of the feed using two capital
 letters, for example "US". See <code><a href="show_countries.html">show_countries()</a></code> for more info.</p></dd>
+
+
 <dt>language</dt>
 <dd><p>the language of the content of the feed using two
 lowercase letters, for example "en". See <code><a href="show_languages.html">show_languages()</a></code> for more info.</p></dd>
+
+
 <dt>rss_table</dt>
 <dd><p>a dataframe with urls and rss feeds in case you
 need to construct your own out of websites not in the included database.
 Be sure to have the same format as the included data. See <code>package_rss.R</code>
 for details.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>a tibble filtered according to the given parameters</p>
+    
+
+<p>a tibble filtered according to the given parameters</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">filter_urls</span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"US"</span>, language <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">filter_urls</span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"US"</span>, language <span class="op">=</span> <span class="st">"en"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 29 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    clean_url       language topic_unified main  clean_country rss_url GlobalRank</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span>
@@ -101,7 +110,7 @@ for details.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> thehill.com     en       tech          None  US            http:/… 666       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> techradar.com   en       tech          1     US            http:/… 715       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> reuters.com     en       tech          None  US            http:/… 81        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 19 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 19 more rows</span></span>
 </code></pre></div>
     </div>
   </div>
@@ -116,7 +125,7 @@ for details.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

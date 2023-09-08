@@ -76,7 +76,9 @@
 <div class="page-header"><h1 id="newscatcher">newscatcheR<a class="anchor" aria-label="anchor" href="#newscatcher"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end --><p>Programmatically collect normalized news from (almost) any website using R</p>
+
+<!-- badges: end -->
+<p>Programmatically collect normalized news from (almost) any website using R</p>
 <p>newscatcheR is an R clone of the python package <a href="https://github.com/kotartemiy/newscatcher" class="external-link">newscatcher</a>.</p>
 <p>The package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from <code>R</code>.</p>
 <p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS" class="external-link">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
@@ -85,109 +87,109 @@
 </h2>
 <p>You can install the released version of newscatcheR from <a href="https://CRAN.R-project.org" class="external-link">CRAN</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"newscatcheR"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"newscatcheR"</span><span class="op">)</span></span></code></pre></div>
 <p>And the development version from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></span></code></pre></div>
 <p>Or</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"discindo/newscatcheR"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
 <p><code>get_news(website)</code> returns the contents of a rss feed of a website.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="reference/get_news.html">get_news</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Bad</span>
-<span class="co">#&gt;   data %&gt;% select(is.character)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;   # Good</span>
-<span class="co">#&gt;   data %&gt;% select(where(is.character))</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ℹ Please update your code.</span>
-<span class="co">#&gt; This message is displayed once per session.</span>
-<span class="co">#&gt; # A tibble: 30 x 10</span>
-<span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span>
-<span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Wt – C++ …</span>
-<span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 The Futur…</span>
-<span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Robot Gam…</span>
-<span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Apple Sil…</span>
-<span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 SAS Rescu…</span>
-<span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Do not re…</span>
-<span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Rust for …</span>
-<span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Cockroach…</span>
-<span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Candy Lan…</span>
-<span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 A gentle …</span>
-<span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span>
-<span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span>
-<span class="co">#&gt; #   item_comments &lt;chr&gt;</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span></span>
+<span><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/get_news.html">get_news</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; GET request successful. Parsing...</span></span>
+<span><span class="co">#&gt; Warning: Predicate functions must be wrapped in `where()`.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   # Bad</span></span>
+<span><span class="co">#&gt;   data %&gt;% select(is.character)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   # Good</span></span>
+<span><span class="co">#&gt;   data %&gt;% select(where(is.character))</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ℹ Please update your code.</span></span>
+<span><span class="co">#&gt; This message is displayed once per session.</span></span>
+<span><span class="co">#&gt; # A tibble: 30 x 10</span></span>
+<span><span class="co">#&gt;    feed_title feed_link feed_description feed_pub_date       item_title</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span></span>
+<span><span class="co">#&gt;  1 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Wt – C++ …</span></span>
+<span><span class="co">#&gt;  2 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 The Futur…</span></span>
+<span><span class="co">#&gt;  3 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Robot Gam…</span></span>
+<span><span class="co">#&gt;  4 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Apple Sil…</span></span>
+<span><span class="co">#&gt;  5 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 SAS Rescu…</span></span>
+<span><span class="co">#&gt;  6 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Do not re…</span></span>
+<span><span class="co">#&gt;  7 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Rust for …</span></span>
+<span><span class="co">#&gt;  8 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Cockroach…</span></span>
+<span><span class="co">#&gt;  9 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Candy Lan…</span></span>
+<span><span class="co">#&gt; 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 A gentle …</span></span>
+<span><span class="co">#&gt; # … with 20 more rows, and 5 more variables: item_link &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   item_description &lt;chr&gt;, item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   item_comments &lt;chr&gt;</span></span></code></pre></div>
 <p><code>get_headlines(website)</code> returns just the headlines of the website’s rss feed.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
-<span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>  
-<span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span>
-<span class="co">#&gt; GET request successful. Parsing...</span>
-<span class="co">#&gt;                                                       feed_entries$item_title</span>
-<span class="co">#&gt; 1                                                        Wt – C++ Web Toolkit</span>
-<span class="co">#&gt; 2                              The Future of Online Identity Is Decentralized</span>
-<span class="co">#&gt; 3                                        Apple Silicon: The Passing of Wintel</span>
-<span class="co">#&gt; 4                           Robot Game: Comparing 6502 C, Assembly, and Forth</span>
-<span class="co">#&gt; 5                           SAS Rescue 3 Trapped British Diplomats in Albania</span>
-<span class="co">#&gt; 6                                   Do not remain nameless to yourself (1966)</span>
-<span class="co">#&gt; 7                                 Show HN: Sed to C translator written in sed</span>
-<span class="co">#&gt; 8                 Rust for JavaScript Developers – Pattern Matching and Enums</span>
-<span class="co">#&gt; 9                              Candy Land Was Invented for Polio Wards (2019)</span>
-<span class="co">#&gt; 10                   Cockroachdb/copyist: Mocking an SQL database in Go tests</span>
-<span class="co">#&gt; 11              A gentle introduction to HDBSCAN and density-based clustering</span>
-<span class="co">#&gt; 12  Underwater caves in Mexico preserve one of the world’s oldest ochre mines</span>
-<span class="co">#&gt; 13   Sirum (YC W15 Nonprofit) hiring back end engineer to automate a pharmacy</span>
-<span class="co">#&gt; 14                        Digital Audio on VHS – The Technics SV-P100 [video]</span>
-<span class="co">#&gt; 15 Lava tubes may be havens for ancient alien life and future human explorers</span>
-<span class="co">#&gt; 16                               The company that sells lost airplane luggage</span>
-<span class="co">#&gt; 17           Sandboxie-Plus – a fork of Sandboxie with improved functionality</span>
-<span class="co">#&gt; 18          Show HN: Learnawesome.org – Open-source learning map for humanity</span>
-<span class="co">#&gt; 19                                               MariaDB Temporal Data Tables</span>
-<span class="co">#&gt; 20                                                         Just Too Efficient</span>
-<span class="co">#&gt; 21                                                 Ruby lib/irb/easter-egg.rb</span>
-<span class="co">#&gt; 22                                                               Tour of Rust</span>
-<span class="co">#&gt; 23                         Building a self-updating profile README for GitHub</span>
-<span class="co">#&gt; 24                                          Linux kernel in-tree Rust support</span>
-<span class="co">#&gt; 25                     US citizens warned they face arbitrary arrest in China</span>
-<span class="co">#&gt; 26                                                      Dealing with Insomnia</span>
-<span class="co">#&gt; 27                   An F-22 test pilot on the Raptor's flight control system</span>
-<span class="co">#&gt; 28                                                   How to Understand Things</span>
-<span class="co">#&gt; 29                                                      The Polymath Playbook</span>
-<span class="co">#&gt; 30                Moving from Siloed Organizations to Distributed Individuals</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span></span>
+<span><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>  </span>
+<span><span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; GET request successful. Parsing...</span></span>
+<span><span class="co">#&gt;                                                       feed_entries$item_title</span></span>
+<span><span class="co">#&gt; 1                                                        Wt – C++ Web Toolkit</span></span>
+<span><span class="co">#&gt; 2                              The Future of Online Identity Is Decentralized</span></span>
+<span><span class="co">#&gt; 3                                        Apple Silicon: The Passing of Wintel</span></span>
+<span><span class="co">#&gt; 4                           Robot Game: Comparing 6502 C, Assembly, and Forth</span></span>
+<span><span class="co">#&gt; 5                           SAS Rescue 3 Trapped British Diplomats in Albania</span></span>
+<span><span class="co">#&gt; 6                                   Do not remain nameless to yourself (1966)</span></span>
+<span><span class="co">#&gt; 7                                 Show HN: Sed to C translator written in sed</span></span>
+<span><span class="co">#&gt; 8                 Rust for JavaScript Developers – Pattern Matching and Enums</span></span>
+<span><span class="co">#&gt; 9                              Candy Land Was Invented for Polio Wards (2019)</span></span>
+<span><span class="co">#&gt; 10                   Cockroachdb/copyist: Mocking an SQL database in Go tests</span></span>
+<span><span class="co">#&gt; 11              A gentle introduction to HDBSCAN and density-based clustering</span></span>
+<span><span class="co">#&gt; 12  Underwater caves in Mexico preserve one of the world’s oldest ochre mines</span></span>
+<span><span class="co">#&gt; 13   Sirum (YC W15 Nonprofit) hiring back end engineer to automate a pharmacy</span></span>
+<span><span class="co">#&gt; 14                        Digital Audio on VHS – The Technics SV-P100 [video]</span></span>
+<span><span class="co">#&gt; 15 Lava tubes may be havens for ancient alien life and future human explorers</span></span>
+<span><span class="co">#&gt; 16                               The company that sells lost airplane luggage</span></span>
+<span><span class="co">#&gt; 17           Sandboxie-Plus – a fork of Sandboxie with improved functionality</span></span>
+<span><span class="co">#&gt; 18          Show HN: Learnawesome.org – Open-source learning map for humanity</span></span>
+<span><span class="co">#&gt; 19                                               MariaDB Temporal Data Tables</span></span>
+<span><span class="co">#&gt; 20                                                         Just Too Efficient</span></span>
+<span><span class="co">#&gt; 21                                                 Ruby lib/irb/easter-egg.rb</span></span>
+<span><span class="co">#&gt; 22                                                               Tour of Rust</span></span>
+<span><span class="co">#&gt; 23                         Building a self-updating profile README for GitHub</span></span>
+<span><span class="co">#&gt; 24                                          Linux kernel in-tree Rust support</span></span>
+<span><span class="co">#&gt; 25                     US citizens warned they face arbitrary arrest in China</span></span>
+<span><span class="co">#&gt; 26                                                      Dealing with Insomnia</span></span>
+<span><span class="co">#&gt; 27                   An F-22 test pilot on the Raptor's flight control system</span></span>
+<span><span class="co">#&gt; 28                                                   How to Understand Things</span></span>
+<span><span class="co">#&gt; 29                                                      The Polymath Playbook</span></span>
+<span><span class="co">#&gt; 30                Moving from Siloed Organizations to Distributed Individuals</span></span></code></pre></div>
 <p><code>describe_url(website)</code> returns the topics of a given web site.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></span></code></pre></div>
 <p><code>filter_urls(topic, country, language )</code> can be used to browse the dataset by topic, country or language.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
-<span class="co">#&gt;            clean_url language topic_unified main clean_country</span>
-<span class="co">#&gt; 1204   repubblica.it       it          tech None            IT</span>
-<span class="co">#&gt; 2276     lastampa.it       it          tech None            IT</span>
-<span class="co">#&gt; 2673 ilsole24ore.com       it          tech None            IT</span>
-<span class="co">#&gt; 3618     corriere.it       it          tech None            IT</span>
-<span class="co">#&gt; 4159         ansa.it       it          tech None            IT</span>
-<span class="co">#&gt;                                                              rss_url GlobalRank</span>
-<span class="co">#&gt; 1204    http://www.repubblica.it/rss/scienza_e_tecnologia/rss2.0.xml       1086</span>
-<span class="co">#&gt; 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413</span>
-<span class="co">#&gt; 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681</span>
-<span class="co">#&gt; 3618                       http://www.corriere.it/rss/tecnologia.xml       1328</span>
-<span class="co">#&gt; 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;            clean_url language topic_unified main clean_country</span></span>
+<span><span class="co">#&gt; 1204   repubblica.it       it          tech None            IT</span></span>
+<span><span class="co">#&gt; 2276     lastampa.it       it          tech None            IT</span></span>
+<span><span class="co">#&gt; 2673 ilsole24ore.com       it          tech None            IT</span></span>
+<span><span class="co">#&gt; 3618     corriere.it       it          tech None            IT</span></span>
+<span><span class="co">#&gt; 4159         ansa.it       it          tech None            IT</span></span>
+<span><span class="co">#&gt;                                                              rss_url GlobalRank</span></span>
+<span><span class="co">#&gt; 1204    http://www.repubblica.it/rss/scienza_e_tecnologia/rss2.0.xml       1086</span></span>
+<span><span class="co">#&gt; 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413</span></span>
+<span><span class="co">#&gt; 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681</span></span>
+<span><span class="co">#&gt; 3618                       http://www.corriere.it/rss/tecnologia.xml       1328</span></span>
+<span><span class="co">#&gt; 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="use-case">Use Case<a class="anchor" aria-label="anchor" href="#use-case"></a>
@@ -195,11 +197,11 @@
 <p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></span></code></pre></div>
 <p>We can get a list of data frames with:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -260,7 +262,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

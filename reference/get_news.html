@@ -61,37 +61,44 @@ Get the contents of a rss feed</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_news</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, topic <span class="op">=</span> <span class="cn">NULL</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_news</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, topic <span class="op">=</span> <span class="cn">NULL</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>website</dt>
 <dd><p>a url of a new source in the format "news.ycombinator.com"</p></dd>
+
+
 <dt>topic</dt>
 <dd><p>the topic of the feed, by default it is NULL which means it
 will fetch the "main" feed. topics are 'tech', 'news', 'business', 'science',
 'finance', 'food', 'politics', 'economics', 'travel', 'entertainment',
 'music', 'sport', 'world', but not all site have all topics.
 use <code>describe_url("website")</code> to check for available feeds.</p></dd>
+
+
 <dt>rss_table</dt>
 <dd><p>a dataframe with urls and rss feeds in case you
 need to construct your own out of websites not in the included database.
 Be sure to have the same format as the included data. See <code><a href="package_rss.html">?package_rss</a></code>
 for details.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>a tibble containing the contents of the rss feed</p>
+    
+
+<p>a tibble containing the contents of the rss feed</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="co"># adding a small time delay to avoid</span></span>
-<span class="r-in"><span class="co"># simultaneous posts to the API</span></span>
-<span class="r-in"><span class="fu">get_news</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span> <span class="co"># adding a small time delay to avoid</span></span></span>
+<span class="r-in"><span><span class="co"># simultaneous posts to the API</span></span></span>
+<span class="r-in"><span><span class="fu">get_news</span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -106,7 +113,7 @@ for details.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

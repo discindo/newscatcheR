@@ -66,7 +66,7 @@
 
       
 
-      </header><script src="newscatcheR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>newscatcheR</h1>
@@ -82,61 +82,75 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>The package provides three simple functions for reading RSS feeds from news outlets and have them conveniently returned as a tibble.</p>
-<p>The <em>newscatcheR</em> package provides a dataset of news sites and their rss feeds, together with some characteristics of the websites such as the topic, country or language of the website, and few functions explore and access the feeds from <code>R</code>.</p>
-<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS" class="external-link">tidyRSS</a> can be used to fetch the feed from a given website. Two additional functions can be used to conveniently browse the websites dataset.</p>
+<p>The package provides three simple functions for reading RSS feeds
+from news outlets and have them conveniently returned as a tibble.</p>
+<p>The <em>newscatcheR</em> package provides a dataset of news sites and
+their rss feeds, together with some characteristics of the websites such
+as the topic, country or language of the website, and few functions
+explore and access the feeds from <code>R</code>.</p>
+<p>Two functions that work as a wrapper around <a href="https://github.com/RobertMyles/tidyRSS" class="external-link">tidyRSS</a> can be used to
+fetch the feed from a given website. Two additional functions can be
+used to conveniently browse the websites dataset.</p>
 <div class="section level3">
 <h3 id="get_news">get_news()<a class="anchor" aria-label="anchor" href="#get_news"></a>
 </h3>
-<p>The first function <code><a href="../reference/get_news.html">get_news()</a></code> returns a tibble of the rss feed of a given site.</p>
+<p>The first function <code><a href="../reference/get_news.html">get_news()</a></code> returns a tibble of the
+rss feed of a given site.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="../reference/get_news.html">get_news</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/get_news.html">get_news</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="get_headlines">get_headlines()<a class="anchor" aria-label="anchor" href="#get_headlines"></a>
 </h3>
-<p>The second function <code>get_headlines</code> is a helper function that returns a tibble of just the headlines, instead of the full rss feed.</p>
+<p>The second function <code>get_headlines</code> is a helper function
+that returns a tibble of just the headlines, instead of the full rss
+feed.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span>
-<span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/get_headlines.html">get_headlines</a></span><span class="op">(</span>website <span class="op">=</span> <span class="st">"ycombinator.com"</span>, rss_table <span class="op">=</span> <span class="va">package_rss</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="describe_url">describe_url()<a class="anchor" aria-label="anchor" href="#describe_url"></a>
 </h3>
-<p>Because some website have multiple feeds divided by topics, <code>describe_url(website)</code> can be helpful to see the topics of a given website.</p>
+<p>Because some website have multiple feeds divided by topics,
+<code>describe_url(website)</code> can be helpful to see the topics of a
+given website.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span>
-<span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Topics available for website bbc.com: business, news, science, travel.</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="filter_urls">filter_urls()<a class="anchor" aria-label="anchor" href="#filter_urls"></a>
 </h3>
-<p>Finally, <code>filter_urls(topic, country, language )</code> can be used to browse the dataset by topic, country, or language.</p>
+<p>Finally, <code>filter_urls(topic, country, language )</code> can be
+used to browse the dataset by topic, country, or language.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span>
-<span class="co">#&gt;   clean_url       language topic_unified main  clean_country rss_url  GlobalRank</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> repubblica.it   it       tech          None  IT            http://… 1086      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">2</span> lastampa.it     it       tech          None  IT            http://… 2413      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ilsole24ore.com it       tech          None  IT            http://… 2681      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">4</span> corriere.it     it       tech          None  IT            http://… 1328      </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">5</span> ansa.it         it       tech          None  IT            http://… 2248</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/filter_urls.html">filter_urls</a></span><span class="op">(</span>topic <span class="op">=</span> <span class="st">"tech"</span>, country <span class="op">=</span> <span class="st">"IT"</span>, language <span class="op">=</span> <span class="st">"it"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span></span>
+<span><span class="co">#&gt;   clean_url       language topic_unified main  clean_country rss_url  GlobalRank</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> repubblica.it   it       tech          None  IT            http://… 1086      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> lastampa.it     it       tech          None  IT            http://… 2413      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> ilsole24ore.com it       tech          None  IT            http://… 2681      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> corriere.it     it       tech          None  IT            http://… 1328      </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> ansa.it         it       tech          None  IT            http://… 2248</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
 <h2 id="use-case">Use case<a class="anchor" aria-label="anchor" href="#use-case"></a>
 </h2>
-<p>This package can be convenient if you need to fetch news from various websites for further analysis and you don’t want to search manually for the URL of their RSS feeds.</p>
+<p>This package can be convenient if you need to fetch news from various
+websites for further analysis and you don’t want to search manually for
+the URL of their RSS feeds.</p>
 <p>Assuming we have the news sites we want to follow:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">sites</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bbc.com"</span>, <span class="st">"spiegel.de"</span>, <span class="st">"washingtonpost.com"</span><span class="op">)</span></span></code></pre></div>
 <p>We can get a list of data frames with:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">sites</span>, <span class="va">get_news</span><span class="op">)</span></span></code></pre></div>
 </div>
   </div>
 
@@ -157,7 +171,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
