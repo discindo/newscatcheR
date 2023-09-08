@@ -10,8 +10,7 @@
 [![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 ![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
 ![pkgdown](https://github.com/discindo/newscatcheR/workflows/pkgdown/badge.svg)
-[![Codecov test
-coverage](https://app.codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/discindo/newscatcheR?branch=master)
+[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR)
 [![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -69,14 +68,14 @@ get_news("ycombinator.com")
 #>    <chr>       <chr>             <chr>            <dttm>              <chr>     
 #>  1 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 NSO group…
 #>  2 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 China's a…
-#>  3 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Unpacking…
-#>  4 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 How Query…
-#>  5 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Servo…
-#>  6 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My Node.j…
-#>  7 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Show HN: …
-#>  8 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 I rode wi…
-#>  9 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My speed …
-#> 10 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Silve…
+#>  3 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 How Query…
+#>  4 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My Node.j…
+#>  5 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My speed …
+#>  6 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Show HN: …
+#>  7 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 We built …
+#>  8 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Silve…
+#>  9 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Unpacking…
+#> 10 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 I rode wi…
 #> # ℹ 20 more rows
 #> # ℹ 5 more variables: item_link <chr>, item_description <chr>,
 #> #   item_pub_date <dttm>, item_category <list>, item_comments <chr>
@@ -94,34 +93,34 @@ get_headlines("ycombinator.com")
 #>                                                            feed_entries$item_title
 #> 1               NSO group iPhone zero-click, zero-day exploit captured in the wild
 #> 2  China's ancient water pipe networks show no evidence of a centralized authority
-#> 3                                                         Unpacking Elixir: Syntax
-#> 4                                                           How Query Engines Work
-#> 5                             The Servo project is joining Linux Foundation Europe
-#> 6                                                        My Node.js is a bit Rusty
-#> 7                       Show HN: HackYourNews – AI summaries of the top HN stories
-#> 8                             I rode with an ice road trucker to the Arctic Circle
-#> 9                                                             My speed cubing page
-#> 10                                                                The Silver Thief
+#> 3                                                           How Query Engines Work
+#> 4                                                        My Node.js is a bit Rusty
+#> 5                                                             My speed cubing page
+#> 6                       Show HN: HackYourNews – AI summaries of the top HN stories
+#> 7                        We built an AI-powered Magic the Gathering card generator
+#> 8                                                          The Silver Thief (2004)
+#> 9                                                         Unpacking Elixir: Syntax
+#> 10                            I rode with an ice road trucker to the Arctic Circle
 #> 11                                 LLMs, RAG, and the missing storage layer for AI
 #> 12         John McCarthy’s collection of numerical facts for use in elisp programs
-#> 13                 Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
-#> 14                       We built an AI-powered Magic the Gathering card generator
-#> 15                                                A BERT for laptops, from scratch
-#> 16                                                                        Lean 4.0
-#> 17                            North Korean campaign targeting security researchers
+#> 13                                                                        Lean 4.0
+#> 14                                                A BERT for laptops, from scratch
+#> 15                 Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
+#> 16                            North Korean campaign targeting security researchers
+#> 17                                    Understanding Request Latency with Profiling
 #> 18                                                        What's new in Emacs 29.1
-#> 19          Federated benchmarking of medical artificial intelligence with MedPerf
-#> 20                                                             London Street Trees
+#> 19                                                             London Street Trees
+#> 20          Federated benchmarking of medical artificial intelligence with MedPerf
 #> 21                                 Animations From First Principles (in 5 minutes)
 #> 22                                      Cthulhu.jl – show type-inferred Julia code
-#> 23                               Accidental Empires, Chapter 11 – Font Wars (1992)
-#> 24                           Deciphering Mary Stuart’s lost letters from 1578-1584
-#> 25              Chrome now tracks users and shares a “topic” list with advertisers
-#> 26                     NaNofuzz: A Usable Tool for Automatic Test Generation [pdf]
-#> 27                                         A successful Git branching model (2010)
-#> 28                                        Are any words the same in all languages?
-#> 29                                  Mullvad on Tailscale: Privately browse the web
-#> 30                                               Why isn't chess popular in Japan?
+#> 23     Coincidentally-identical waypoint names foxed UK air traffic control system
+#> 24                               Accidental Empires, Chapter 11 – Font Wars (1992)
+#> 25                           Deciphering Mary Stuart’s lost letters from 1578-1584
+#> 26                                                Keith Haring’s Computer Drawings
+#> 27              Chrome now tracks users and shares a “topic” list with advertisers
+#> 28                                               Why isn't chess popular in Japan?
+#> 29                     NaNofuzz: A Usable Tool for Automatic Test Generation [pdf]
+#> 30                                                                        Slack AI
 ```
 
 `describe_url(website)` returns the topics of a given web site.
