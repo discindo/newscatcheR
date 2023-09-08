@@ -5,14 +5,14 @@
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
-[![CRAN\_Download\_Badge](https://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
-[![CRAN\_Download\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
+[![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+[![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 ![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
 ![pkgdown](https://github.com/discindo/newscatcheR/workflows/pkgdown/badge.svg)
 [![Codecov test
 coverage](https://app.codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/discindo/newscatcheR?branch=master)
-
+[![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Programmatically collect normalized news from (almost) any website using
@@ -64,32 +64,22 @@ library(newscatcheR)
 Sys.sleep(3)
 get_news("ycombinator.com")
 #> GET request successful. Parsing...
-#> Warning: Predicate functions must be wrapped in `where()`.
-#> 
-#>   # Bad
-#>   data %>% select(is.character)
-#> 
-#>   # Good
-#>   data %>% select(where(is.character))
-#> 
-#> ℹ Please update your code.
-#> This message is displayed once per session.
-#> # A tibble: 30 x 10
-#>    feed_title feed_link feed_description feed_pub_date       item_title
-#>    <chr>      <chr>     <chr>            <dttm>              <chr>     
-#>  1 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Wt – C++ …
-#>  2 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 The Futur…
-#>  3 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Robot Gam…
-#>  4 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Apple Sil…
-#>  5 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 SAS Rescu…
-#>  6 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Do not re…
-#>  7 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Rust for …
-#>  8 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Cockroach…
-#>  9 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 Candy Lan…
-#> 10 Hacker Ne… https://… Links for the i… 2020-07-12 17:00:35 A gentle …
-#> # … with 20 more rows, and 5 more variables: item_link <chr>,
-#> #   item_description <chr>, item_pub_date <dttm>, item_category <list>,
-#> #   item_comments <chr>
+#> # A tibble: 30 × 10
+#>    feed_title  feed_link         feed_description feed_pub_date       item_title
+#>    <chr>       <chr>             <chr>            <dttm>              <chr>     
+#>  1 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 NSO group…
+#>  2 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 China's a…
+#>  3 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Unpacking…
+#>  4 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 How Query…
+#>  5 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Servo…
+#>  6 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My Node.j…
+#>  7 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Show HN: …
+#>  8 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 I rode wi…
+#>  9 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My speed …
+#> 10 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Silve…
+#> # ℹ 20 more rows
+#> # ℹ 5 more variables: item_link <chr>, item_description <chr>,
+#> #   item_pub_date <dttm>, item_category <list>, item_comments <chr>
 ```
 
 `get_headlines(website)` returns just the headlines of the website’s rss
@@ -101,37 +91,37 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                       feed_entries$item_title
-#> 1                                                        Wt – C++ Web Toolkit
-#> 2                              The Future of Online Identity Is Decentralized
-#> 3                                        Apple Silicon: The Passing of Wintel
-#> 4                           Robot Game: Comparing 6502 C, Assembly, and Forth
-#> 5                           SAS Rescue 3 Trapped British Diplomats in Albania
-#> 6                                   Do not remain nameless to yourself (1966)
-#> 7                                 Show HN: Sed to C translator written in sed
-#> 8                 Rust for JavaScript Developers – Pattern Matching and Enums
-#> 9                              Candy Land Was Invented for Polio Wards (2019)
-#> 10                   Cockroachdb/copyist: Mocking an SQL database in Go tests
-#> 11              A gentle introduction to HDBSCAN and density-based clustering
-#> 12  Underwater caves in Mexico preserve one of the world’s oldest ochre mines
-#> 13   Sirum (YC W15 Nonprofit) hiring back end engineer to automate a pharmacy
-#> 14                        Digital Audio on VHS – The Technics SV-P100 [video]
-#> 15 Lava tubes may be havens for ancient alien life and future human explorers
-#> 16                               The company that sells lost airplane luggage
-#> 17           Sandboxie-Plus – a fork of Sandboxie with improved functionality
-#> 18          Show HN: Learnawesome.org – Open-source learning map for humanity
-#> 19                                               MariaDB Temporal Data Tables
-#> 20                                                         Just Too Efficient
-#> 21                                                 Ruby lib/irb/easter-egg.rb
-#> 22                                                               Tour of Rust
-#> 23                         Building a self-updating profile README for GitHub
-#> 24                                          Linux kernel in-tree Rust support
-#> 25                     US citizens warned they face arbitrary arrest in China
-#> 26                                                      Dealing with Insomnia
-#> 27                   An F-22 test pilot on the Raptor's flight control system
-#> 28                                                   How to Understand Things
-#> 29                                                      The Polymath Playbook
-#> 30                Moving from Siloed Organizations to Distributed Individuals
+#>                                                            feed_entries$item_title
+#> 1               NSO group iPhone zero-click, zero-day exploit captured in the wild
+#> 2  China's ancient water pipe networks show no evidence of a centralized authority
+#> 3                                                         Unpacking Elixir: Syntax
+#> 4                                                           How Query Engines Work
+#> 5                             The Servo project is joining Linux Foundation Europe
+#> 6                                                        My Node.js is a bit Rusty
+#> 7                       Show HN: HackYourNews – AI summaries of the top HN stories
+#> 8                             I rode with an ice road trucker to the Arctic Circle
+#> 9                                                             My speed cubing page
+#> 10                                                                The Silver Thief
+#> 11                                 LLMs, RAG, and the missing storage layer for AI
+#> 12         John McCarthy’s collection of numerical facts for use in elisp programs
+#> 13                 Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
+#> 14                       We built an AI-powered Magic the Gathering card generator
+#> 15                                                A BERT for laptops, from scratch
+#> 16                                                                        Lean 4.0
+#> 17                            North Korean campaign targeting security researchers
+#> 18                                                        What's new in Emacs 29.1
+#> 19          Federated benchmarking of medical artificial intelligence with MedPerf
+#> 20                                                             London Street Trees
+#> 21                                 Animations From First Principles (in 5 minutes)
+#> 22                                      Cthulhu.jl – show type-inferred Julia code
+#> 23                               Accidental Empires, Chapter 11 – Font Wars (1992)
+#> 24                           Deciphering Mary Stuart’s lost letters from 1578-1584
+#> 25              Chrome now tracks users and shares a “topic” list with advertisers
+#> 26                     NaNofuzz: A Usable Tool for Automatic Test Generation [pdf]
+#> 27                                         A successful Git branching model (2010)
+#> 28                                        Are any words the same in all languages?
+#> 29                                  Mullvad on Tailscale: Privately browse the web
+#> 30                                               Why isn't chess popular in Japan?
 ```
 
 `describe_url(website)` returns the topics of a given web site.
@@ -146,18 +136,14 @@ dataset by topic, country or language.
 
 ``` r
 filter_urls(topic = "tech", country = "IT", language = "it")
-#>            clean_url language topic_unified main clean_country
-#> 1204   repubblica.it       it          tech None            IT
-#> 2276     lastampa.it       it          tech None            IT
-#> 2673 ilsole24ore.com       it          tech None            IT
-#> 3618     corriere.it       it          tech None            IT
-#> 4159         ansa.it       it          tech None            IT
-#>                                                              rss_url GlobalRank
-#> 1204    http://www.repubblica.it/rss/scienza_e_tecnologia/rss2.0.xml       1086
-#> 2276                       http://www.lastampa.it/tecnologia/rss.xml       2413
-#> 2673                   http://nova.ilsole24ore.com/nova24ora/rss.xml       2681
-#> 3618                       http://www.corriere.it/rss/tecnologia.xml       1328
-#> 4159 http://www.ansa.it/web/notizie/rubriche/scienza/scienza_rss.xml       2248
+#> # A tibble: 5 × 7
+#>   clean_url       language topic_unified main  clean_country rss_url  GlobalRank
+#>   <chr>           <chr>    <chr>         <chr> <chr>         <chr>    <chr>     
+#> 1 repubblica.it   it       tech          None  IT            http://… 1086      
+#> 2 lastampa.it     it       tech          None  IT            http://… 2413      
+#> 3 ilsole24ore.com it       tech          None  IT            http://… 2681      
+#> 4 corriere.it     it       tech          None  IT            http://… 1328      
+#> 5 ansa.it         it       tech          None  IT            http://… 2248
 ```
 
 ## Use Case
