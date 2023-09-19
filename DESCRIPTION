@@ -1,7 +1,7 @@
 Package: newscatcheR
 Title: Programmatically Collect Normalized News from (Almost)
     Any Website
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     c(person(given = "Novica",
              family = "Nakov",
@@ -36,5 +36,5 @@ VignetteBuilder:
     knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Language: en-US

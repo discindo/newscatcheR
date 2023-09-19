@@ -1,3 +1,6 @@
+# newcatcheR 0.1.2
+* update the PKGNAME-package to align with roxygen issue
+
 # newcatcheR 0.1.1
 
 * add `skip_on_cran()` for tests that require fetching online resources

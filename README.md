@@ -59,6 +59,7 @@ devtools::install_github("discindo/newscatcheR")
 
 ``` r
 library(newscatcheR)
+#> Warning: package 'newscatcheR' was built under R version 4.3.1
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
 get_news("ycombinator.com")
@@ -66,16 +67,16 @@ get_news("ycombinator.com")
 #> # A tibble: 30 × 10
 #>    feed_title  feed_link         feed_description feed_pub_date       item_title
 #>    <chr>       <chr>             <chr>            <dttm>              <chr>     
-#>  1 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 NSO group…
-#>  2 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 China's a…
-#>  3 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 How Query…
-#>  4 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My Node.j…
-#>  5 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My speed …
-#>  6 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Show HN: …
-#>  7 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 We built …
-#>  8 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Silve…
-#>  9 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Unpacking…
-#> 10 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 I rode wi…
+#>  1 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mythbuste…
+#>  2 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Show HN: …
+#>  3 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mwmbl: Fr…
+#>  4 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Fidonet R…
+#>  5 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Van Gogh’…
+#>  6 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Self-supe…
+#>  7 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Making II…
+#>  8 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Why and w…
+#>  9 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Tackling …
+#> 10 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Seeking h…
 #> # ℹ 20 more rows
 #> # ℹ 5 more variables: item_link <chr>, item_description <chr>,
 #> #   item_pub_date <dttm>, item_category <list>, item_comments <chr>
@@ -90,37 +91,37 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                            feed_entries$item_title
-#> 1               NSO group iPhone zero-click, zero-day exploit captured in the wild
-#> 2  China's ancient water pipe networks show no evidence of a centralized authority
-#> 3                                                           How Query Engines Work
-#> 4                                                        My Node.js is a bit Rusty
-#> 5                                                             My speed cubing page
-#> 6                       Show HN: HackYourNews – AI summaries of the top HN stories
-#> 7                        We built an AI-powered Magic the Gathering card generator
-#> 8                                                          The Silver Thief (2004)
-#> 9                                                         Unpacking Elixir: Syntax
-#> 10                            I rode with an ice road trucker to the Arctic Circle
-#> 11                                 LLMs, RAG, and the missing storage layer for AI
-#> 12         John McCarthy’s collection of numerical facts for use in elisp programs
-#> 13                                                                        Lean 4.0
-#> 14                                                A BERT for laptops, from scratch
-#> 15                 Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo
-#> 16                            North Korean campaign targeting security researchers
-#> 17                                    Understanding Request Latency with Profiling
-#> 18                                                        What's new in Emacs 29.1
-#> 19                                                             London Street Trees
-#> 20          Federated benchmarking of medical artificial intelligence with MedPerf
-#> 21                                 Animations From First Principles (in 5 minutes)
-#> 22                                      Cthulhu.jl – show type-inferred Julia code
-#> 23     Coincidentally-identical waypoint names foxed UK air traffic control system
-#> 24                               Accidental Empires, Chapter 11 – Font Wars (1992)
-#> 25                           Deciphering Mary Stuart’s lost letters from 1578-1584
-#> 26                                                Keith Haring’s Computer Drawings
-#> 27              Chrome now tracks users and shares a “topic” list with advertisers
-#> 28                                               Why isn't chess popular in Japan?
-#> 29                     NaNofuzz: A Usable Tool for Automatic Test Generation [pdf]
-#> 30                                                                        Slack AI
+#>                                                             feed_entries$item_title
+#> 1                                             Mythbusters: Wing Commander I Edition
+#> 2                   Show HN: HyperDX – open-source dev-friendly Datadog alternative
+#> 3                             Mwmbl: Free, open-source and non-profit search engine
+#> 4                                                              Fidonet Rules (2014)
+#> 5                                                         Van Gogh’s Self-Portraits
+#> 6                  Self-supervised learning: The dark matter of intelligence (2021)
+#> 7                                      Making IIIF Official at the Internet Archive
+#> 8                            Why and when the Sahara Desert was green: new research
+#> 9        Tackling the curse of dimensionality with physics-informed neural networks
+#> 10                             Seeking help to preserve WWII database on Windows 98
+#> 11         Replanting logged forests with diverse seedlings accelerates restoration
+#> 12                                       Tell HN: ChatGPT cut off date now Jan 2022
+#> 13                              The daguerreotype is famous – why not the calotype?
+#> 14                Playing cards that taught 17th-century cooks to carve meat (2019)
+#> 15                             How hard is it to adapt a memory allocator to CHERI?
+#> 16                                       The joys of maintenance programming (2011)
+#> 17                                     Some new snippets from the Snowden documents
+#> 18                                   How FoundationDB works and why it works (2021)
+#> 19                                Forty years of GNU and the free software movement
+#> 20 Early performance results from the prototype CHERI ARM Morello microarchitecture
+#> 21                      The brain is not an onion with a tiny reptile inside (2020)
+#> 22                       OpenRA – Classic strategy games rebuilt for the modern era
+#> 23                                                            Pentominoku for Layla
+#> 24                                       Ask HN: 6 months later. How is Bard doing?
+#> 25                                               Mysteries of the Court of Miracles
+#> 26 FTC warns pharma companies about sham patent listings designed to delay generics
+#> 27                                                                         Georgism
+#> 28                                          F-35 can’t be found after pilot ejected
+#> 29                                         NSA Backdoor Key from Lotus-Notes (1997)
+#> 30                                                Apple TV, now with more Tailscale
 ```
 
 `describe_url(website)` returns the topics of a given web site.
