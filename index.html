@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">newscatcheR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.2</span>
       </span>
     </div>
 
@@ -102,6 +102,7 @@
 <p><code>get_news(website)</code> returns the contents of a rss feed of a website.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/discindo/newscatcheR/" class="external-link">newscatcheR</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: package 'newscatcheR' was built under R version 4.3.1</span></span>
 <span><span class="co"># adding a small time delay to avoid simultaneous posts to the API</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/get_news.html">get_news</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span></span>
@@ -109,16 +110,16 @@
 <span><span class="co">#&gt; # A tibble: 30 × 10</span></span>
 <span><span class="co">#&gt;    feed_title  feed_link         feed_description feed_pub_date       item_title</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;             &lt;chr&gt;            &lt;dttm&gt;              &lt;chr&gt;     </span></span>
-<span><span class="co">#&gt;  1 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 NSO group…</span></span>
-<span><span class="co">#&gt;  2 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 China's a…</span></span>
-<span><span class="co">#&gt;  3 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Unpacking…</span></span>
-<span><span class="co">#&gt;  4 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 How Query…</span></span>
-<span><span class="co">#&gt;  5 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Servo…</span></span>
-<span><span class="co">#&gt;  6 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My Node.j…</span></span>
-<span><span class="co">#&gt;  7 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 Show HN: …</span></span>
-<span><span class="co">#&gt;  8 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 I rode wi…</span></span>
-<span><span class="co">#&gt;  9 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 My speed …</span></span>
-<span><span class="co">#&gt; 10 Hacker News https://news.yco… Links for the i… 2023-09-07 20:21:01 The Silve…</span></span>
+<span><span class="co">#&gt;  1 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mythbuste…</span></span>
+<span><span class="co">#&gt;  2 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Show HN: …</span></span>
+<span><span class="co">#&gt;  3 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mwmbl: Fr…</span></span>
+<span><span class="co">#&gt;  4 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Fidonet R…</span></span>
+<span><span class="co">#&gt;  5 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Van Gogh’…</span></span>
+<span><span class="co">#&gt;  6 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Self-supe…</span></span>
+<span><span class="co">#&gt;  7 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Making II…</span></span>
+<span><span class="co">#&gt;  8 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Why and w…</span></span>
+<span><span class="co">#&gt;  9 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Tackling …</span></span>
+<span><span class="co">#&gt; 10 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Seeking h…</span></span>
 <span><span class="co">#&gt; # ℹ 20 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 5 more variables: item_link &lt;chr&gt;, item_description &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   item_pub_date &lt;dttm&gt;, item_category &lt;list&gt;, item_comments &lt;chr&gt;</span></span></code></pre></div>
@@ -129,37 +130,37 @@
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span>  </span>
 <span><span class="fu"><a href="reference/get_headlines.html">get_headlines</a></span><span class="op">(</span><span class="st">"ycombinator.com"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; GET request successful. Parsing...</span></span>
-<span><span class="co">#&gt;                                                            feed_entries$item_title</span></span>
-<span><span class="co">#&gt; 1               NSO group iPhone zero-click, zero-day exploit captured in the wild</span></span>
-<span><span class="co">#&gt; 2  China's ancient water pipe networks show no evidence of a centralized authority</span></span>
-<span><span class="co">#&gt; 3                                                         Unpacking Elixir: Syntax</span></span>
-<span><span class="co">#&gt; 4                                                           How Query Engines Work</span></span>
-<span><span class="co">#&gt; 5                             The Servo project is joining Linux Foundation Europe</span></span>
-<span><span class="co">#&gt; 6                                                        My Node.js is a bit Rusty</span></span>
-<span><span class="co">#&gt; 7                       Show HN: HackYourNews – AI summaries of the top HN stories</span></span>
-<span><span class="co">#&gt; 8                             I rode with an ice road trucker to the Arctic Circle</span></span>
-<span><span class="co">#&gt; 9                                                             My speed cubing page</span></span>
-<span><span class="co">#&gt; 10                                                                The Silver Thief</span></span>
-<span><span class="co">#&gt; 11                                 LLMs, RAG, and the missing storage layer for AI</span></span>
-<span><span class="co">#&gt; 12         John McCarthy’s collection of numerical facts for use in elisp programs</span></span>
-<span><span class="co">#&gt; 13                 Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo</span></span>
-<span><span class="co">#&gt; 14                       We built an AI-powered Magic the Gathering card generator</span></span>
-<span><span class="co">#&gt; 15                                                A BERT for laptops, from scratch</span></span>
-<span><span class="co">#&gt; 16                                                                        Lean 4.0</span></span>
-<span><span class="co">#&gt; 17                            North Korean campaign targeting security researchers</span></span>
-<span><span class="co">#&gt; 18                                                        What's new in Emacs 29.1</span></span>
-<span><span class="co">#&gt; 19          Federated benchmarking of medical artificial intelligence with MedPerf</span></span>
-<span><span class="co">#&gt; 20                                                             London Street Trees</span></span>
-<span><span class="co">#&gt; 21                                 Animations From First Principles (in 5 minutes)</span></span>
-<span><span class="co">#&gt; 22                                      Cthulhu.jl – show type-inferred Julia code</span></span>
-<span><span class="co">#&gt; 23                               Accidental Empires, Chapter 11 – Font Wars (1992)</span></span>
-<span><span class="co">#&gt; 24                           Deciphering Mary Stuart’s lost letters from 1578-1584</span></span>
-<span><span class="co">#&gt; 25              Chrome now tracks users and shares a “topic” list with advertisers</span></span>
-<span><span class="co">#&gt; 26                     NaNofuzz: A Usable Tool for Automatic Test Generation [pdf]</span></span>
-<span><span class="co">#&gt; 27                                         A successful Git branching model (2010)</span></span>
-<span><span class="co">#&gt; 28                                        Are any words the same in all languages?</span></span>
-<span><span class="co">#&gt; 29                                  Mullvad on Tailscale: Privately browse the web</span></span>
-<span><span class="co">#&gt; 30                                               Why isn't chess popular in Japan?</span></span></code></pre></div>
+<span><span class="co">#&gt;                                                             feed_entries$item_title</span></span>
+<span><span class="co">#&gt; 1                                             Mythbusters: Wing Commander I Edition</span></span>
+<span><span class="co">#&gt; 2                   Show HN: HyperDX – open-source dev-friendly Datadog alternative</span></span>
+<span><span class="co">#&gt; 3                             Mwmbl: Free, open-source and non-profit search engine</span></span>
+<span><span class="co">#&gt; 4                                                              Fidonet Rules (2014)</span></span>
+<span><span class="co">#&gt; 5                                                         Van Gogh’s Self-Portraits</span></span>
+<span><span class="co">#&gt; 6                  Self-supervised learning: The dark matter of intelligence (2021)</span></span>
+<span><span class="co">#&gt; 7                                      Making IIIF Official at the Internet Archive</span></span>
+<span><span class="co">#&gt; 8                            Why and when the Sahara Desert was green: new research</span></span>
+<span><span class="co">#&gt; 9        Tackling the curse of dimensionality with physics-informed neural networks</span></span>
+<span><span class="co">#&gt; 10                             Seeking help to preserve WWII database on Windows 98</span></span>
+<span><span class="co">#&gt; 11         Replanting logged forests with diverse seedlings accelerates restoration</span></span>
+<span><span class="co">#&gt; 12                                       Tell HN: ChatGPT cut off date now Jan 2022</span></span>
+<span><span class="co">#&gt; 13                              The daguerreotype is famous – why not the calotype?</span></span>
+<span><span class="co">#&gt; 14                Playing cards that taught 17th-century cooks to carve meat (2019)</span></span>
+<span><span class="co">#&gt; 15                             How hard is it to adapt a memory allocator to CHERI?</span></span>
+<span><span class="co">#&gt; 16                                       The joys of maintenance programming (2011)</span></span>
+<span><span class="co">#&gt; 17                                     Some new snippets from the Snowden documents</span></span>
+<span><span class="co">#&gt; 18                                   How FoundationDB works and why it works (2021)</span></span>
+<span><span class="co">#&gt; 19                                Forty years of GNU and the free software movement</span></span>
+<span><span class="co">#&gt; 20 Early performance results from the prototype CHERI ARM Morello microarchitecture</span></span>
+<span><span class="co">#&gt; 21                      The brain is not an onion with a tiny reptile inside (2020)</span></span>
+<span><span class="co">#&gt; 22                       OpenRA – Classic strategy games rebuilt for the modern era</span></span>
+<span><span class="co">#&gt; 23                                                            Pentominoku for Layla</span></span>
+<span><span class="co">#&gt; 24                                       Ask HN: 6 months later. How is Bard doing?</span></span>
+<span><span class="co">#&gt; 25                                               Mysteries of the Court of Miracles</span></span>
+<span><span class="co">#&gt; 26 FTC warns pharma companies about sham patent listings designed to delay generics</span></span>
+<span><span class="co">#&gt; 27                                                                         Georgism</span></span>
+<span><span class="co">#&gt; 28                                          F-35 can’t be found after pilot ejected</span></span>
+<span><span class="co">#&gt; 29                                         NSA Backdoor Key from Lotus-Notes (1997)</span></span>
+<span><span class="co">#&gt; 30                                                Apple TV, now with more Tailscale</span></span></code></pre></div>
 <p><code>describe_url(website)</code> returns the topics of a given web site.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/describe_url.html">describe_url</a></span><span class="op">(</span><span class="st">"bbc.com"</span><span class="op">)</span></span>
@@ -232,7 +233,7 @@
 <li><a href="https://cran.r-project.org/package=newscatcheR" class="external-link"><img src="https://www.r-pkg.org/badges/version/newscatcheR" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://CRAN.R-project.org/package=newscatcheR" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/newscatcheR" alt="CRAN_Download_Badge"></a></li>
 <li><a href="https://CRAN.R-project.org/package=newscatcheR" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR" alt="CRAN_Download_Badge"></a></li>
-<li><a href="https://app.codecov.io/gh/discindo/newscatcheR?branch=master" class="external-link"><img src="https://app.codecov.io/gh/discindo/newscatcheR/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://codecov.io/gh/discindo/newscatcheR" class="external-link"><img src="https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3" alt="codecov"></a></li>
 <li><a href="https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
