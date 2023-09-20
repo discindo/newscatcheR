@@ -8,9 +8,8 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
 [![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
-![R-CMD-check](https://github.com/discindo/newscatcheR/workflows/R-CMD-check/badge.svg)
 ![pkgdown](https://github.com/discindo/newscatcheR/workflows/pkgdown/badge.svg)
-[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR)
+[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR/)
 [![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -67,16 +66,16 @@ get_news("ycombinator.com")
 #> # A tibble: 30 × 10
 #>    feed_title  feed_link         feed_description feed_pub_date       item_title
 #>    <chr>       <chr>             <chr>            <dttm>              <chr>     
-#>  1 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mythbuste…
-#>  2 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Show HN: …
-#>  3 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Mwmbl: Fr…
-#>  4 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Fidonet R…
-#>  5 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Van Gogh’…
-#>  6 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Self-supe…
-#>  7 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Making II…
-#>  8 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Why and w…
-#>  9 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Tackling …
-#> 10 Hacker News https://news.yco… Links for the i… 2023-09-19 00:30:02 Seeking h…
+#>  1 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 OpenTF re…
+#>  2 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 FAA autho…
+#>  3 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 Can’t sen…
+#>  4 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 ‘Less tha…
+#>  5 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 What will…
+#>  6 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 Add extra…
+#>  7 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 100 Parki…
+#>  8 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 My trip t…
+#>  9 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 Aldous Hu…
+#> 10 Hacker News https://news.yco… Links for the i… 2023-09-20 06:44:42 A simple …
 #> # ℹ 20 more rows
 #> # ℹ 5 more variables: item_link <chr>, item_description <chr>,
 #> #   item_pub_date <dttm>, item_category <list>, item_comments <chr>
@@ -91,37 +90,37 @@ library(newscatcheR)
 Sys.sleep(3)  
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
-#>                                                             feed_entries$item_title
-#> 1                                             Mythbusters: Wing Commander I Edition
-#> 2                   Show HN: HyperDX – open-source dev-friendly Datadog alternative
-#> 3                             Mwmbl: Free, open-source and non-profit search engine
-#> 4                                                              Fidonet Rules (2014)
-#> 5                                                         Van Gogh’s Self-Portraits
-#> 6                  Self-supervised learning: The dark matter of intelligence (2021)
-#> 7                                      Making IIIF Official at the Internet Archive
-#> 8                            Why and when the Sahara Desert was green: new research
-#> 9        Tackling the curse of dimensionality with physics-informed neural networks
-#> 10                             Seeking help to preserve WWII database on Windows 98
-#> 11         Replanting logged forests with diverse seedlings accelerates restoration
-#> 12                                       Tell HN: ChatGPT cut off date now Jan 2022
-#> 13                              The daguerreotype is famous – why not the calotype?
-#> 14                Playing cards that taught 17th-century cooks to carve meat (2019)
-#> 15                             How hard is it to adapt a memory allocator to CHERI?
-#> 16                                       The joys of maintenance programming (2011)
-#> 17                                     Some new snippets from the Snowden documents
-#> 18                                   How FoundationDB works and why it works (2021)
-#> 19                                Forty years of GNU and the free software movement
-#> 20 Early performance results from the prototype CHERI ARM Morello microarchitecture
-#> 21                      The brain is not an onion with a tiny reptile inside (2020)
-#> 22                       OpenRA – Classic strategy games rebuilt for the modern era
-#> 23                                                            Pentominoku for Layla
-#> 24                                       Ask HN: 6 months later. How is Bard doing?
-#> 25                                               Mysteries of the Court of Miracles
-#> 26 FTC warns pharma companies about sham patent listings designed to delay generics
-#> 27                                                                         Georgism
-#> 28                                          F-35 can’t be found after pilot ejected
-#> 29                                         NSA Backdoor Key from Lotus-Notes (1997)
-#> 30                                                Apple TV, now with more Tailscale
+#>                                                          feed_entries$item_title
+#> 1                                              OpenTF renames itself to OpenTofu
+#> 2             FAA authorizes Zipline to deliver commercial packages using drones
+#> 3                                    Can’t send email more than 500 miles (2002)
+#> 4                  ‘Less than half’ fresh produce sold globally makes any profit
+#> 5            What will LLM-powered software look like in the medium-term future?
+#> 6                        Add extra stuff to a “standard” encoding? Sure, why not
+#> 7                                                     100 Parking Tickets (2004)
+#> 8                      My trip to the Communication and Laptop Museum in Estonia
+#> 9                                                Aldous Huxley's Deep Reflection
+#> 10                                            A simple web server written in Awk
+#> 11                                 SillycoValley: Write Code, Build Your Startup
+#> 12                                                   Fixing for loops in Go 1.22
+#> 13 Q-Transformer: Scalable Reinforcement Learning via Autoregressive Q-Functions
+#> 14                                         First automatic JPEG-XL cloud service
+#> 15                                                          Getting into Pinball
+#> 16                     A small community of unofficial Apple technicians in Cuba
+#> 17                                                       Chonky Menu Re-Creation
+#> 18                           Show HN: Liz – Collaborative Lisp coding on Discord
+#> 19                          RabbitMQ vs. Kafka – An Architect’s Dilemma (Part 1)
+#> 20                                                             Secretions (1992)
+#> 21 Show HN: A reference implementation of Turing's paper “On Computable Numbers”
+#> 22   Etleap (YC W13) Is Hiring a Software Engineer (London – OR – San Francisco)
+#> 23             Snowden leak: Cavium networking hardware may contain NSA backdoor
+#> 24             Show HN: Cheq UPI – India's first UPI payments app for foreigners
+#> 25                A closer look at BookCorpus, a key dataset in machine learning
+#> 26                   Show HN: Symphony – Use GPT-4 to call functions in sequence
+#> 27                                                          Writing HTML by hand
+#> 28         Smashing the state machine: the true potential of web race conditions
+#> 29                                                           Programming is hard
+#> 30 Pink diamonds erupted to Earth’s surface after early supercontinent’s breakup
 ```
 
 `describe_url(website)` returns the topics of a given web site.
