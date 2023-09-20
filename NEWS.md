@@ -1,3 +1,5 @@
+# newscatcheR (development version)
+
 # newcatcheR 0.1.2
 * update the PKGNAME-package to align with roxygen issue
 
