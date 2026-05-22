@@ -41,7 +41,13 @@ jobs:
           needs: website
 
       - name: Build site
-        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+        run: |
+          pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+          pkgdown::build_site(
+          override = list(destination = "docs", development = list(mode = "release")),
+          new_process = FALSE,
+          install = FALSE
+          )
         shell: Rscript {0}
 
       - name: Upload artifact
