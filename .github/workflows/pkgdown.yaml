@@ -39,10 +39,21 @@ jobs:
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
 
-      - name: Deploy to GitHub pages 🚀
-        if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          clean: false
-          branch: gh-pages
-          folder: docs
+          path: "./docs/"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: pkgdown
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
