@@ -1,3 +1,7 @@
+# version 0.1.2
+* resolve issue with PKGNAME-package as described at
+ <https://github.com/r-lib/roxygen2/issues/1491>.
+
 # version 0.1.1
 
 * adding skip_on_cran() for some tests to avoid errors
