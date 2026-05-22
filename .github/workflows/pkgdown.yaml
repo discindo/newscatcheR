@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: "./docs/"
+          path: "./docs/html/"
 
   deploy:
     runs-on: ubuntu-latest
