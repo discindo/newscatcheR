@@ -38,4 +38,3 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 Language: en-US
-Config/Needs/website: gadenbuie/grkgdown

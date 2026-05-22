@@ -1,10 +1,11 @@
 url: https://discindo.github.io/newscatcheR/
 destination: docs
 template:
-  package: grkgdown
-
+  bootstrap: 5
+  bootswatch: litera
+development:
+  mode: auto
 navbar:
-  components:
-    github:
-      icon: fab fa-github fa-lg
-      href: https://github.com/gadenbuie/js4shiny
+  right:
+    - text: "Dev version"
+      href: https://discindo.github.io/newscatcheR/dev/
