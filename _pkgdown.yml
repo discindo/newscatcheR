@@ -3,5 +3,4 @@ destination: docs
 template:
   params:
     bootswatch: paper
-development:
-  mode: auto
+
