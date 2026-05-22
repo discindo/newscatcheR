@@ -51,7 +51,7 @@ jobs:
           # Build dev version into docs/dev/
           pkgdown::build_site(
           override = list(
-          destination = "docs/dev",
+          destination = "docs/",
           development = list(mode = "devel")
           ),
           new_process = FALSE,
