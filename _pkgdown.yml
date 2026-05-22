@@ -1,6 +1,5 @@
 url: https://discindo.github.io/newscatcheR/
 destination: docs
 template:
-  params:
-    bootswatch: paper
-
+  bootstrap: 5
+  bootswatch: cerulean
