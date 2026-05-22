@@ -40,24 +40,17 @@ jobs:
           extra-packages: any::pkgdown, local::.
           needs: website
 
-      - name: Build site
-        run: |
-          # Build release version into docs/
-          pkgdown::build_site(
-          override = list(development = list(mode = "release")),
-          new_process = FALSE,
-          install = FALSE
-          )
-          # Build dev version into docs/dev/
-          pkgdown::build_site(
-          override = list(
-          destination = "docs/",
-          development = list(mode = "devel")
-          ),
-          new_process = FALSE,
-          install = FALSE
-          )
+      - name: Build release site
+        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
+        env:
+          PKGDOWN_DEV_MODE: release
+
+      - name: Build dev site
+        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+        shell: Rscript {0}
+        env:
+          PKGDOWN_DEV_MODE: devel
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

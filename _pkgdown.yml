@@ -3,3 +3,5 @@ destination: docs
 template:
   bootstrap: 5
   bootswatch: cerulean
+development:
+  mode: auto
