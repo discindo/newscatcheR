@@ -10,7 +10,7 @@
 [![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml)
 [![pkgdown](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml/badge.svg?branch=main)](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml)
-[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR)
+[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://app.codecov.io/gh/discindo/newscatcheR)
 [![newscatcheR status
 badge](https://discindo.r-universe.dev/newscatcheR/badges/version)](https://discindo.r-universe.dev/newscatcheR)
 
@@ -67,16 +67,16 @@ get_news("ycombinator.com")
 #> # A tibble: 30 × 10
 #>    feed_title  feed_link         feed_description feed_pub_date       item_title
 #>    <chr>       <chr>             <chr>            <dttm>              <chr>     
-#>  1 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 90% of US…
-#>  2 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Apple ML …
-#>  3 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Big Fish:…
-#>  4 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Show HN: …
-#>  5 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 I Love So…
-#>  6 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 What on E…
-#>  7 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 JPEG XL v…
-#>  8 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Piramidal…
-#>  9 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Stolen Re…
-#> 10 Hacker News https://news.yco… Links for the i… 2026-10-16 17:08:38 Tesla Roa…
+#>  1 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 Tesla Roa…
+#>  2 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 eBay Rest…
+#>  3 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 Claude re…
+#>  4 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 Llama.cpp…
+#>  5 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 The NIST …
+#>  6 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 JPEG XL v…
+#>  7 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 90% of US…
+#>  8 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 Apple ML …
+#>  9 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 Designing…
+#> 10 Hacker News https://news.yco… Links for the i… 2026-10-16 01:32:45 The Fatal…
 #> # ℹ 20 more rows
 #> # ℹ 5 more variables: item_link <chr>, item_description <chr>,
 #> #   item_pub_date <dttm>, item_category <list>, item_comments <chr>
@@ -92,36 +92,36 @@ Sys.sleep(3)
 get_headlines("ycombinator.com")
 #> GET request successful. Parsing...
 #>                                                              feed_entries$item_title
-#> 1       90% of US working hours are spent on tasks not covered well by AI benchmarks
-#> 2                          Apple ML Research: Muse Spark Open with MLX on Mac Studio
-#> 3                           Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD
-#> 4                                            Show HN: Gemini 4 Argon plays StarCraft
-#> 5                                                          I Love Software Rendering
-#> 6                                                           What on Earth Is Dekton?
-#> 7                                                 JPEG XL vs. AVIF for web use-cases
-#> 8                                                       Piramidal (YC W24) Is Hiring
-#> 9        Stolen Renoir paintings found hidden, and damaged, behind cinder block wall
-#> 10                                                                    Tesla Roadster
-#> 11                                      RFC8950: Announce IPv4 with an IPv6 next-hop
-#> 12    Is Liquid Metal Killing Our PCs? Scientific Analysis and a 2-Year Test [video]
-#> 13 Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]
-#> 14                             How to make System 1 LLMs show System 2 competencies?
-#> 15         Postgres 19 delayed after AI reviewers find more bugs than humans can fix
-#> 16               Making 1,750 programmable PCB badges for Canada's biggest hackathon
-#> 17                           Yet another way to invoke functions without parentheses
-#> 18        US Rep Announces Congressional Legislation to Protect Video Game Ownership
-#> 19                            Inside Polymarket's paid quote-retweet esports program
-#> 20                                               How gyroscopes got so small [video]
-#> 21                      Show HN: rStation – A shared research lab for your AI agents
-#> 22                               The Economic Complexity of the Western Roman Empire
-#> 23                                                    What was a Token Ring network?
-#> 24        Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS
-#> 25                                               AI-assisted PCB design for KiCad 10
-#> 26                                               How to Formalize All of Mathematics
-#> 27    Show HN: Wonderhop – A daily game: guess what most people say, or what none do
-#> 28           A story of WiFi secrets, UART lockdowns and a damaged flash memory chip
-#> 29                                             Bark: The Toll-Free BBS for 90s Teens
-#> 30                                                  The Folders Programming Language
+#> 1                                                                     Tesla Roadster
+#> 2         eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear
+#> 3                                                 Claude reveals ECDSA curve origins
+#> 4          Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console
+#> 5                             The NIST Elliptic Curves Seeds Bounty Has Been Claimed
+#> 6                                                 JPEG XL vs. AVIF for web use-cases
+#> 7       90% of US working hours are spent on tasks not covered well by AI benchmarks
+#> 8                          Apple ML Research: Muse Spark Open with MLX on Mac Studio
+#> 9                              Designing more efficient quantum circuits with Claude
+#> 10                                                             The Fatal Flaw of 911
+#> 11                                                      Piramidal (YC W24) Is Hiring
+#> 12                                         How the Claude Code team does code review
+#> 13                          Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD
+#> 14                                           Show HN: Gemini 4 Argon plays StarCraft
+#> 15                                          /dev/null: social network for developers
+#> 16                                                          What on Earth Is Dekton?
+#> 17       Stolen Renoir paintings found hidden, and damaged, behind cinder block wall
+#> 18                                                         I Love Software Rendering
+#> 19                             Anthropic assigned highest junk credit rating in June
+#> 20                                                   C++26: The New Debugging Header
+#> 21                                                           Monte-Carlo Simulations
+#> 22                                                                         GifCities
+#> 23 Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]
+#> 24     Show HN: Stoke Money – Personal finance app built around a cash flow forecast
+#> 25                                      RFC8950: Announce IPv4 with an IPv6 next-hop
+#> 26    Is Liquid Metal Killing Our PCs? Scientific Analysis and a 2-Year Test [video]
+#> 27               Making 1,750 programmable PCB badges for Canada's biggest hackathon
+#> 28                           Yet another way to invoke functions without parentheses
+#> 29        US Rep Announces Congressional Legislation to Protect Video Game Ownership
+#> 30                             How to make System 1 LLMs show System 2 competencies?
 ```
 
 `describe_url(website)` returns the topics of a given web site.
