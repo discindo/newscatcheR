@@ -21,8 +21,8 @@ test_that("get_news returns a tibble with feed contents", {
   expect_s3_class(output_news, "data.frame")
 
   # numbers return an error
-  expect_error(output_news = get_news(123))
+  expect_error(get_news(123))
 
   # url not in database returns error
-  expect_error(output_news = get_news("example.com"))
+  expect_error(get_news("example.com"))
 })
