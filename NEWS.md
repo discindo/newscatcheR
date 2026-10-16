@@ -1,3 +1,9 @@
+# newscatcheR 0.1.3
+
+## Bug fixes
+
+* name tidyRSS correctly in check_url() error ([#23](https://github.com/discindo/newscatcheR/issues/23)) ([fe4e5fa](https://github.com/discindo/newscatcheR/commit/fe4e5fa32d3e84a241c1226c471b75f62d35cf97))
+
 # newscatcheR (development version)
 
 # newscatcheR 0.1.2
