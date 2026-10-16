@@ -23,14 +23,17 @@
 #' get_news(website = "ycombinator.com", rss_table = package_rss)
 #' }
 
-get_news <- function(website = "ycombinator.com", topic = NULL, rss_table = package_rss) {
-
+get_news <- function(
+  website = "ycombinator.com",
+  topic = NULL,
+  rss_table = package_rss
+) {
   check_url(website, rss_table)
 
-  news_source <- rss_table[rss_table$clean_url == website,]
+  news_source <- rss_table[rss_table$clean_url == website, ]
 
   if (is.null(topic)) {
-    news_source <- news_source[news_source$main == 1,]
+    news_source <- news_source[news_source$main == 1, ]
   } else if (!any(topic %in% news_source$topic_unified)) {
     message(
       paste(
@@ -43,9 +46,8 @@ get_news <- function(website = "ycombinator.com", topic = NULL, rss_table = pack
     describe_url("bbc.com")
 
     return(invisible(NULL))
-
   } else {
-    news_source <- news_source[news_source$topic_unified == topic,]
+    news_source <- news_source[news_source$topic_unified == topic, ]
   }
 
   feed_entries <- tidyfeed(news_source$rss_url)

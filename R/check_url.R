@@ -10,7 +10,6 @@
 #'
 
 check_url <- function(website = "ycombinator.com", rss_table = package_rss) {
-
   # check if argument is character
   if (is.character(website)) {
     index <- rss_table$clean_url == website

@@ -15,8 +15,7 @@ download.file(
 
 # access the database
 sqlite.driver <- dbDriver("SQLite")
-db <- dbConnect(sqlite.driver,
-                dbname = dbfile)
+db <- dbConnect(sqlite.driver, dbname = dbfile)
 dbListTables(db)
 
 # import data

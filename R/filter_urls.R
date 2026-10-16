@@ -16,15 +16,17 @@
 #' @examples
 #' filter_urls(topic = "tech", country = "US", language = "en")
 filter_urls <-
-  function(topic = NULL,
-           country = NULL,
-           language = NULL,
-           rss_table = package_rss) {
+  function(
+    topic = NULL,
+    country = NULL,
+    language = NULL,
+    rss_table = package_rss
+  ) {
     work_table <- rss_table
 
     if (!is.null(topic)) {
       stopifnot("'topic' should be character string." = is.character(topic))
-      work_table <- work_table[work_table$topic_unified == topic,]
+      work_table <- work_table[work_table$topic_unified == topic, ]
       if (nrow(work_table) == 0) {
         if (topic %in% rss_table$topic_unified) {
           message(
@@ -61,7 +63,9 @@ filter_urls <-
     }
 
     if (!is.null(language)) {
-      stopifnot("'language' should be character string." = is.character(language))
+      stopifnot(
+        "'language' should be character string." = is.character(language)
+      )
       work_table <- work_table[work_table$language == language, ]
       if (nrow(work_table) == 0) {
         if (language %in% rss_table$language) {

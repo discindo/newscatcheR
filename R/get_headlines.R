@@ -23,7 +23,11 @@
 #' get_headlines(website = "ycombinator.com", rss_table = package_rss)
 #' }
 
-get_headlines <- function(website = "ycombinator.com", topic = NULL, rss_table = package_rss) {
+get_headlines <- function(
+  website = "ycombinator.com",
+  topic = NULL,
+  rss_table = package_rss
+) {
   feed_entries <- get_news(website, topic, rss_table)
 
   title_list <- as.data.frame(feed_entries$item_title)

@@ -18,8 +18,12 @@ usethis::use_github_release()
 library(tidyverse)
 
 
-rss_table_raw <- readr::read_delim("inst/external-data/package_rss.csv",
-                            "|", escape_double = FALSE, trim_ws = TRUE)
+rss_table_raw <- readr::read_delim(
+  "inst/external-data/package_rss.csv",
+  "|",
+  escape_double = FALSE,
+  trim_ws = TRUE
+)
 
 glimpse(rss_table_raw)
 
