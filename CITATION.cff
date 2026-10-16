@@ -9,7 +9,7 @@ authors:
   - family-names: "Nakov"
     given-names: "Novica"
     email: nnovica@gmail.com
-version: 0.1.2 # x-release-please-version
+version: 0.1.3 # x-release-please-version
 date-released: 2023-09-20
 license: MIT
 url: "https://discindo.github.io/newscatcheR/"
