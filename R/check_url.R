@@ -22,7 +22,7 @@ check_url <- function(website = "ycombinator.com", rss_table = package_rss) {
       paste(
         "Can't find the website:",
         website,
-        "in our database. Please check if this is a valid website name, or try to fetch the feed directly with 'tydyrss::tidyfeed()'.",
+        "in our database. Please check if this is a valid website name, or try to fetch the feed directly with 'tidyRSS::tidyfeed()'.",
         sep = " "
       )
     )

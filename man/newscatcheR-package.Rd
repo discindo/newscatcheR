@@ -11,13 +11,19 @@ Programmatically collect normalized news from (almost) any website. An 'R' clone
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/discindo/newscatcheR/}
+  \item \url{https://discindo.github.io/newscatcheR/}
+  \item \url{https://github.com/discindo/newscatcheR}
   \item Report bugs at \url{https://github.com/discindo/newscatcheR/issues/}
 }
 
 }
 \author{
 \strong{Maintainer}: Novica Nakov \email{nnovica@gmail.com}
+
+Authors:
+\itemize{
+  \item Novica Nakov \email{nnovica@gmail.com}
+}
 
 Other contributors:
 \itemize{
