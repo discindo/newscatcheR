@@ -1,7 +1,6 @@
 # Filter helpers
 # Short functions for exploring the RSS feeds data
 
-
 #' Show topics
 #' Show all topics in the database.
 #'
@@ -15,7 +14,6 @@
 show_topics <- function(rss_table = package_rss) {
   return(unique(rss_table$topic_unified))
 }
-
 
 
 #' Show countries

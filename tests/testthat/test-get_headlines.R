@@ -11,5 +11,4 @@ test_that("get_headlines returns a data frame with one column", {
   # What's returned
   expect_s3_class(output_headlines, "data.frame")
   expect_equal(ncol(output_headlines), 1)
-
 })

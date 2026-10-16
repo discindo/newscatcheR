@@ -1,5 +1,4 @@
 test_that("filter_urls filters the feeds dataset", {
-
   # Filter topic
   output_filter <- filter_urls(topic = "tech")
 
@@ -49,9 +48,7 @@ test_that("filter_urls filters the feeds dataset", {
 
   expect_error(filter_urls(topic = NA))
   expect_error(filter_urls(country = 123))
-  expect_error(filter_urls(language = tibble("lang"="klingon")))
-
+  expect_error(filter_urls(language = tibble("lang" = "klingon")))
 
   expect_error(filter_urls(topic = 123))
-
 })

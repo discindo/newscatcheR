@@ -25,6 +25,4 @@ test_that("get_news returns a tibble with feed contents", {
 
   # url not in database returns error
   expect_error(output_news = get_news("example.com"))
-
 })
-
