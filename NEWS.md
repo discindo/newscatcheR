@@ -1,16 +1,16 @@
 # newscatcheR (development version)
 
-# newcatcheR 0.1.2
+# newscatcheR 0.1.2
 * update the PKGNAME-package to align with roxygen issue
 
-# newcatcheR 0.1.1
+# newscatcheR 0.1.1
 
 * add `skip_on_cran()` for tests that require fetching online resources
 
 * update vignette accordingly
 
 
-# newcatcheR 0.1.0
+# newscatcheR 0.1.0
 
 * this update catches up to the changes made in the python package
 
@@ -24,7 +24,7 @@
 
 * updated documentation
 
-# newcatcheR 0.0.2
+# newscatcheR 0.0.2
 
 * make sure the package imports tidyRSS 2.0.2
 
@@ -34,7 +34,7 @@
 
 * fixing lines as per `goodpractice::gp()` report
 
-# newcatcheR 0.0.1
+# newscatcheR 0.0.1
 
 * First release.
 
