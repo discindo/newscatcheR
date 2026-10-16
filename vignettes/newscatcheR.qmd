@@ -1,20 +1,19 @@
 ---
 title: "newscatcheR"
-output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{newscatcheR}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: "#>"
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-```{r preliminaries, echo=FALSE, message=FALSE}
+```{r}
+#| label: preliminaries
+#| echo: false
+#| message: false
 library(newscatcheR)
 library(tidyRSS)
 ```
@@ -30,7 +29,8 @@ Two functions that work as a wrapper around [tidyRSS](https://github.com/RobertM
 ### get_news()
 
 The first function `get_news()` returns a tibble of the rss feed of a given site.
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
 get_news(website = "ycombinator.com", rss_table = package_rss)
@@ -40,7 +40,8 @@ get_news(website = "ycombinator.com", rss_table = package_rss)
 
 The second function `get_headlines` is a helper function that returns a tibble of just the headlines, instead of the full rss feed.
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 # adding a small time delay to avoid simultaneous posts to the API
 Sys.sleep(3)
 get_headlines(website = "ycombinator.com", rss_table = package_rss)
@@ -50,7 +51,8 @@ get_headlines(website = "ycombinator.com", rss_table = package_rss)
 
 Because some website have multiple feeds divided by topics,  `describe_url(website)` can be helpful to see the topics of a given website. 
 
-```{r example_3}
+```{r}
+#| label: example-3
 describe_url("bbc.com")
 ```
 
@@ -58,7 +60,8 @@ describe_url("bbc.com")
 
 Finally, `filter_urls(topic, country, language )` can be used to browse the dataset by topic, country, or language.
 
-```{r example_4}
+```{r}
+#| label: example-4
 filter_urls(topic = "tech", country = "IT", language = "it")
 ```
 
@@ -68,12 +71,14 @@ This package can be convenient if you need to fetch news from various websites f
 
 Assuming we have the news sites we want to follow:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 sites = c("bbc.com", "spiegel.de", "washingtonpost.com")
 ```
 
 We can get a list of data frames with:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
 lapply(sites, get_news)
 ```
