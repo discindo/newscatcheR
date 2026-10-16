@@ -4,8 +4,4 @@ template:
   bootstrap: 5
   bootswatch: litera
 development:
-  mode: auto
-navbar:
-  right:
-    - text: "Dev version"
-      href: https://discindo.github.io/newscatcheR/dev/
+  mode: release
