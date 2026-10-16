@@ -21,8 +21,9 @@ knitr::opts_chunk$set(
 [![CRAN\_Download\_Badge](https://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![CRAN\_Download\_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
 [![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml)
-![pkgdown](https://github.com/discindo/newscatcheR/workflows/pkgdown/badge.svg)
-<!-- [![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR)>
+[![pkgdown](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml/badge.svg?branch=main)](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml)
+[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://codecov.io/gh/discindo/newscatcheR)
+[![newscatcheR status badge](https://discindo.r-universe.dev/newscatcheR/badges/version)](https://discindo.r-universe.dev/newscatcheR)
 
 <!-- badges: end -->
 
@@ -36,25 +37,25 @@ Two functions that work as a wrapper around [tidyRSS](https://github.com/RobertM
 
 ## Installation
 
-You can install the released version of newscatcheR from [CRAN](https://CRAN.R-project.org) with:
+Install newscatcheR from:
+
+### CRAN
 
 ``` r
 install.packages("newscatcheR")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+### R-Universe
+```r
+install.packages('newscatcheR', repos = c('https://discindo.r-universe.dev'))
+```
+
+### GitHub
 
 ```r
-# install.packages("remotes")
-remotes::install_github("discindo/newscatcheR")
+pak::pak('discindo/newscatcheR')
 ```
 
-Or
-
-``` r
-# install.packages("devtools")
-devtools::install_github("discindo/newscatcheR")
-```
 ## Overview
 
 `get_news(website)` returns the contents of a rss feed of a website. 
