@@ -1,7 +1,5 @@
 ^newscatcheR\.Rproj$
 ^\.Rproj\.user$
-^dev_history\.R$
-^cran-comments.md$
 ^README\.Rmd$
 ^CRAN-RELEASE$
 ^_pkgdown\.yml$
