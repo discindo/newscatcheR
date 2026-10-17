@@ -16,12 +16,10 @@
 #'
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#' Sys.sleep(3) # adding a small time delay to avoid
-#' # simultaneous posts to the API
+#' @examplesIf interactive()
+#' # Add a small delay to avoid simultaneous requests to the feed
+#' Sys.sleep(3)
 #' get_headlines(website = "ycombinator.com", rss_table = package_rss)
-#' }
 
 get_headlines <- function(
   website = "ycombinator.com",

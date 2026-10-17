@@ -6,9 +6,7 @@
 #' need to construct your own out of websites not in the included database.
 #' Be sure to have the same format as the included data. See `R/package_rss.R`
 #' for details.
-#'
-#'
-
+#' @noRd
 check_url <- function(website = "ycombinator.com", rss_table = package_rss) {
   # check if argument is character
   if (is.character(website)) {
