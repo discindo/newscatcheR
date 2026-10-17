@@ -6,7 +6,9 @@
 \alias{newscatcheR-package}
 \title{newscatcheR: Programmatically Collect Normalized News from (Almost) Any Website}
 \description{
-Programmatically collect normalized news from (almost) any website. An 'R' clone of the \url{https://github.com/kotartemiy/newscatcher} 'Python' module.
+\if{html}{\figure{logo.svg}{options: style='float: right' alt='logo' width='120'}}
+
+Fetch news from the 'RSS' (Really Simple Syndication) feeds of thousands of news websites without having to look up the feed addresses. Bundles a lookup table of news sites and their feeds, which can be filtered by topic, country and language. Feeds are parsed with 'tidyRSS' and returned as tidy data frames of full entries or headlines. An 'R' clone of the \url{https://github.com/kotartemiy/newscatcher} 'Python' module.
 }
 \seealso{
 Useful links:
