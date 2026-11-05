@@ -4,16 +4,12 @@
 # newscatcheR <img src="man/figures/logo.svg" align="right" height="139" alt="" />
 
 <!-- badges: start -->
-
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://cran.r-project.org/package=newscatcheR)
-[![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
-[![CRAN_Download_Badge](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
-[![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml)
-[![pkgdown](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml/badge.svg?branch=main)](https://github.com/discindo/newscatcheR/actions/workflows/pkgdown.yml)
-[![codecov](https://codecov.io/gh/discindo/newscatcheR/graph/badge.svg?token=u3BlKDT8b3)](https://app.codecov.io/gh/discindo/newscatcheR)
-[![newscatcheR status
-badge](https://discindo.r-universe.dev/newscatcheR/badges/version)](https://discindo.r-universe.dev/newscatcheR)
-
+[![R-CMD-check](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml/badge.svg?branch=main)](https://github.com/discindo/newscatcheR/actions/workflows/R-CMD-check.yml)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+[![CRAN\_Downloads](https://cranlogs.r-pkg.org/badges/grand-total/newscatcheR)](https://CRAN.R-project.org/package=newscatcheR)
+[![DOI](https://img.shields.io/badge/DOI-10.32614%2FCRAN.package.newscatcheR-blue)](https://doi.org/10.32614/CRAN.package.newscatcheR)
+[![Coverage Status](https://codecov.io/gh/discindo/newscatcheR/branch/main/graph/badge.svg)](https://app.codecov.io/gh/discindo/newscatcheR/branch/main)
+[![newscatcheR status badge](https://discindo.r-universe.dev/newscatcheR/badges/version)](https://discindo.r-universe.dev/newscatcheR)
 <!-- badges: end -->
 
 Programmatically collect normalized news from (almost) any website using
