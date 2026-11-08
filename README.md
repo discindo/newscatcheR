@@ -38,17 +38,18 @@ Install newscatcheR from:
 install.packages("newscatcheR")
 ```
 
+### GitHub
+
+``` r
+pak::pak('discindo/newscatcheR')
+```
+
 ### R-Universe
 
 ``` r
 install.packages('newscatcheR', repos = c('https://discindo.r-universe.dev'))
 ```
 
-### GitHub
-
-``` r
-pak::pak('discindo/newscatcheR')
-```
 
 ## Overview
 
